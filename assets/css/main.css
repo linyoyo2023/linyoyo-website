@@ -76,7 +76,7 @@ button {
 
 .ribbon-inner p {
   margin: 0;
-  color: #bed7ca;
+  color: #f3cbd3;
   letter-spacing: 0.28em;
 }
 
@@ -84,8 +84,8 @@ button {
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(16, 44, 36, 0.1);
-  background: rgba(255, 253, 248, 0.92);
+  border-bottom: 1px solid rgba(59, 37, 44, 0.1);
+  background: rgba(255, 250, 248, 0.92);
   backdrop-filter: blur(18px);
 }
 
@@ -107,15 +107,10 @@ button {
 .brand-mark {
   width: 46px;
   height: 46px;
-  display: grid;
-  place-items: center;
+  display: block;
   flex: 0 0 auto;
   border-radius: 50%;
-  background: var(--orange);
-  color: white;
-  font-family: "Noto Serif TC", "Songti TC", serif;
-  font-size: 24px;
-  font-weight: 900;
+  object-fit: contain;
 }
 
 .brand-copy,
@@ -133,7 +128,7 @@ button {
 
 .brand-copy small,
 .footer-brand small {
-  color: #5c7169;
+  color: var(--ink-soft);
   font-size: 11px;
   letter-spacing: 0.1em;
 }
@@ -141,7 +136,7 @@ button {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   font-size: 14px;
   font-weight: 700;
 }
@@ -203,8 +198,8 @@ button {
   display: grid;
   align-items: center;
   background:
-    radial-gradient(circle at 12% 80%, rgba(238, 102, 69, 0.12), transparent 28%),
-    linear-gradient(135deg, #fffdf8 0%, #eef4ec 100%);
+    radial-gradient(circle at 12% 80%, rgba(241, 156, 166, 0.18), transparent 28%),
+    linear-gradient(135deg, #fffaf8 0%, #fff1f4 100%);
 }
 
 .hero-inner {
@@ -219,7 +214,7 @@ button {
 
 .hero-orbit {
   position: absolute;
-  border: 1px solid rgba(24, 91, 71, 0.16);
+  border: 1px solid rgba(185, 71, 98, 0.16);
   border-radius: 50%;
 }
 
@@ -284,7 +279,7 @@ button {
 .hero-lead {
   max-width: 590px;
   margin: 28px 0 0;
-  color: #476057;
+  color: var(--ink-soft);
   font-size: 17px;
   line-height: 1.9;
 }
@@ -458,7 +453,7 @@ button {
   border-radius: 50%;
   background: var(--forest);
   color: white;
-  box-shadow: 0 14px 35px rgba(16, 44, 36, 0.2);
+  box-shadow: 0 14px 35px rgba(124, 47, 67, 0.22);
 }
 
 .candidate-stamp strong {
@@ -494,7 +489,7 @@ button {
 }
 
 .message-strip i {
-  color: #ffd5c9;
+  color: #fff0f3;
   font-style: normal;
 }
 
@@ -532,7 +527,7 @@ button {
 
 .about-copy > p {
   margin: 0 0 22px;
-  color: #50655e;
+  color: var(--ink-soft);
   font-size: 16px;
   line-height: 2;
 }
@@ -574,9 +569,324 @@ button {
 
 .belief-card p {
   margin: 0;
-  color: #53665f;
+  color: var(--ink-soft);
   font-size: 14px;
   line-height: 1.8;
+}
+
+.achievements-section {
+  background: var(--paper);
+}
+
+.achievement-heading-row {
+  margin-bottom: 42px;
+}
+
+.result-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.result-stat {
+  min-height: 220px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--cream);
+}
+
+.result-stat::after {
+  content: "";
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  right: -62px;
+  bottom: -58px;
+  border: 1px solid rgba(185, 71, 98, 0.2);
+  border-radius: 50%;
+}
+
+.result-stat > span {
+  color: var(--forest-dark);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.result-stat strong {
+  margin-block: auto 2px;
+  color: var(--forest);
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: 58px;
+  line-height: 1;
+}
+
+.result-stat strong small {
+  margin-left: 5px;
+  color: var(--ink-soft);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+}
+
+.result-stat h3 {
+  margin: 10px 0 0;
+  font-size: 17px;
+}
+
+.data-note {
+  margin: 16px 0 0;
+  color: var(--ink-soft);
+  font-size: 12px;
+}
+
+.achievement-subhead {
+  margin: 88px 0 30px;
+}
+
+.achievement-subhead .section-kicker {
+  margin-bottom: 12px;
+}
+
+.achievement-subhead h3 {
+  margin: 0;
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: clamp(31px, 3.5vw, 44px);
+}
+
+.achievement-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.achievement-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 16px 45px rgba(124, 47, 67, 0.07);
+}
+
+.achievement-card figure {
+  aspect-ratio: 16 / 10;
+  margin: 0;
+  overflow: hidden;
+  background: var(--mint);
+}
+
+.achievement-card figure img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.achievement-card-body {
+  padding: 28px;
+}
+
+.achievement-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--forest);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.achievement-card h3 {
+  margin: 22px 0 13px;
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: 25px;
+}
+
+.achievement-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.achievement-card a,
+.issue-feature a {
+  width: max-content;
+  display: block;
+  margin-top: 22px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--forest);
+  color: var(--forest-dark);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.records-subhead {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 60px;
+}
+
+.records-subhead .section-kicker,
+.records-subhead h3 {
+  grid-column: 1;
+}
+
+.records-subhead > p:last-child {
+  max-width: 540px;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: end;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.service-records {
+  border-top: 1px solid var(--line);
+}
+
+.service-records details {
+  border-bottom: 1px solid var(--line);
+}
+
+.service-records summary {
+  display: grid;
+  grid-template-columns: 52px 1fr 32px;
+  gap: 18px;
+  align-items: center;
+  padding: 27px 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.service-records summary::-webkit-details-marker {
+  display: none;
+}
+
+.service-records summary > span {
+  color: var(--forest);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.service-records summary div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.service-records summary strong {
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: 22px;
+}
+
+.service-records summary small {
+  color: var(--ink-soft);
+  font-size: 12px;
+}
+
+.service-records summary b {
+  color: var(--forest);
+  font-size: 24px;
+  font-weight: 400;
+  text-align: right;
+  transition: transform 0.2s ease;
+}
+
+.service-records details[open] summary b {
+  transform: rotate(45deg);
+}
+
+.record-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 50px;
+  margin: 0 0 30px 70px;
+  padding: 0;
+  list-style: none;
+}
+
+.record-list li {
+  position: relative;
+  padding: 13px 0 13px 20px;
+  border-bottom: 1px dashed rgba(59, 37, 44, 0.12);
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.record-list li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 23px;
+  left: 0;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+.issue-feature {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 42px;
+  margin-top: 70px;
+  padding: 46px;
+  border-radius: 8px;
+  background: var(--forest-dark);
+  color: white;
+}
+
+.issue-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 36px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.issue-label span {
+  color: #f8cbd3;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.issue-label strong {
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: 46px;
+}
+
+.issue-feature .section-kicker {
+  margin-bottom: 12px;
+  color: #f8cbd3;
+}
+
+.issue-feature h3 {
+  margin: 0 0 14px;
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: 34px;
+}
+
+.issue-feature p:not(.section-kicker) {
+  max-width: 720px;
+  margin: 0;
+  color: #f8e5e9;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.issue-feature a {
+  border-color: #f8cbd3;
+  color: white;
 }
 
 .policy-section {
@@ -594,7 +904,7 @@ button {
 .section-head-row > p {
   max-width: 520px;
   margin: 0;
-  color: #53685f;
+  color: var(--ink-soft);
   font-size: 16px;
   line-height: 1.9;
 }
@@ -611,7 +921,7 @@ button {
   display: flex;
   flex-direction: column;
   padding: 30px;
-  border: 1px solid rgba(16, 44, 36, 0.12);
+  border: 1px solid rgba(59, 37, 44, 0.12);
   background: var(--paper);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -622,7 +932,7 @@ button {
 
 .policy-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(16, 44, 36, 0.09);
+  box-shadow: 0 20px 50px rgba(124, 47, 67, 0.1);
 }
 
 .card-topline {
@@ -646,7 +956,7 @@ button {
 
 .policy-card p {
   margin: auto 0 0;
-  color: #5a6e66;
+  color: var(--ink-soft);
   font-size: 14px;
   line-height: 1.85;
 }
@@ -678,7 +988,7 @@ button {
 }
 
 .section-kicker-light {
-  color: #9bc8b6;
+  color: #f8cbd3;
 }
 
 .action-intro h2 {
@@ -692,7 +1002,7 @@ button {
 .action-intro > p:not(.section-kicker) {
   max-width: 490px;
   margin: 26px 0 0;
-  color: #b9cec5;
+  color: #f2dfe3;
   font-size: 16px;
   line-height: 1.9;
 }
@@ -716,7 +1026,7 @@ button {
 }
 
 .action-item > span {
-  color: #82b9a5;
+  color: #f3b8c4;
   font-size: 13px;
   font-weight: 900;
 }
@@ -728,14 +1038,14 @@ button {
 
 .action-item p {
   margin: 0;
-  color: #b9cec5;
+  color: #f2dfe3;
   font-size: 14px;
   line-height: 1.8;
 }
 
 .contact-section {
   background:
-    radial-gradient(circle at 84% 16%, rgba(238, 102, 69, 0.14), transparent 20%),
+    radial-gradient(circle at 84% 16%, rgba(241, 156, 166, 0.2), transparent 20%),
     var(--paper);
 }
 
@@ -749,7 +1059,7 @@ button {
 .contact-copy > p:not(.section-kicker) {
   max-width: 610px;
   margin: 28px 0 0;
-  color: #53685f;
+  color: var(--ink-soft);
   font-size: 17px;
   line-height: 1.9;
 }
@@ -767,7 +1077,7 @@ button {
 .link-note {
   display: block;
   margin-top: 18px;
-  color: #73847e;
+  color: var(--ink-soft);
 }
 
 .service-card {
@@ -780,7 +1090,7 @@ button {
 
 .service-card > p {
   margin: 0 0 18px;
-  color: #a9d1c1;
+  color: #f8dce1;
   font-size: 12px;
   font-weight: 900;
   letter-spacing: 0.18em;
@@ -807,7 +1117,7 @@ button {
 }
 
 .service-card li span {
-  color: #9cc7b6;
+  color: #f3b8c4;
   font-size: 11px;
 }
 
@@ -832,7 +1142,7 @@ button {
 
 .footer-brand small,
 .site-footer p {
-  color: #9ab0a8;
+  color: #d9bdc5;
 }
 
 .site-footer p {
@@ -846,7 +1156,7 @@ button {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid #ffb9a5;
+  outline: 3px solid #f19ca6;
   outline-offset: 4px;
 }
 
@@ -863,7 +1173,7 @@ button:focus-visible {
     padding: 16px 24px 26px;
     border-bottom: 1px solid var(--line);
     background: var(--paper);
-    box-shadow: 0 20px 40px rgba(16, 44, 36, 0.1);
+    box-shadow: 0 20px 40px rgba(124, 47, 67, 0.12);
   }
 
   .nav-links.is-open {
@@ -916,6 +1226,36 @@ button:focus-visible {
 
   .policy-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .result-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achievement-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .records-subhead {
+    grid-template-columns: 1fr;
+  }
+
+  .records-subhead > p:last-child {
+    grid-column: 1;
+    grid-row: auto;
+    margin-top: 16px;
+  }
+
+  .issue-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .issue-label {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 0 22px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .policy-card,
@@ -1041,6 +1381,52 @@ button:focus-visible {
     padding: 24px;
   }
 
+  .result-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .result-stat {
+    min-height: 190px;
+  }
+
+  .achievement-subhead {
+    margin-top: 66px;
+  }
+
+  .achievement-card-body {
+    padding: 24px;
+  }
+
+  .service-records summary {
+    grid-template-columns: 32px 1fr 24px;
+    gap: 10px;
+  }
+
+  .service-records summary div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .service-records summary strong {
+    font-size: 19px;
+  }
+
+  .record-list {
+    grid-template-columns: 1fr;
+    margin-left: 42px;
+  }
+
+  .issue-feature {
+    gap: 28px;
+    margin-top: 52px;
+    padding: 30px 24px;
+  }
+
+  .issue-label strong {
+    font-size: 36px;
+  }
+
   .policy-grid {
     grid-template-columns: 1fr;
   }
@@ -1090,4 +1476,7 @@ button:focus-visible {
   *::after {
     transition-duration: 0.01ms !important;
   }
+}
+.candidate-stamp {
+  display: none;
 }

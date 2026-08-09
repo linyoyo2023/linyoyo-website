@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">成果照片待補</title>
+  <desc id="desc">請依照網站說明，將成果照片放入 images 資料夾。</desc>
+  <rect width="1200" height="750" fill="#fff5f2"/>
+  <circle cx="1050" cy="90" r="300" fill="#f8dce1"/>
+  <circle cx="170" cy="690" r="250" fill="#f19ca6" opacity=".28"/>
+  <path d="M0 560C210 430 360 650 590 520S980 390 1200 520V750H0Z" fill="#f19ca6" opacity=".24"/>
+  <g transform="translate(515 190)" fill="none" stroke="#b94762" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="0" y="35" width="170" height="130" rx="18"/>
+    <path d="M38 35l24-35h62l24 35"/>
+    <circle cx="85" cy="100" r="34"/>
+  </g>
+  <g fill="#7c2f43" text-anchor="middle" font-family="PingFang TC, Microsoft JhengHei, sans-serif">
+    <text x="600" y="470" font-size="52" font-weight="700" letter-spacing="8">成果照片待補</text>
+    <text x="600" y="530" font-size="25" opacity=".78">放入指定檔名後，網站會自動顯示</text>
+  </g>
+</svg>

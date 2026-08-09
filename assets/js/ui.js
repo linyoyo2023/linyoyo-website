@@ -20,6 +20,6 @@ if (menuButton && navigation) {
 document.querySelectorAll(".placeholder-link").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
-    window.alert("請在正式上線前，換成林友友官方 LINE 或志工表單網址。");
+    window.alert("志工表單尚未建立；完成後再將此按鈕換成正式網址。");
   });
 });
