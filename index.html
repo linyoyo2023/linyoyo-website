@@ -1,0 +1,3009 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>林友友｜服務實績</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+      background: #f7f7f5;
+      color: #123d2c;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* =========================
+       Header
+    ========================= */
+
+    .header {
+      position: relative;
+      z-index: 20;
+      width: 100%;
+      background: #f7f7f5;
+    }
+
+    .header-inner {
+      max-width: 1380px;
+      margin: auto;
+      min-height: 110px;
+      padding: 0 40px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 3px solid #16603f;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 22px;
+      font-weight: 900;
+      color: #16603f;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .nav a {
+      transition: opacity .2s ease;
+    }
+
+    .nav a:hover {
+      opacity: .6;
+    }
+
+    .service-button {
+      padding: 16px 28px;
+      background: #12b981;
+      color: white;
+      border-radius: 12px;
+      font-weight: 800;
+      transition: transform .2s ease;
+    }
+
+    .service-button:hover {
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       Hero
+    ========================= */
+
+    .hero {
+      position: relative;
+      min-height: 690px;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      position: relative;
+      max-width: 1380px;
+      min-height: 690px;
+      margin: auto;
+      padding: 0 40px;
+    }
+
+    .hero-copy {
+      position: absolute;
+      left: 40px;
+      top: 210px;
+      z-index: 3;
+    }
+
+    .hero-title {
+      font-size: clamp(42px, 5vw, 72px);
+      line-height: 1.2;
+      font-weight: 900;
+      letter-spacing: -2px;
+      color: #111;
+    }
+
+    .hero-title strong {
+      color: #16603f;
+    }
+
+    .hero-subtitle {
+      margin-top: 18px;
+      font-size: clamp(28px, 3vw, 44px);
+      line-height: 1.25;
+      font-weight: 800;
+      color: #9ba2a9;
+    }
+
+    .hero-subtitle strong {
+      color: #16603f;
+    }
+
+    .hero-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-top: 48px;
+      padding: 18px 34px;
+
+      border: 1px solid #9de2c8;
+      border-radius: 12px;
+      background: #eafff6;
+
+      color: #586271;
+      font-size: 18px;
+      font-weight: 700;
+
+      box-shadow: 0 10px 24px rgba(0,0,0,.08);
+      transition: .2s ease;
+    }
+
+    .hero-action:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(0,0,0,.12);
+    }
+
+    .hero-person {
+      position: absolute;
+      right: 20px;
+      bottom: 0;
+
+      height: 650px;
+      max-width: 58%;
+      object-fit: contain;
+      object-position: bottom right;
+
+      z-index: 2;
+    }
+
+    /* =========================
+       Statistics
+    ========================= */
+
+    .stats-wrap {
+      position: relative;
+      z-index: 10;
+      max-width: 1380px;
+      margin: -45px auto 0;
+      padding: 0 40px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      border-radius: 30px;
+      background: #dedee1;
+      overflow: hidden;
+
+      box-shadow: 0 12px 36px rgba(0,0,0,.04);
+    }
+
+    .stat {
+      position: relative;
+      padding: 42px 20px 36px;
+      text-align: center;
+    }
+
+    .stat:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 25%;
+      width: 1px;
+      height: 50%;
+      background: rgba(0,0,0,.08);
+    }
+
+    .counter {
+      font-size: clamp(46px, 5vw, 74px);
+      line-height: 1;
+      font-weight: 900;
+      color: #064d33;
+      letter-spacing: -2px;
+    }
+
+    .stat-label {
+      margin-top: 15px;
+      font-size: 20px;
+      font-weight: 800;
+      color: #144832;
+    }
+
+    .stat-note {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #68716c;
+    }
+
+    /* =========================
+       Achievement intro
+    ========================= */
+
+    .achievements {
+      padding: 120px 40px;
+    }
+
+    .section-inner {
+      max-width: 1380px;
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      font-size: 42px;
+      font-weight: 900;
+      color: #16603f;
+    }
+
+    .section-heading p {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #315e4d;
+    }
+
+    .cards {
+      margin-top: 60px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .card {
+      min-height: 260px;
+      padding: 30px;
+
+      border-radius: 22px;
+      background: white;
+
+      box-shadow: 0 8px 30px rgba(0,0,0,.06);
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,.1);
+    }
+
+    .card-no {
+      font-size: 14px;
+      color: #18a779;
+      font-weight: 800;
+    }
+
+    .card h3 {
+      margin-top: 50px;
+      font-size: 28px;
+      color: #124c35;
+    }
+
+    .card p {
+      margin-top: 12px;
+      line-height: 1.8;
+      color: #66736c;
+    }
+
+    /* =========================
+       Reveal animation
+    ========================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       Mobile
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .header-inner {
+        min-height: 80px;
+        padding: 0 20px;
+      }
+
+      .logo {
+        width: 52px;
+        height: 52px;
+        font-size: 18px;
+      }
+
+      .nav a:not(.service-button) {
+        display: none;
+      }
+
+      .service-button {
+        padding: 12px 18px;
+      }
+
+      .hero {
+        min-height: 720px;
+      }
+
+      .hero-inner {
+        min-height: 720px;
+        padding: 0 20px;
+      }
+
+      .hero-copy {
+        top: 75px;
+        left: 20px;
+        right: 20px;
+      }
+
+      .hero-title {
+        font-size: 44px;
+      }
+
+      .hero-subtitle {
+        font-size: 28px;
+      }
+
+      .hero-action {
+        margin-top: 25px;
+      }
+
+      .hero-person {
+        height: 440px;
+        max-width: 95%;
+        right: -20px;
+        bottom: 0;
+      }
+
+      .stats-wrap {
+        margin-top: -25px;
+        padding: 0 16px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 22px;
+      }
+
+      .stat {
+        padding: 30px 10px;
+      }
+
+      .stat:nth-child(2)::after {
+        display: none;
+      }
+
+      .stat:nth-child(-n+2) {
+        border-bottom: 1px solid rgba(0,0,0,.08);
+      }
+
+      .counter {
+        font-size: 46px;
+      }
+
+      .stat-label {
+        font-size: 16px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .achievements {
+        padding: 90px 20px;
+      }
+    }
+/* =========================================
+   B版首頁精修
+========================================= */
+
+/* Hero 收緊 */
+.hero {
+  min-height: 620px;
+}
+
+.hero-inner {
+  min-height: 620px;
+}
+
+/* 左邊文字稍微往上 */
+.hero-copy {
+  top: 150px;
+}
+
+/* 人物去背版 */
+.hero-person {
+  height: 650px;
+  max-width: none;
+
+  right: 65px;
+  bottom: -5px;
+
+  object-fit: contain;
+  object-position: bottom center;
+
+  z-index: 2;
+}
+
+/* 統計數字往上壓，跟人物接在一起 */
+.stats-wrap {
+  margin-top: -55px;
+}
+
+/* 標題稍微更有比例 */
+.hero-title {
+  font-size: clamp(48px, 5vw, 70px);
+  letter-spacing: -3px;
+}
+
+.hero-subtitle {
+  margin-top: 16px;
+}
+
+/* 服務按鈕 */
+.hero-action {
+  margin-top: 38px;
+  padding: 17px 30px;
+  border-radius: 11px;
+}
+
+/* 數字區 */
+.stats {
+  border-radius: 28px;
+}
+
+.stat {
+  padding-top: 38px;
+  padding-bottom: 32px;
+}
+
+
+/* =========================================
+   手機版
+========================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    min-height: 680px;
+  }
+
+  .hero-inner {
+    min-height: 680px;
+  }
+
+  .hero-copy {
+    top: 55px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+
+  .hero-subtitle {
+    font-size: 26px;
+  }
+
+  .hero-person {
+    height: 430px;
+
+    right: -30px;
+    bottom: 0;
+  }
+
+  .stats-wrap {
+    margin-top: -35px;
+  }
+
+}/* ===== Header 正式 Logo ===== */
+
+.logo {
+  width: 180px;
+  height: 72px;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+/* =========================================
+   林友友 B版｜粉紅酒紅正式配色
+========================================= */
+
+:root {
+  --yoyo-pink: #cd7886;
+  --yoyo-pink-light: #f5e7e6;
+  --yoyo-pink-soft: #faeeee;
+
+  --yoyo-wine: #703442;
+  --yoyo-wine-dark: #4f2631;
+
+  --yoyo-gold: #e3bc91;
+
+  --yoyo-cream: #faf3f0;
+  --yoyo-paper: #fffaf8;
+
+  --yoyo-gray: #9da0a5;
+}
+
+
+/* ===== 全站背景 ===== */
+
+body {
+  background: var(--yoyo-paper);
+  color: var(--yoyo-wine-dark);
+}
+
+
+/* ===== Header ===== */
+
+.header {
+  background: var(--yoyo-paper);
+}
+
+.nav {
+  color: var(--yoyo-wine-dark);
+}
+
+.nav a:hover {
+  color: var(--yoyo-pink);
+  opacity: 1;
+}
+
+
+/* 右上主要按鈕 */
+.service-button {
+  background: var(--yoyo-pink);
+  color: #fff;
+}
+
+.service-button:hover {
+  background: var(--yoyo-wine);
+}
+
+
+/* ===== Hero ===== */
+
+/* 修正人物頭部被裁切 */
+.hero {
+  min-height: 680px;
+  background: var(--yoyo-paper);
+  overflow: hidden;
+}
+
+.hero-inner {
+  min-height: 680px;
+}
+
+
+/* 左邊文案 */
+.hero-copy {
+  top: 155px;
+}
+
+.hero-title {
+  color: #181417;
+}
+
+.hero-title strong {
+  color: var(--yoyo-pink);
+}
+
+.hero-subtitle {
+  color: #aaa5a6;
+}
+
+.hero-subtitle strong {
+  color: var(--yoyo-wine);
+}
+
+
+/* 我要服務 */
+.hero-action {
+  background: #fff7f5;
+  border: 1px solid #ecc5ca;
+  color: var(--yoyo-wine);
+
+  box-shadow:
+    0 12px 30px rgba(112, 52, 66, .10);
+}
+
+.hero-action:hover {
+  background: var(--yoyo-pink-light);
+  border-color: var(--yoyo-pink);
+}
+
+
+/* ===== 人物 ===== */
+
+.hero-person {
+  height: 655px;
+
+  right: 85px;
+  bottom: -4px;
+
+  max-width: none;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+
+/* ===== 四大數字 ===== */
+
+.stats-wrap {
+  margin-top: -62px;
+}
+
+.stats {
+  background: var(--yoyo-pink-light);
+  border-radius: 30px;
+
+  box-shadow:
+    0 18px 45px rgba(112, 52, 66, .08);
+}
+
+.stat:not(:last-child)::after {
+  background: rgba(112, 52, 66, .13);
+}
+
+.counter {
+  color: var(--yoyo-wine);
+}
+
+.stat-label {
+  color: var(--yoyo-wine-dark);
+}
+
+.stat-note {
+  color: #89777c;
+}
+
+
+/* ===== 服務實績 ===== */
+
+.achievements {
+  background: var(--yoyo-paper);
+}
+
+.section-heading h2 {
+  color: var(--yoyo-wine);
+}
+
+.section-heading p {
+  color: #816b71;
+}
+
+
+/* 卡片 */
+.card {
+  background: #ffffff;
+
+  border: 1px solid rgba(205, 120, 134, .14);
+
+  box-shadow:
+    0 12px 35px rgba(112, 52, 66, .07);
+}
+
+.card:hover {
+  box-shadow:
+    0 20px 50px rgba(112, 52, 66, .13);
+}
+
+.card-no {
+  color: var(--yoyo-pink);
+}
+
+.card h3 {
+  color: var(--yoyo-wine);
+}
+
+.card p {
+  color: #796a6e;
+}
+
+
+/* ===== Logo ===== */
+
+.logo {
+  width: 100px;
+  height: 82px;
+
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+
+/* =========================================
+   手機版
+========================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    min-height: 690px;
+  }
+
+  .hero-inner {
+    min-height: 690px;
+  }
+
+  .hero-copy {
+    top: 55px;
+  }
+
+  .hero-person {
+    height: 425px;
+    right: -20px;
+    bottom: 0;
+  }
+
+  .stats-wrap {
+    margin-top: -32px;
+  }
+
+}
+/* =========================================
+   服務實績區精修
+========================================= */
+
+.achievements {
+  padding: 105px 24px 130px;
+  background: var(--yoyo-paper);
+}
+
+.section-inner {
+  width: min(1320px, 100%);
+  margin: 0 auto;
+}
+
+.cards {
+  width: 100%;
+  margin: 58px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.card {
+  min-height: 300px;
+  padding: 34px 34px 38px;
+
+  border: 1px solid rgba(205, 120, 134, .16);
+  border-radius: 28px;
+
+  background: #fff;
+
+  box-shadow:
+    0 16px 45px rgba(112, 52, 66, .07);
+
+  overflow: hidden;
+}
+
+/* 編號 */
+.card-no {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: var(--yoyo-pink);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.card-no::after {
+  content: "";
+  width: 38px;
+  height: 2px;
+  display: block;
+  background: var(--yoyo-gold);
+}
+
+/* 卡片標題 */
+.card h3 {
+  margin-top: 58px;
+  color: var(--yoyo-wine);
+  font-size: 30px;
+  font-weight: 900;
+}
+
+/* 卡片文字 */
+.card p {
+  margin-top: 14px;
+  color: #78686d;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* hover */
+.card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 24px 60px rgba(112, 52, 66, .12);
+}
+
+/* Hero 人物小幅往左 */
+.hero-person {
+  right: 115px;
+}
+
+
+/* 手機 */
+@media (max-width: 900px) {
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .achievements {
+    padding-inline: 18px;
+  }
+
+  .hero-person {
+    right: -10px;
+  }
+
+}
+/* =========================================
+   服務實績｜新版卡片
+========================================= */
+
+.service-grid {
+  width: min(1320px, 100%);
+  margin: 60px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.service-card-pro {
+  overflow: hidden;
+
+  border: 1px solid rgba(205, 120, 134, .14);
+  border-radius: 28px;
+
+  background: #fff;
+
+  box-shadow:
+    0 14px 40px rgba(112, 52, 66, .07);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.service-card-pro:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 25px 60px rgba(112, 52, 66, .13);
+}
+
+
+/* 上方圖片區 */
+.service-media {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 22px;
+}
+
+.service-media::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 75% 25%,
+      rgba(255,255,255,.7),
+      transparent 28%
+    );
+}
+
+.service-media span {
+  position: relative;
+  z-index: 2;
+
+  padding: 7px 13px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.82);
+
+  color: var(--yoyo-wine);
+
+  font-size: 12px;
+  font-weight: 900;
+
+  backdrop-filter: blur(8px);
+}
+
+
+/* 六種淡色調 */
+.media-traffic {
+  background:
+    linear-gradient(
+      135deg,
+      #f3dfe2,
+      #e4b2ba
+    );
+}
+
+.media-education {
+  background:
+    linear-gradient(
+      135deg,
+      #f8eee7,
+      #e3bc91
+    );
+}
+
+.media-law {
+  background:
+    linear-gradient(
+      135deg,
+      #f5e7e6,
+      #ce7d8a
+    );
+}
+
+.media-help {
+  background:
+    linear-gradient(
+      135deg,
+      #f6e9eb,
+      #d69ba4
+    );
+}
+
+.media-community {
+  background:
+    linear-gradient(
+      135deg,
+      #faf0e7,
+      #e0b68b
+    );
+}
+
+.media-safety {
+  background:
+    linear-gradient(
+      135deg,
+      #eedde0,
+      #884b59
+    );
+}
+
+
+/* 文字區 */
+.service-body {
+  padding: 28px 30px 32px;
+}
+
+.service-meta {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  color: var(--yoyo-pink);
+
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.service-meta i {
+  width: 28px;
+  height: 1px;
+
+  display: block;
+
+  background: var(--yoyo-gold);
+}
+
+.service-card-pro h3 {
+  margin: 24px 0 12px;
+
+  color: var(--yoyo-wine);
+
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.service-card-pro p {
+  min-height: 82px;
+
+  margin: 0;
+
+  color: #78686d;
+
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.service-more {
+  margin-top: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(112,52,66,.10);
+
+  color: var(--yoyo-wine);
+
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.service-more span {
+  font-size: 20px;
+
+  transition: transform .2s ease;
+}
+
+.service-card-pro:hover .service-more span {
+  transform: translateX(5px);
+}
+
+
+/* 手機 */
+@media (max-width: 900px) {
+
+  .service-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 640px) {
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-media {
+    height: 190px;
+  }
+}
+/* =========================================
+   認識友友
+========================================= */
+
+.about-yoyo {
+  padding: 130px 30px;
+  background: #f8e9e9;
+}
+
+.about-yoyo-inner {
+  width: min(1250px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 110px;
+  align-items: center;
+}
+
+
+/* 左邊人物 */
+.about-yoyo-visual {
+  height: 650px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 320px 320px 28px 28px;
+
+  background: #fff6f3;
+}
+
+.about-pink-shape {
+  width: 520px;
+  height: 520px;
+
+  position: absolute;
+
+  left: -100px;
+  bottom: -200px;
+
+  border-radius: 50%;
+
+  background: var(--yoyo-pink);
+}
+
+.about-yoyo-visual img {
+  height: 95%;
+
+  position: absolute;
+
+  z-index: 2;
+
+  left: 50%;
+  bottom: 0;
+
+  transform: translateX(-50%);
+
+  object-fit: contain;
+}
+
+
+/* 小章 */
+.about-number {
+  width: 100px;
+  height: 100px;
+
+  position: absolute;
+
+  z-index: 4;
+
+  right: 24px;
+  bottom: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  border: 5px solid #f8e9e9;
+  border-radius: 50%;
+
+  background: var(--yoyo-wine);
+
+  color: #fff;
+}
+
+.about-number strong {
+  font-size: 35px;
+  line-height: 1;
+}
+
+.about-number span {
+  margin-top: 6px;
+
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+
+/* 右側文字 */
+.about-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: var(--yoyo-pink);
+
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .18em;
+}
+
+.about-kicker span {
+  width: 36px;
+  height: 2px;
+
+  background: var(--yoyo-gold);
+}
+
+.about-yoyo-copy h2 {
+  margin: 25px 0 0;
+
+  color: var(--yoyo-wine);
+
+  font-size: clamp(44px, 5vw, 68px);
+  line-height: 1.15;
+}
+
+.about-yoyo-copy h2 small {
+  margin-top: 15px;
+
+  display: block;
+
+  color: var(--yoyo-pink);
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.about-lead {
+  margin-top: 36px !important;
+
+  color: var(--yoyo-wine-dark) !important;
+
+  font-size: 21px !important;
+  font-weight: 700;
+
+  line-height: 1.85 !important;
+}
+
+.about-yoyo-copy > p {
+  max-width: 610px;
+
+  margin: 24px 0 0;
+
+  color: #79686d;
+
+  font-size: 15px;
+  line-height: 2;
+}
+
+
+/* 三個價值 */
+.about-values {
+  margin-top: 40px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid rgba(112,52,66,.15);
+  border-bottom: 1px solid rgba(112,52,66,.15);
+}
+
+.about-values div {
+  padding: 22px 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  border-right: 1px solid rgba(112,52,66,.15);
+}
+
+.about-values div:first-child {
+  padding-left: 0;
+}
+
+.about-values div:last-child {
+  border-right: none;
+}
+
+.about-values strong {
+  color: var(--yoyo-gold);
+
+  font-size: 12px;
+}
+
+.about-values span {
+  color: var(--yoyo-wine);
+
+  font-size: 15px;
+  font-weight: 900;
+}
+
+
+/* 按鈕 */
+.about-button {
+  margin-top: 35px;
+
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  padding: 16px 22px;
+
+  border-radius: 8px;
+
+  background: var(--yoyo-wine);
+
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.about-button:hover {
+  background: var(--yoyo-pink);
+}
+
+
+/* 手機 */
+@media (max-width: 900px) {
+
+  .about-yoyo-inner {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .about-yoyo-visual {
+    width: min(520px, 100%);
+    height: 580px;
+
+    margin: 0 auto;
+  }
+
+}
+
+@media (max-width: 640px) {
+
+  .about-yoyo {
+    padding: 90px 20px;
+  }
+
+  .about-yoyo-visual {
+    height: 480px;
+  }
+
+  .about-values {
+    grid-template-columns: 1fr;
+  }
+
+  .about-values div {
+    padding: 16px 0;
+
+    border-right: 0;
+    border-bottom: 1px solid rgba(112,52,66,.12);
+  }
+
+}
+/* =========================================
+   選民服務
+========================================= */
+
+.voter-service {
+  position: relative;
+  overflow: hidden;
+
+  padding: 130px 30px;
+
+  background: #703442;
+  color: white;
+}
+
+/* 背景大「友」 */
+.voter-service::after {
+  content: "友";
+
+  position: absolute;
+  right: -40px;
+  bottom: -170px;
+
+  color: rgba(255,255,255,.035);
+
+  font-size: 520px;
+  font-weight: 900;
+  line-height: 1;
+
+  pointer-events: none;
+}
+
+
+.voter-service-inner {
+  width: min(1220px, 100%);
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 100px;
+  align-items: start;
+}
+
+
+/* 左側 */
+.voter-service .about-kicker {
+  color: #f1a8b4;
+}
+
+.voter-service .about-kicker span {
+  background: #e3bc91;
+}
+
+.voter-service-copy h2 {
+  margin: 25px 0 0;
+
+  font-size: clamp(46px, 5vw, 68px);
+  line-height: 1.15;
+}
+
+.voter-service-copy h2 small {
+  display: block;
+
+  margin-top: 15px;
+
+  color: #e8a0ac;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.voter-service-copy > p {
+  max-width: 510px;
+
+  margin: 32px 0 0;
+
+  color: #ead8dc;
+
+  font-size: 15px;
+  line-height: 2;
+}
+
+
+/* 主按鈕 */
+.voter-main-button {
+  width: max-content;
+
+  margin-top: 38px;
+
+  display: flex;
+  align-items: center;
+  gap: 48px;
+
+  padding: 17px 23px;
+
+  border-radius: 9px;
+
+  background: white;
+  color: #703442;
+
+  font-size: 14px;
+  font-weight: 900;
+
+  transition: .25s ease;
+}
+
+.voter-main-button:hover {
+  transform: translateY(-3px);
+  background: #f5e7e6;
+}
+
+
+/* 右側列表 */
+.voter-service-list {
+  border-top: 1px solid rgba(255,255,255,.2);
+}
+
+.voter-service-item {
+  min-height: 120px;
+
+  display: grid;
+  grid-template-columns: 50px 1fr 40px;
+  gap: 22px;
+  align-items: center;
+
+  padding: 28px 0;
+
+  border-bottom: 1px solid rgba(255,255,255,.2);
+
+  transition: padding .25s ease;
+}
+
+.voter-service-item:hover {
+  padding-left: 10px;
+}
+
+.voter-no {
+  color: #e3bc91;
+
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.voter-service-item strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: white;
+
+  font-size: 21px;
+}
+
+.voter-service-item p {
+  margin: 0;
+
+  color: #d9c1c7;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.voter-service-item b {
+  color: #f1a8b4;
+  font-size: 22px;
+
+  transition: transform .2s ease;
+}
+
+.voter-service-item:hover b {
+  transform: translateX(5px);
+}
+
+
+/* 認識友友 → 選民服務間距稍微收緊 */
+.about-yoyo {
+  padding-bottom: 110px;
+}
+
+
+/* Tablet */
+@media (max-width: 900px) {
+
+  .voter-service-inner {
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+
+  .voter-service {
+    padding: 90px 20px;
+  }
+
+  .voter-service::after {
+    font-size: 330px;
+  }
+
+  .voter-service-item {
+    grid-template-columns: 35px 1fr 25px;
+    gap: 12px;
+  }
+
+}/* =========================================
+   服務據點
+========================================= */
+
+.location-section {
+  padding: 130px 30px;
+  background: var(--yoyo-paper);
+}
+
+.location-inner {
+  width: min(1220px, 100%);
+  margin: 0 auto;
+}
+
+.location-heading {
+  max-width: 620px;
+}
+
+.location-heading h2 {
+  margin: 24px 0 0;
+
+  color: var(--yoyo-wine);
+
+  font-size: clamp(46px, 5vw, 66px);
+  line-height: 1.15;
+}
+
+.location-heading h2 small {
+  display: block;
+
+  margin-top: 14px;
+
+  color: var(--yoyo-pink);
+
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.location-heading > p {
+  margin-top: 28px;
+
+  color: #78686d;
+
+  font-size: 15px;
+  line-height: 2;
+}
+
+
+/* 兩張據點卡 */
+.location-grid {
+  margin-top: 60px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.location-card {
+  min-height: 420px;
+  padding: 38px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 28px;
+
+  background: #f5e7e6;
+
+  box-shadow:
+    0 16px 45px rgba(112,52,66,.07);
+}
+
+.location-card-pink {
+  background: #efd0d4;
+}
+
+.location-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 28px;
+
+  border-bottom: 1px solid rgba(112,52,66,.15);
+}
+
+.location-card-top span {
+  color: var(--yoyo-gold);
+
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.location-card-top strong {
+  color: var(--yoyo-wine);
+
+  font-size: 25px;
+}
+
+
+/* 地址資料 */
+.location-info {
+  margin-top: 32px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.location-info small {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--yoyo-pink);
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+.location-info p {
+  margin: 0;
+
+  color: var(--yoyo-wine-dark);
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+/* 查看地圖 */
+.location-link {
+  margin-top: auto;
+  padding-top: 25px;
+
+  display: flex;
+  justify-content: space-between;
+
+  border-top: 1px solid rgba(112,52,66,.15);
+
+  color: var(--yoyo-wine);
+
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.location-link span {
+  font-size: 20px;
+
+  transition: transform .2s ease;
+}
+
+.location-link:hover span {
+  transform: translateX(5px);
+}
+
+
+/* 社群 */
+.contact-social {
+  margin-top: 90px;
+  padding: 42px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+
+  border-top: 1px solid rgba(112,52,66,.15);
+  border-bottom: 1px solid rgba(112,52,66,.15);
+}
+
+.contact-social > div > span {
+  color: var(--yoyo-pink);
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .18em;
+}
+
+.contact-social h3 {
+  margin-top: 8px;
+
+  color: var(--yoyo-wine);
+
+  font-size: 25px;
+}
+
+.contact-social-buttons {
+  display: flex;
+  gap: 14px;
+}
+
+.contact-social-buttons a {
+  min-width: 145px;
+
+  padding: 15px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid #dbc1c5;
+  border-radius: 10px;
+
+  background: #fff;
+
+  color: var(--yoyo-wine);
+
+  font-size: 13px;
+  font-weight: 900;
+
+  transition: .2s ease;
+}
+
+.contact-social-buttons a:hover {
+  background: var(--yoyo-wine);
+  color: white;
+}
+
+
+/* Tablet / Mobile */
+@media (max-width: 800px) {
+
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-social {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 640px) {
+
+  .location-section {
+    padding: 90px 18px;
+  }
+
+  .location-card {
+    min-height: 380px;
+    padding: 28px;
+  }
+
+  .contact-social-buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .contact-social-buttons a {
+    width: 100%;
+  }
+
+}
+/* =========================================
+   手機版最終精修
+========================================= */
+
+@media (max-width: 640px) {
+
+  /* ===== 服務實績標題 ===== */
+
+  .achievements {
+    padding-top: 72px;
+    padding-bottom: 85px;
+  }
+
+  .section-heading h2 {
+    font-size: 38px;
+  }
+
+  .section-heading p {
+    margin-top: 12px;
+    padding: 0 12px;
+
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+
+  /* ===== 服務卡片 ===== */
+
+  .service-grid {
+    margin-top: 38px;
+    gap: 20px;
+  }
+
+  .service-card-pro {
+    border-radius: 22px;
+  }
+
+  .service-media {
+    height: 165px;
+  }
+
+  .service-body {
+    padding: 24px 26px 27px;
+  }
+
+  .service-card-pro h3 {
+    margin-top: 20px;
+    font-size: 26px;
+  }
+
+  .service-card-pro p {
+    min-height: auto;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+
+  /* =========================
+     認識友友
+  ========================= */
+
+  .about-yoyo {
+    padding:
+      70px
+      18px
+      80px;
+  }
+
+  .about-yoyo-inner {
+    gap: 50px;
+  }
+
+
+  /* 人物卡不要佔整個手機畫面 */
+
+  .about-yoyo-visual {
+    width: 100%;
+    height: 480px;
+
+    border-radius:
+      220px
+      220px
+      24px
+      24px;
+  }
+
+  .about-yoyo-visual img {
+    height: 91%;
+  }
+
+  .about-pink-shape {
+    width: 410px;
+    height: 410px;
+
+    left: -95px;
+    bottom: -155px;
+  }
+
+  .about-number {
+    width: 82px;
+    height: 82px;
+
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .about-number strong {
+    font-size: 28px;
+  }
+
+
+  /* ABOUT YOYO */
+
+  .about-kicker {
+    font-size: 11px;
+  }
+
+  .about-kicker span {
+    width: 34px;
+  }
+
+
+  /* 認識友友標題 */
+
+  .about-yoyo-copy h2 {
+    margin-top: 20px;
+
+    font-size: 46px;
+    line-height: 1.12;
+  }
+
+  .about-yoyo-copy h2 small {
+    margin-top: 12px;
+
+    font-size: 17px;
+  }
+
+
+  /* 主文案 */
+
+  .about-yoyo-copy .about-lead {
+    margin-top: 30px !important;
+
+    font-size: 18px !important;
+    line-height: 1.75 !important;
+  }
+
+  .about-yoyo-copy > p {
+    margin-top: 20px;
+
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+
+  /* 三個價值 */
+
+  .about-values {
+    margin-top: 30px;
+  }
+
+  .about-values div {
+    padding: 15px 0;
+  }
+
+  .about-values span {
+    font-size: 14px;
+  }
+
+
+  /* 更認識友友 */
+
+  .about-button {
+    width: 100%;
+
+    margin-top: 30px;
+
+    justify-content: space-between;
+
+    padding: 17px 22px;
+  }
+
+
+  /* =========================
+     我需要服務
+  ========================= */
+
+  .voter-service {
+    padding:
+      80px
+      20px
+      85px;
+  }
+
+  .voter-service-inner {
+    gap: 55px;
+  }
+
+  .voter-service-copy h2 {
+    font-size: 48px;
+  }
+
+  .voter-service-copy h2 small {
+    font-size: 17px;
+  }
+
+  .voter-service-copy > p {
+    margin-top: 26px;
+
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+
+  /* 提出服務需求 */
+
+  .voter-main-button {
+    width: 100%;
+
+    justify-content: space-between;
+
+    margin-top: 30px;
+
+    padding: 17px 22px;
+  }
+
+
+  /* 服務項目 */
+
+  .voter-service-item {
+    min-height: 105px;
+
+    grid-template-columns:
+      34px
+      1fr
+      24px;
+
+    gap: 12px;
+
+    padding: 24px 0;
+  }
+
+  .voter-service-item strong {
+    font-size: 19px;
+  }
+
+  .voter-service-item p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+}/* ===== 南投縣議會聯絡 ===== */
+
+.council-contact {
+  margin-top: 28px;
+  padding: 26px 30px;
+
+  display: grid;
+  grid-template-columns: .8fr 1.3fr auto;
+  gap: 35px;
+  align-items: center;
+
+  border: 1px solid rgba(112, 52, 66, .13);
+  border-radius: 18px;
+
+  background: #fff;
+}
+
+.council-contact > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.council-contact > div:first-child span {
+  color: var(--yoyo-pink);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+.council-contact > div:first-child strong {
+  color: var(--yoyo-wine);
+  font-size: 18px;
+}
+
+.council-contact p {
+  margin: 0 0 5px;
+
+  color: #78686d;
+  font-size: 14px;
+}
+
+.council-contact > div:nth-child(2) a {
+  color: var(--yoyo-wine);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.council-contact > a {
+  color: var(--yoyo-wine);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+
+/* 手機 */
+@media (max-width: 700px) {
+
+  .council-contact {
+    grid-template-columns: 1fr;
+    gap: 18px;
+
+    padding: 24px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+
+    <div class="header-inner">
+
+      <a class="logo" href="#">
+  <img src="images/logo-lockup.svg" alt="林友友">
+</a>
+
+      <nav class="nav">
+
+        <a href="#achievements">服務實績</a>
+
+        <a href="https://lin.ee/QvWUqYBb"
+       target="_blank"
+       rel="noopener noreferrer"
+>
+          南投縣議會聯絡
+        </a>
+
+        <a href="#about">認識友友</a>
+
+        <a href="#location">服務據點</a>
+
+        <a class="service-button" href="#service">
+          我需要服務
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- Hero -->
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-inner">
+
+        <div class="hero-copy reveal">
+
+          <h1 class="hero-title">
+            與 <strong>友友</strong> 一起
+          </h1>
+
+          <div class="hero-subtitle">
+            讓<strong>草屯・中寮</strong>更好
+          </div>
+
+          <aclass="service-button"
+            href="https://lin.ee/QvWUqYBb"
+           target="_blank"
+           rel="noopener noreferrer"
+>
+  我需要服務
+</a>
+
+        </div>
+
+        <img
+  class="hero-person"
+  src="/images/candidate-transparent.png"
+  alt="林友友"
+>
+
+      </div>
+
+    </section>
+
+
+    <!-- Statistics -->
+
+    <section class="stats-wrap reveal">
+
+      <div class="stats">
+
+        <div class="stat">
+
+          <div class="counter" data-target="407">
+            0
+          </div>
+
+          <div class="stat-label">
+            法律服務
+          </div>
+
+          <div class="stat-note">
+            截至115年8月
+          </div>
+
+        </div>
+
+
+        <div class="stat">
+
+          <div class="counter" data-target="90">
+            0
+          </div>
+
+          <div class="stat-label">
+            急難救助
+          </div>
+
+          <div class="stat-note">
+            草屯72・中寮18
+          </div>
+
+        </div>
+
+
+        <div class="stat">
+
+          <div class="counter" data-target="117">
+            0
+          </div>
+
+          <div class="stat-label">
+            道路服務
+          </div>
+
+          <div class="stat-note">
+            截至115年7月
+          </div>
+
+        </div>
+
+
+        <div class="stat">
+
+          <div class="counter" data-target="8">
+            0
+          </div>
+
+          <div class="stat-label">
+            公益捐贈
+          </div>
+
+          <div class="stat-note">
+            骨灰罈捐贈
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Achievements -->
+
+    <section class="achievements" id="achievements">
+
+      <div class="section-inner">
+
+        <div class="section-heading reveal">
+
+          <h2>
+            服務實績
+          </h2>
+
+          <p>
+            跟隨友友的腳步，看見草屯・中寮的改變
+          </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+  <article class="service-card-pro reveal">
+    <div class="service-media media-traffic">
+      <span>草屯・中寮</span>
+    </div>
+
+    <div class="service-body">
+      <div class="service-meta">
+        <span>01</span>
+        <i></i>
+        <span>交通建設</span>
+      </div>
+
+      <h3>道路交通</h3>
+
+      <p>
+        道路改善、反射鏡、交通號誌、標線及地方交通安全案件。
+      </p>
+
+      <a href="#" class="service-more">
+        查看服務成果 <span>→</span>
+      </a>
+    </div>
+  </article>
+
+
+  <article class="service-card-pro reveal">
+    <div class="service-media media-education">
+      <span>教育</span>
+    </div>
+
+    <div class="service-body">
+      <div class="service-meta">
+        <span>02</span>
+        <i></i>
+        <span>校園建設</span>
+      </div>
+
+      <h3>教育建設</h3>
+
+      <p>
+        協助學校改善教學環境、設備與校園周邊安全。
+      </p>
+
+      <a href="#" class="service-more">
+        查看服務成果 <span>→</span>
+      </a>
+    </div>
+  </article>
+
+
+  <article class="service-card-pro reveal">
+    <div class="service-media media-law">
+      <span>407 件</span>
+    </div>
+
+    <div class="service-body">
+      <div class="service-meta">
+        <span>03</span>
+        <i></i>
+        <span>法律服務</span>
+      </div>
+
+      <h3>法律諮詢</h3>
+
+      <p>
+        提供法律服務及案件諮詢，協助民眾找到適合的處理方向。
+      </p>
+
+      <a href="#" class="service-more">
+        查看服務成果 <span>→</span>
+      </a>
+    </div>
+  </article>
+
+
+  <article class="service-card-pro reveal">
+    <div class="service-media media-help">
+      <span>90 件</span>
+    </div>
+
+    <div class="service-body">
+      <div class="service-meta">
+        <span>04</span>
+        <i></i>
+        <span>社會關懷</span>
+      </div>
+
+      <h3>急難救助</h3>
+
+      <p>
+        草屯、中寮急難家庭協助與社會資源轉介，陪伴民眾度過難關。
+      </p>
+
+      <a href="#" class="service-more">
+        查看服務成果 <span>→</span>
+      </a>
+    </div>
+  </article>
+
+
+  <article class="service-card-pro reveal">
+    <div class="service-media media-community">
+      <span>地方服務</span>
+    </div>
+
+    <div class="service-body">
+      <div class="service-meta">
+        <span>05</span>
+        <i></i>
+        <span>地方建設</span>
+      </div>
+
+      <h3>社區建設</h3>
+
+      <p>
+        從道路、排水到公共環境，持續處理居民生活中真正需要改善的問題。
+      </p>
+
+      <a href="#" class="service-more">
+        查看服務成果 <span>→</span>
+      </a>
+    </div>
+  </article>
+
+
+  <article class="service-card-pro reveal">
+    <div class="service-media media-safety">
+      <span>公共安全</span>
+    </div>
+
+    <div class="service-body">
+      <div class="service-meta">
+        <span>06</span>
+        <i></i>
+        <span>安全守護</span>
+      </div>
+
+      <h3>警消支持</h3>
+
+      <p>
+        關注第一線警消設備與公共安全需求，讓地方服務更完整。
+      </p>
+
+      <a href="#" class="service-more">
+        查看服務成果 <span>→</span>
+      </a>
+    </div>
+  </article>
+
+
+    </div>
+
+    </div>
+
+    </section>
+<section class="about-yoyo" id="about">
+
+  <div class="about-yoyo-inner">
+
+    <div class="about-yoyo-visual reveal">
+
+      <div class="about-pink-shape"></div>
+
+      <img
+        src="images/candidate-transparent.png"
+        alt="林友友"
+      >
+
+      <div class="about-number">
+        <strong>友</strong>
+        <span>LIN YOYO</span>
+      </div>
+
+    </div>
+
+
+    <div class="about-yoyo-copy reveal">
+
+      <div class="about-kicker">
+        <span></span>
+        ABOUT YOYO
+      </div>
+
+      <h2>
+        認識友友
+        <small>把地方的事，放在心上</small>
+      </h2>
+
+      <p class="about-lead">
+        服務不是一句口號，而是願意走進地方，
+        聽見每一個人的需求，再一起找到解決問題的方法。
+      </p>
+
+      <p>
+        從法律服務、急難救助，到道路交通與地方建設，
+        每一件事情背後，都是一個家庭、一條道路，
+        或一個地方真正需要被看見的問題。
+      </p>
+
+      <div class="about-values">
+
+        <div>
+          <strong>01</strong>
+          <span>傾聽地方</span>
+        </div>
+
+        <div>
+          <strong>02</strong>
+          <span>立即行動</span>
+        </div>
+
+        <div>
+          <strong>03</strong>
+          <span>持續追蹤</span>
+        </div>
+
+      </div>
+
+      <a href="#" class="about-button">
+        更認識友友
+        <span>→</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- =========================
+     選民服務
+========================= -->
+
+<section class="voter-service" id="service">
+
+  <div class="voter-service-inner">
+
+    <div class="voter-service-copy reveal">
+
+      <div class="about-kicker">
+        <span></span>
+        SERVICE
+      </div>
+
+      <h2>
+        我需要服務
+        <small>有事情，找友友</small>
+      </h2>
+
+      <p>
+        無論是道路交通、地方建設、法律諮詢，
+        或急難救助與生活中的大小問題，
+        都歡迎留下需求，我們會協助了解並持續追蹤。
+      </p>
+
+      <a
+  href="https://lin.ee/QvWUqYBb"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="voter-main-button"
+>
+  提出服務需求
+  <span>→</span>
+</a>
+
+    </div>
+
+
+    <div class="voter-service-list reveal">
+
+      <a href="#" class="voter-service-item">
+        <span class="voter-no">01</span>
+
+        <div>
+          <strong>道路與交通</strong>
+          <p>道路、號誌、反射鏡、標線及交通安全問題</p>
+        </div>
+
+        <b>→</b>
+      </a>
+
+
+      <a href="#" class="voter-service-item">
+        <span class="voter-no">02</span>
+
+        <div>
+          <strong>法律服務</strong>
+          <p>法律諮詢、權益問題與案件協助</p>
+        </div>
+
+        <b>→</b>
+      </a>
+
+
+      <a href="#" class="voter-service-item">
+        <span class="voter-no">03</span>
+
+        <div>
+          <strong>急難救助</strong>
+          <p>急難家庭、弱勢關懷及社會資源轉介</p>
+        </div>
+
+        <b>→</b>
+      </a>
+
+
+      <a href="#" class="voter-service-item">
+        <span class="voter-no">04</span>
+
+        <div>
+          <strong>地方建設</strong>
+          <p>排水、公共環境、教育與社區建設需求</p>
+        </div>
+
+        <b>→</b>
+      </a>
+
+    </div>
+
+  </div>
+
+<!-- =========================
+     服務據點
+========================= -->
+
+<!-- =========================
+     服務據點
+========================= -->
+
+<section class="location-section" id="location">
+
+  <div class="location-inner">
+
+    <div class="location-heading reveal">
+
+      <div class="about-kicker">
+        <span></span>
+        CONTACT
+      </div>
+
+      <h2>
+        服務據點
+        <small>有需要，歡迎來找友友</small>
+      </h2>
+
+      <p>
+        草屯、中寮的地方服務與民眾需求，
+        都歡迎透過服務處、LINE 或 Facebook 與我們聯絡。
+      </p>
+
+    </div>
+
+
+    <div class="location-grid">
+
+      <!-- 草屯服務處 -->
+      <article class="location-card reveal">
+
+        <div class="location-card-top">
+          <span>01</span>
+          <strong>草屯服務處</strong>
+        </div>
+
+        <div class="location-info">
+
+          <div>
+            <small>ADDRESS</small>
+            <p>南投縣草屯鎮碧山路1082-1號</p>
+          </div>
+
+          <div>
+            <small>PHONE</small>
+            <p>
+              <a href="tel:+886492305335">
+                （049）230-5335
+              </a>
+            </p>
+          </div>
+
+          <div>
+            <small>HOURS</small>
+            <p>08:00–17:00</p>
+          </div>
+
+        </div>
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=南投縣草屯鎮碧山路1082-1號"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="location-link"
+        >
+          查看地圖
+          <span>→</span>
+        </a>
+
+      </article>
+
+
+      <!-- 中寮服務處 -->
+      <article class="location-card location-card-pink reveal">
+
+        <div class="location-card-top">
+          <span>02</span>
+          <strong>中寮服務處</strong>
+        </div>
+
+        <div class="location-info">
+
+          <div>
+            <small>ADDRESS</small>
+            <p>南投縣中寮鄉初中巷48號</p>
+          </div>
+
+          <div>
+            <small>PHONE</small>
+            <p>
+              <a href="tel:+886492693998">
+                （049）269-3998
+              </a>
+            </p>
+          </div>
+
+          <div>
+            <small>HOURS</small>
+            <p>08:00–17:00</p>
+          </div>
+
+        </div>
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=南投縣中寮鄉初中巷48號"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="location-link"
+        >
+          查看地圖
+          <span>→</span>
+        </a>
+
+      </article>
+
+    </div>
+
+
+    <!-- 議會聯絡 -->
+    <div class="council-contact reveal">
+
+      <div>
+        <span>COUNTY COUNCIL</span>
+        <strong>南投縣議會聯絡</strong>
+      </div>
+
+      <div>
+        <p>南投縣南投市南崗二路1號</p>
+
+        <a href="tel:+886492222131">
+          049-222-2131
+        </a>
+      </div>
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=南投縣南投市南崗二路1號"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        查看地圖 →
+      </a>
+
+    </div>
+
+
+    <!-- 線上聯絡 -->
+    <div class="contact-social reveal">
+
+      <div>
+        <span>ONLINE CONTACT</span>
+        <h3>線上也可以找到友友</h3>
+      </div>
+
+      <div class="contact-social-buttons">
+
+        <a
+          href="https://www.facebook.com/profile.php?id=100084546050372"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook
+          <span>↗</span>
+        </a>
+
+        <a
+          href="https://lin.ee/QvWUqYBb"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LINE
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  </main>
+
+
+  <script>
+
+    /* =========================
+       Reveal animation
+    ========================= */
+
+    const revealObserver = new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+            revealObserver.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.15
+      }
+    );
+
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach(el => revealObserver.observe(el));
+
+
+    /* =========================
+       Counter animation
+    ========================= */
+
+    const counters =
+      document.querySelectorAll(".counter");
+
+
+    function animateCounter(element) {
+
+      const target =
+        Number(element.dataset.target);
+
+      const duration = 1500;
+
+      const start =
+        performance.now();
+
+
+      function update(time) {
+
+        const progress =
+          Math.min(
+            (time - start) / duration,
+            1
+          );
+
+
+        const eased =
+          1 - Math.pow(1 - progress, 3);
+
+
+        const value =
+          Math.floor(target * eased);
+
+
+        element.textContent =
+          value.toLocaleString();
+
+
+        if (progress < 1) {
+
+          requestAnimationFrame(update);
+
+        } else {
+
+          element.textContent =
+            target.toLocaleString();
+
+        }
+
+      }
+
+
+      requestAnimationFrame(update);
+
+    }
+
+
+    const counterObserver =
+      new IntersectionObserver(
+
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              animateCounter(entry.target);
+
+              counterObserver.unobserve(
+                entry.target
+              );
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.6
+        }
+
+      );
+
+
+    counters.forEach(counter => {
+
+      counterObserver.observe(counter);
+
+    });
+
+  </script>
+
+</body>
+</html>
