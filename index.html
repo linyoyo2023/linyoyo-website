@@ -2124,69 +2124,331 @@ body {
     line-height: 1.6;
   }
 
-}/* ===== 南投縣議會聯絡 ===== */
+}/* =========================================
+   iPhone / 手機 Hero 最終修正版
+========================================= */
 
-.council-contact {
-  margin-top: 28px;
-  padding: 26px 30px;
+@media (max-width: 640px) {
 
-  display: grid;
-  grid-template-columns: .8fr 1.3fr auto;
-  gap: 35px;
-  align-items: center;
+  /* Hero 整體縮短，減少中間空白 */
+  .hero {
+    min-height: 610px !important;
+  }
 
-  border: 1px solid rgba(112, 52, 66, .13);
-  border-radius: 18px;
+  .hero-inner {
+    min-height: 610px !important;
+    padding: 0 18px !important;
+  }
 
-  background: #fff;
+
+  /* 標題位置 */
+  .hero-copy {
+    top: 55px !important;
+    left: 20px !important;
+    right: 20px !important;
+  }
+
+  .hero-title {
+    font-size: 43px !important;
+    line-height: 1.12 !important;
+  }
+
+  .hero-subtitle {
+    margin-top: 18px !important;
+    font-size: 27px !important;
+  }
+
+
+  /* 手機 Hero 的我要服務按鈕 */
+  .hero-action {
+    display: inline-flex !important;
+    align-items: center !important;
+
+    margin-top: 24px !important;
+    padding: 13px 20px !important;
+
+    border: 1px solid #ecc5ca !important;
+    border-radius: 10px !important;
+
+    background: #fff7f5 !important;
+    color: #703442 !important;
+
+    font-size: 14px !important;
+    font-weight: 800 !important;
+
+    box-shadow:
+      0 8px 22px rgba(112,52,66,.08) !important;
+  }
+
+
+  /* 人物放大 */
+  .hero-person {
+    height: 515px !important;
+
+    right: -58px !important;
+    bottom: -6px !important;
+
+    max-width: none !important;
+
+    object-fit: contain !important;
+    object-position: bottom center !important;
+  }
+
+
+  /* 數字區更靠近人物 */
+  .stats-wrap {
+    margin-top: -30px !important;
+  }
+
+}
+/* =========================================
+   iPad + Desktop 視覺放大版
+   減少空白、人物放大、內容更集中
+========================================= */
+
+
+/* ===== iPad / 小型筆電 ===== */
+@media (min-width: 641px) and (max-width: 1199px) {
+
+  .header-inner,
+  .hero-inner {
+    max-width: 1050px;
+  }
+
+  .hero {
+    min-height: 650px;
+  }
+
+  .hero-inner {
+    min-height: 650px;
+  }
+
+  .hero-copy {
+    top: 125px;
+    left: 35px;
+  }
+
+  .hero-title {
+    font-size: 58px;
+  }
+
+  .hero-subtitle {
+    font-size: 34px;
+  }
+
+  .hero-person {
+    height: 610px;
+    right: -15px;
+    bottom: -4px;
+  }
+
+  .stats-wrap {
+    max-width: 1050px;
+    margin-top: -55px;
+  }
+
+  .section-inner,
+  .about-yoyo-inner,
+  .voter-service-inner,
+  .location-inner {
+    width: min(1050px, 100%);
+  }
+
 }
 
-.council-contact > div:first-child {
+
+/* ===== 桌機版 ===== */
+@media (min-width: 1200px) {
+
+  /* 整體不要拉得太寬 */
+  .header-inner,
+  .hero-inner,
+  .stats-wrap {
+    max-width: 1220px;
+  }
+
+
+  /* Hero 更有存在感 */
+  .hero {
+    min-height: 690px;
+  }
+
+  .hero-inner {
+    min-height: 690px;
+  }
+
+  .hero-copy {
+    top: 135px;
+    left: 40px;
+  }
+
+  .hero-title {
+    font-size: clamp(64px, 5vw, 82px);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(34px, 3vw, 46px);
+  }
+
+  .hero-action {
+    margin-top: 32px;
+    padding: 18px 30px;
+    font-size: 17px;
+  }
+
+
+  /* 人物放大 */
+  .hero-person {
+    height: 710px;
+    right: 35px;
+    bottom: -8px;
+  }
+
+
+  /* 數字區更靠近人物 */
+  .stats-wrap {
+    margin-top: -72px;
+  }
+
+
+  /* 下方內容也集中 */
+  .section-inner {
+    width: min(1180px, 100%);
+  }
+
+  .service-grid {
+    width: min(1180px, 100%);
+  }
+
+  .about-yoyo-inner {
+    width: min(1120px, 100%);
+  }
+
+  .voter-service-inner,
+  .location-inner {
+    width: min(1120px, 100%);
+  }
+}/* 人物再往左 */
+
+@media (min-width: 1200px) {
+  .hero-person {
+    right: 150px !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
+  .hero-person {
+    right: 25px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-person {
+    right: -28px !important;
+  }
+}/* =========================================
+   統計數字白色底線
+========================================= */
+
+.counter {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  isolation: isolate;
+}
+
+.counter::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+
+  width: 78px;
+  height: 14px;
+
+  transform: translateX(-50%);
+
+  background: #ffffff;
+  border-radius: 5px;
+
+  z-index: -1;
+}/* =========================================
+   統計數字白色底線
+========================================= */
+
+.counter {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  isolation: isolate;
+}
+
+.counter::after {
+  content: "";
+  position: absolute;
+
+  left: 50%;
+  bottom: 0px;
+
+  width: 86px;
+  height: 10px;
+
+  transform: translateX(-50%);
+
+  background: rgba(255,255,255,.95);
+  border-radius: 5px;
+
+  z-index: -1;
+}
+/* =========================================
+   認識友友人物 Logo 圓章
+========================================= */
+
+.about-number {
+  width: 100px;
+  height: 100px;
+
+  position: absolute;
+  z-index: 4;
+
+  right: 24px;
+  bottom: 24px;
+
   display: flex;
-  flex-direction: column;
-  gap: 6px;
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px;
+
+  border: 5px solid #f8e9e9;
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 30px rgba(112, 52, 66, .15);
 }
 
-.council-contact > div:first-child span {
-  color: var(--yoyo-pink);
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: .15em;
-}
+.about-number img {
+  width: 100%;
+  height: 100%;
 
-.council-contact > div:first-child strong {
-  color: var(--yoyo-wine);
-  font-size: 18px;
-}
-
-.council-contact p {
-  margin: 0 0 5px;
-
-  color: #78686d;
-  font-size: 14px;
-}
-
-.council-contact > div:nth-child(2) a {
-  color: var(--yoyo-wine);
-  font-size: 14px;
-  font-weight: 800;
-}
-
-.council-contact > a {
-  color: var(--yoyo-wine);
-  font-size: 12px;
-  font-weight: 900;
+  object-fit: contain;
 }
 
 
-/* 手機 */
-@media (max-width: 700px) {
+/* 手機版 */
+@media (max-width: 640px) {
 
-  .council-contact {
-    grid-template-columns: 1fr;
-    gap: 18px;
+  .about-number {
+    width: 82px;
+    height: 82px;
 
-    padding: 24px;
+    right: 16px;
+    bottom: 16px;
+
+    padding: 10px;
   }
 
 }
@@ -2207,13 +2469,6 @@ body {
       <nav class="nav">
 
         <a href="#achievements">服務實績</a>
-
-        <a href="https://lin.ee/QvWUqYBb"
-       target="_blank"
-       rel="noopener noreferrer"
->
-          南投縣議會聯絡
-        </a>
 
         <a href="#about">認識友友</a>
 
@@ -2246,14 +2501,6 @@ body {
           <div class="hero-subtitle">
             讓<strong>草屯・中寮</strong>更好
           </div>
-
-          <aclass="service-button"
-            href="https://lin.ee/QvWUqYBb"
-           target="_blank"
-           rel="noopener noreferrer"
->
-  我需要服務
-</a>
 
         </div>
 
@@ -2346,8 +2593,83 @@ body {
     </section>
 
 
-    <!-- Achievements -->
+    <!-- 認識友友 -->
 
+<section class="about-yoyo" id="about">
+
+  <div class="about-yoyo-inner">
+
+    <div class="about-yoyo-visual reveal">
+
+      <div class="about-pink-shape"></div>
+
+      <img
+        src="images/candidate-transparent.png"
+        alt="林友友"
+      >
+
+     <div class="about-number">
+      <img src="images/logo-mark.svg" alt="林友友 Logo">
+     </div>
+
+    </div>
+
+
+    <div class="about-yoyo-copy reveal">
+
+      <div class="about-kicker">
+        <span></span>
+        ABOUT YOYO
+      </div>
+
+      <h2>
+        認識友友
+        <small>把地方的事，放在心上</small>
+      </h2>
+
+      <p class="about-lead">
+        服務不是一句口號，而是願意走進地方，
+        聽見每一個人的需求，再一起找到解決問題的方法。
+      </p>
+
+      <p>
+        從法律服務、急難救助，到道路交通與地方建設，
+        每一件事情背後，都是一個家庭、一條道路，
+        或一個地方真正需要被看見的問題。
+      </p>
+
+      <div class="about-values">
+
+        <div>
+          <strong>01</strong>
+          <span>傾聽地方</span>
+        </div>
+
+        <div>
+          <strong>02</strong>
+          <span>立即行動</span>
+        </div>
+
+        <div>
+          <strong>03</strong>
+          <span>持續追蹤</span>
+        </div>
+
+      </div>
+
+      <a href="#" class="about-button">
+        更認識友友
+        <span>→</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+    <!-- 服務實績 -->
     <section class="achievements" id="achievements">
 
       <div class="section-inner">
@@ -2522,79 +2844,7 @@ body {
     </div>
 
     </section>
-<section class="about-yoyo" id="about">
 
-  <div class="about-yoyo-inner">
-
-    <div class="about-yoyo-visual reveal">
-
-      <div class="about-pink-shape"></div>
-
-      <img
-        src="images/candidate-transparent.png"
-        alt="林友友"
-      >
-
-      <div class="about-number">
-        <strong>友</strong>
-        <span>LIN YOYO</span>
-      </div>
-
-    </div>
-
-
-    <div class="about-yoyo-copy reveal">
-
-      <div class="about-kicker">
-        <span></span>
-        ABOUT YOYO
-      </div>
-
-      <h2>
-        認識友友
-        <small>把地方的事，放在心上</small>
-      </h2>
-
-      <p class="about-lead">
-        服務不是一句口號，而是願意走進地方，
-        聽見每一個人的需求，再一起找到解決問題的方法。
-      </p>
-
-      <p>
-        從法律服務、急難救助，到道路交通與地方建設，
-        每一件事情背後，都是一個家庭、一條道路，
-        或一個地方真正需要被看見的問題。
-      </p>
-
-      <div class="about-values">
-
-        <div>
-          <strong>01</strong>
-          <span>傾聽地方</span>
-        </div>
-
-        <div>
-          <strong>02</strong>
-          <span>立即行動</span>
-        </div>
-
-        <div>
-          <strong>03</strong>
-          <span>持續追蹤</span>
-        </div>
-
-      </div>
-
-      <a href="#" class="about-button">
-        更認識友友
-        <span>→</span>
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
 <!-- =========================
      選民服務
 ========================= -->
@@ -2687,9 +2937,8 @@ body {
 
   </div>
 
-<!-- =========================
-     服務據點
-========================= -->
+</section>
+
 
 <!-- =========================
      服務據點
@@ -2770,7 +3019,7 @@ body {
 
         <div class="location-card-top">
           <span>02</span>
-          <strong>中寮服務處</strong>
+          <strong>中寮服務站</strong>
         </div>
 
         <div class="location-info">
@@ -2781,17 +3030,8 @@ body {
           </div>
 
           <div>
-            <small>PHONE</small>
-            <p>
-              <a href="tel:+886492693998">
-                （049）269-3998
-              </a>
-            </p>
-          </div>
-
-          <div>
             <small>HOURS</small>
-            <p>08:00–17:00</p>
+            <p>週三-週五 08:00–17:00</p>
           </div>
 
         </div>
@@ -2809,34 +3049,6 @@ body {
       </article>
 
     </div>
-
-
-    <!-- 議會聯絡 -->
-    <div class="council-contact reveal">
-
-      <div>
-        <span>COUNTY COUNCIL</span>
-        <strong>南投縣議會聯絡</strong>
-      </div>
-
-      <div>
-        <p>南投縣南投市南崗二路1號</p>
-
-        <a href="tel:+886492222131">
-          049-222-2131
-        </a>
-      </div>
-
-      <a
-        href="https://www.google.com/maps/search/?api=1&query=南投縣南投市南崗二路1號"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        查看地圖 →
-      </a>
-
-    </div>
-
 
     <!-- 線上聯絡 -->
     <div class="contact-social reveal">
