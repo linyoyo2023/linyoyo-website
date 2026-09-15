@@ -1424,17 +1424,21 @@ body {
 
 /* 背景大「友」 */
 .voter-service::after {
-  content: "友";
+  content: "";
 
   position: absolute;
-  right: -40px;
-  bottom: -170px;
+  right: -35px;
+  bottom: -55px;
 
-  color: rgba(255,255,255,.035);
+  width: 360px;
+  height: 360px;
 
-  font-size: 520px;
-  font-weight: 900;
-  line-height: 1;
+  background-image: url("images/logo-mark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  opacity: .07;
 
   pointer-events: none;
 }
@@ -2452,6 +2456,557 @@ body {
   }
 
 }
+/* =========================================
+   政治獻金｜導覽按鈕
+========================================= */
+
+.donation-button {
+  padding: 15px 23px;
+
+  border: 1px solid var(--yoyo-pink);
+  border-radius: 12px;
+
+  background: transparent;
+  color: var(--yoyo-wine);
+
+  font-weight: 800;
+
+  transition:
+    background .2s ease,
+    color .2s ease,
+    transform .2s ease;
+}
+
+.donation-button:hover {
+  background: var(--yoyo-pink-light);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   政治獻金｜主區塊
+========================================= */
+
+.donation-section {
+  padding: 115px 30px;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(205,120,134,.15),
+      transparent 30%
+    ),
+    #fffaf8;
+}
+
+.donation-inner {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+
+  padding: 75px 80px;
+
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid rgba(205,120,134,.15);
+  border-radius: 32px;
+
+  background: #f8e9e9;
+
+  box-shadow:
+    0 20px 55px rgba(112,52,66,.08);
+}
+
+.donation-inner::after {
+  content: "";
+
+  position: absolute;
+  right: -20px;
+  bottom: -45px;
+
+  width: 280px;
+  height: 280px;
+
+  background-image: url("images/logo-mark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  opacity: .06;
+
+  pointer-events: none;
+}
+
+.donation-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: var(--yoyo-pink);
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .18em;
+}
+
+.donation-kicker span {
+  width: 38px;
+  height: 2px;
+
+  background: var(--yoyo-gold);
+}
+
+.donation-inner h2 {
+  max-width: 760px;
+
+  margin-top: 25px;
+
+  color: var(--yoyo-wine);
+
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.3;
+}
+
+.donation-inner h2 strong {
+  display: block;
+
+  color: var(--yoyo-pink);
+
+  font-weight: 900;
+}
+
+.donation-inner > p {
+  max-width: 650px;
+
+  margin-top: 28px;
+
+  color: #78686d;
+
+  font-size: 15px;
+  line-height: 2;
+}
+
+.donation-main-button {
+  width: max-content;
+
+  margin-top: 36px;
+  padding: 18px 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 55px;
+
+  border-radius: 10px;
+
+  background: var(--yoyo-wine);
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 900;
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.donation-main-button:hover {
+  transform: translateY(-3px);
+  background: var(--yoyo-pink);
+}
+
+.donation-main-button span {
+  font-size: 20px;
+}
+
+.donation-note {
+  margin-top: 15px;
+
+  color: #9c878d;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   手機版
+========================================= */
+
+@media (max-width: 900px) {
+
+  .donation-button {
+    padding: 12px 16px;
+  }
+
+}
+
+
+@media (max-width: 640px) {
+
+  .donation-section {
+    padding: 75px 18px;
+  }
+
+  .donation-inner {
+    padding: 52px 28px;
+
+    border-radius: 24px;
+  }
+
+  .donation-inner::after {
+    right: -50px;
+    bottom: -80px;
+
+    font-size: 260px;
+  }
+
+  .donation-inner h2 {
+    font-size: 38px;
+  }
+
+  .donation-inner > p {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .donation-main-button {
+    width: 100%;
+
+    justify-content: space-between;
+
+    margin-top: 30px;
+  }
+
+}
+/* =========================================
+   服務實績照片
+========================================= */
+
+/* 教育建設 */
+.media-education {
+  background-image: url("images/education.jpg") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+
+/* 社區建設 */
+.media-community {
+  background-image: url("images/community.jpg") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+/* =========================================
+   Hero 人物最終裁切｜只顯示上半身
+========================================= */
+
+/* 電腦版 */
+@media (min-width: 1200px) {
+
+  .hero {
+    overflow: hidden !important;
+  }
+
+  .hero-person {
+    height: 800px !important;
+
+    right: 115px !important;
+    bottom: -150px !important;
+
+    max-width: none !important;
+
+    object-fit: contain !important;
+    object-position: bottom center !important;
+  }
+
+}
+
+
+/* iPad / 小型筆電 */
+@media (min-width: 641px) and (max-width: 1199px) {
+
+  .hero {
+    overflow: hidden !important;
+  }
+
+  .hero-person {
+    height: 720px !important;
+
+    right: 15px !important;
+    bottom: -125px !important;
+
+    max-width: none !important;
+  }
+
+}
+
+
+/* 手機版 */
+@media (max-width: 640px) {
+
+  .hero {
+    overflow: hidden !important;
+  }
+
+  .hero-person {
+    height: 600px !important;
+
+    right: -35px !important;
+    bottom: -125px !important;
+
+    max-width: none !important;
+  }
+
+}
+/* =========================================
+   Hero 人物加大＋隱藏牛仔褲
+========================================= */
+
+@media (min-width: 1200px) {
+
+  .hero {
+    overflow: hidden !important;
+  }
+
+  .hero-person {
+    height: 900px !important;
+
+    right: 90px !important;
+    bottom: -235px !important;
+
+    max-width: none !important;
+
+    object-fit: contain !important;
+    object-position: bottom center !important;
+  }
+
+}
+/* =========================================
+   六大政見
+========================================= */
+
+.policies-section {
+  padding: 125px 30px 135px;
+  background: #fffaf8;
+}
+
+.policies-inner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.policies-heading {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.policies-heading .about-kicker {
+  justify-content: center;
+}
+
+.policies-heading h2 {
+  margin-top: 22px;
+
+  color: var(--yoyo-wine);
+
+  font-size: clamp(46px, 5vw, 66px);
+  line-height: 1.15;
+}
+
+.policies-heading h2 small {
+  display: block;
+
+  margin-top: 14px;
+
+  color: var(--yoyo-pink);
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.policies-heading > p {
+  margin-top: 27px;
+
+  color: #78686d;
+
+  font-size: 15px;
+  line-height: 2;
+}
+
+
+/* 六張卡片 */
+
+.policies-grid {
+  margin-top: 65px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+.policy-card {
+  position: relative;
+
+  min-height: 390px;
+
+  padding: 34px 32px 36px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(205,120,134,.14);
+  border-radius: 26px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 14px 40px rgba(112,52,66,.06);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.policy-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 24px 55px rgba(112,52,66,.12);
+}
+
+
+/* 編號 */
+
+.policy-number {
+  color: var(--yoyo-pink);
+
+  font-size: 12px;
+  font-weight: 900;
+
+  letter-spacing: .12em;
+}
+
+
+/* 圓形中文字 */
+
+.policy-icon {
+  width: 62px;
+  height: 62px;
+
+  margin-top: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--yoyo-pink-light);
+
+  color: var(--yoyo-wine);
+
+  font-size: 24px;
+  font-weight: 900;
+}
+
+
+/* 標題 */
+
+.policy-card h3 {
+  margin-top: 27px;
+
+  color: var(--yoyo-wine);
+
+  font-size: 26px;
+  line-height: 1.35;
+}
+
+.policy-card h3 span {
+  display: block;
+
+  margin-top: 7px;
+
+  color: var(--yoyo-pink);
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+
+/* 內文 */
+
+.policy-card p {
+  margin-top: 21px;
+
+  color: #796a6e;
+
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+
+/* 底部裝飾 */
+
+.policy-card::after {
+  content: "";
+
+  position: absolute;
+
+  right: -35px;
+  bottom: -35px;
+
+  width: 115px;
+  height: 115px;
+
+  border-radius: 50%;
+
+  background: rgba(205,120,134,.055);
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+  .policies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 640px) {
+
+  .policies-section {
+    padding: 85px 18px 95px;
+  }
+
+  .policies-grid {
+    margin-top: 42px;
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .policy-card {
+    min-height: auto;
+
+    padding: 29px 27px 32px;
+  }
+
+  .policies-heading h2 {
+    font-size: 42px;
+  }
+
+}
+#policies {
+  scroll-margin-top: 30px;
+}
 </style>
 </head>
 
@@ -2468,12 +3023,19 @@ body {
 
       <nav class="nav">
 
-        <a href="#achievements">服務實績</a>
+<a href="#policies">六大政見</a>
+<a href="#achievements">服務實績</a>
+<a href="#about">認識友友</a>
+<a href="#location">服務據點</a>
 
-        <a href="#about">認識友友</a>
-
-        <a href="#location">服務據點</a>
-
+        <a
+        class="donation-button"
+          href="https://donate.ecpay.com.tw/home/linyoyo/linyoyo"
+        target="_blank"
+         rel="noopener noreferrer"
+          >
+          我要捐款
+        </a>
         <a class="service-button" href="#service">
           我需要服務
         </a>
@@ -2670,6 +3232,167 @@ body {
 
 
     <!-- 服務實績 -->
+     <!-- =========================
+     六大政見
+========================= -->
+
+<section class="policies-section" id="policies">
+
+  <div class="policies-inner">
+
+    <div class="policies-heading reveal">
+
+      <div class="about-kicker">
+        <span></span>
+        OUR VISION
+      </div>
+
+      <h2>
+        六大政見
+        <small>讓草屯・中寮生活得更好</small>
+      </h2>
+
+      <p>
+        從長照、婦幼、青年、教育文化、運動建設到區域發展，
+        以生活需求為出發點，一步一步打造更安心、更有活力的地方。
+      </p>
+
+    </div>
+
+
+    <div class="policies-grid">
+
+      <!-- 01 -->
+      <article class="policy-card reveal">
+
+        <div class="policy-number">01</div>
+
+        <div class="policy-icon">照</div>
+
+        <h3>
+          完善長照
+          <span>打造高齡友善環境</span>
+        </h3>
+
+        <p>
+          整合長照、健康與社區照顧資源，簡化長照申請流程，
+          讓草屯、中寮的長輩獲得更便利、更安心的照顧，
+          也減輕家庭照顧負擔。
+        </p>
+
+      </article>
+
+
+      <!-- 02 -->
+      <article class="policy-card reveal">
+
+        <div class="policy-number">02</div>
+
+        <div class="policy-icon">家</div>
+
+        <h3>
+          守護婦幼
+          <span>健全家庭支持體系</span>
+        </h3>
+
+        <p>
+          廣設托育資源，減輕育兒負擔，持續關注婦女權益、
+          月經平權及弱勢與特殊境遇家庭，
+          建立更完整的家庭支持與照顧網絡。
+        </p>
+
+      </article>
+
+
+      <!-- 03 -->
+      <article class="policy-card reveal">
+
+        <div class="policy-number">03</div>
+
+        <div class="policy-icon">青</div>
+
+        <h3>
+          支持青年
+          <span>創造在地發展機會</span>
+        </h3>
+
+        <p>
+          串聯就業、創業、數位學習與創客資源，
+          鼓勵青年留鄉、返鄉發展，推動青銀共生，
+          讓年輕人在地方有更多參與及發揮的機會。
+        </p>
+
+      </article>
+
+
+      <!-- 04 -->
+      <article class="policy-card reveal">
+
+        <div class="policy-number">04</div>
+
+        <div class="policy-icon">文</div>
+
+        <h3>
+          深耕教育
+          <span>傳承在地藝文文化</span>
+        </h3>
+
+        <p>
+          支持學校教育、在地藝術家及藝文團隊，
+          推廣藝文展演與文化活動，保存草屯、中寮的地方故事、
+          技藝與特色，讓在地文化持續傳承。
+        </p>
+
+      </article>
+
+
+      <!-- 05 -->
+      <article class="policy-card reveal">
+
+        <div class="policy-number">05</div>
+
+        <div class="policy-icon">動</div>
+
+        <h3>
+          推廣運動
+          <span>建置草屯匹克球場</span>
+        </h3>
+
+        <p>
+          爭取草屯建置完善的匹克球場及運動空間，
+          提供安全、友善的運動環境，推廣全民運動，
+          鼓勵青銀世代共同參與，打造草屯新的休閒運動據點。
+        </p>
+
+      </article>
+
+
+      <!-- 06 -->
+      <article class="policy-card reveal">
+
+        <div class="policy-number">06</div>
+
+        <div class="policy-icon">共</div>
+
+        <h3>
+          整體規劃
+          <span>促進區域共榮</span>
+        </h3>
+
+        <p>
+          推動東草屯交流道周邊整體規劃，
+          完善人行道、自行車道及交通環境，
+          並結合地方產業、觀光與生活機能，
+          在兼顧居民需求及環境品質下，帶動地方穩健發展。
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
     <section class="achievements" id="achievements">
 
       <div class="section-inner">
@@ -2943,8 +3666,48 @@ body {
 <!-- =========================
      服務據點
 ========================= -->
+<!-- =========================
+     政治獻金
+========================= -->
+
+<section class="donation-section" id="donate">
+
+  <div class="donation-inner reveal">
+
+    <div class="donation-kicker">
+      <span></span>
+      SUPPORT YOYO
+    </div>
+
+    <h2>
+      支持友友，
+      <strong>讓服務繼續走得更遠</strong>
+    </h2>
+
+    <p>
+      每一份支持，都是持續走進地方、傾聽需求，
+      並把一件件地方大小事做好、做完的力量。
+    </p>
+
+    <a
+      href="https://donate.ecpay.com.tw/home/linyoyo/linyoyo"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="donation-main-button"
+    >
+      政治獻金專頁
+      <span>→</span>
+    </a>
+
+    <div class="donation-note">
+      點擊後將前往外部政治獻金專頁
+    </div>
+
+    </div>
 
 <section class="location-section" id="location">
+
+</section>
 
   <div class="location-inner">
 
