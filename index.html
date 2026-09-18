@@ -3008,6 +3008,541 @@ body {
 }
 #policies {
   scroll-margin-top: 30px;
+}/* =========================================
+   全站視覺豐富化 V1
+========================================= */
+
+:root {
+  --yoyo-sage: #dfe8df;
+  --yoyo-blue: #e2edf2;
+  --yoyo-lilac: #eee4ef;
+  --yoyo-gold-soft: #f4e8d7;
+  --yoyo-coral-soft: #f3ddda;
+}
+
+
+/* ===== HERO 背景增加層次 ===== */
+
+.hero {
+  background:
+    radial-gradient(
+      circle at 82% 25%,
+      rgba(205,120,134,.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 18% 85%,
+      rgba(227,188,145,.13),
+      transparent 32%
+    ),
+    var(--yoyo-paper);
+}
+
+
+/* ===== 認識友友 ===== */
+
+.about-yoyo {
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(255,255,255,.55),
+      transparent 30%
+    ),
+    #f8e9e9;
+}
+
+
+/* ===== 六大政見 ===== */
+
+.policies-section {
+  background:
+    linear-gradient(
+      180deg,
+      #fffaf8 0%,
+      #faf5f2 100%
+    );
+}
+
+.policy-card:nth-child(1) {
+  background: #f8e4e6;
+}
+
+.policy-card:nth-child(2) {
+  background: #f4e8d7;
+}
+
+.policy-card:nth-child(3) {
+  background: #e2edf2;
+}
+
+.policy-card:nth-child(4) {
+  background: #eee4ef;
+}
+
+.policy-card:nth-child(5) {
+  background: #dfe8df;
+}
+
+.policy-card:nth-child(6) {
+  background: #f3ddda;
+}
+
+.policy-card {
+  border-color: rgba(112,52,66,.08);
+}
+
+.policy-icon {
+  background: rgba(255,255,255,.65);
+  box-shadow:
+    0 8px 22px rgba(112,52,66,.06);
+}
+
+
+/* ===== 服務實績 ===== */
+
+.service-media::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(79,38,49,.20),
+      transparent 55%
+    );
+
+  pointer-events: none;
+}
+
+.service-media span {
+  z-index: 3;
+}
+
+
+/* ===== 我需要服務 ===== */
+
+.voter-service {
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(227,188,145,.10),
+      transparent 30%
+    ),
+    #703442;
+}
+
+
+/* ===== 政治獻金 ===== */
+
+.donation-section {
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf8 0%,
+      #f6ecdf 100%
+    );
+}
+
+.donation-inner {
+  background:
+    linear-gradient(
+      135deg,
+      #f8e9e9 0%,
+      #f3e2d2 100%
+    );
+}
+
+
+/* ===== 服務據點 ===== */
+
+.location-card {
+  background:
+    linear-gradient(
+      145deg,
+      #f7e9e8,
+      #f3dddf
+    );
+}
+
+.location-card-pink {
+  background:
+    linear-gradient(
+      145deg,
+      #f4eadc,
+      #ead8c3
+    );
+}
+
+
+/* ===== 卡片 hover 更有層次 ===== */
+
+.policy-card,
+.service-card-pro,
+.location-card {
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease;
+}
+
+.policy-card:hover,
+.service-card-pro:hover,
+.location-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 24px 60px rgba(112,52,66,.12);
+}
+/* =========================================
+   全站視覺豐富化 V2
+   艷色＋標籤＋指標＋微動畫
+========================================= */
+
+:root {
+  --yoyo-pop: #ff6a3d;
+  --yoyo-pop-soft: #fff0ea;
+}
+
+
+/* =========================================
+   01｜區塊標題增加指標感
+========================================= */
+
+.about-kicker {
+  position: relative;
+}
+
+.about-kicker::after {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  margin-left: 3px;
+
+  border-radius: 50%;
+
+  background: var(--yoyo-pop);
+
+  box-shadow:
+    0 0 0 5px rgba(255,106,61,.10);
+
+  animation: yoyoPulse 2.3s ease-in-out infinite;
+}
+
+
+/* =========================================
+   02｜六大政見加入彩色標籤
+========================================= */
+
+.policy-card {
+  position: relative;
+}
+
+
+/* 標籤共同樣式 */
+
+.policy-card::before {
+  position: absolute;
+
+  top: 25px;
+  right: 25px;
+
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  background: var(--yoyo-pop);
+
+  color: white;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .08em;
+
+  z-index: 2;
+}
+
+
+/* 六個政策標籤 */
+
+.policy-card:nth-child(1)::before {
+  content: "高齡照顧";
+}
+
+.policy-card:nth-child(2)::before {
+  content: "婦幼家庭";
+}
+
+.policy-card:nth-child(3)::before {
+  content: "青年發展";
+}
+
+.policy-card:nth-child(4)::before {
+  content: "教育文化";
+}
+
+.policy-card:nth-child(5)::before {
+  content: "全民運動";
+}
+
+.policy-card:nth-child(6)::before {
+  content: "區域發展";
+}
+
+
+/* =========================================
+   03｜六大政見左上編號更有識別
+========================================= */
+
+.policy-number {
+  width: max-content;
+
+  padding-bottom: 7px;
+
+  border-bottom: 3px solid var(--yoyo-pop);
+
+  color: var(--yoyo-wine);
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   04｜政策圓圈增加艷色小點
+========================================= */
+
+.policy-icon {
+  position: relative;
+}
+
+.policy-icon::after {
+  content: "";
+
+  position: absolute;
+
+  right: -3px;
+  top: -3px;
+
+  width: 15px;
+  height: 15px;
+
+  border: 4px solid white;
+  border-radius: 50%;
+
+  background: var(--yoyo-pop);
+}
+
+
+/* =========================================
+   05｜服務實績照片標籤
+========================================= */
+
+.service-media span {
+  border:
+    1px solid rgba(255,255,255,.65);
+
+  box-shadow:
+    0 7px 20px rgba(79,38,49,.08);
+}
+
+
+/* 橘色小指標 */
+
+.service-meta::before {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+
+  background: var(--yoyo-pop);
+}
+
+
+/* =========================================
+   06｜統計數字增加艷色指標
+========================================= */
+
+.stat {
+  position: relative;
+}
+
+.stat::before {
+  content: "";
+
+  position: absolute;
+
+  top: 18px;
+  left: 50%;
+
+  width: 25px;
+  height: 4px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius: 999px;
+
+  background: var(--yoyo-pop);
+
+  opacity: .85;
+}
+
+
+/* =========================================
+   07｜主要按鈕增加動態箭頭
+========================================= */
+
+.voter-main-button span,
+.donation-main-button span,
+.about-button span,
+.location-link span,
+.service-more span {
+  transition:
+    transform .25s ease;
+}
+
+.voter-main-button:hover span,
+.donation-main-button:hover span,
+.about-button:hover span,
+.location-link:hover span,
+.service-more:hover span {
+  transform:
+    translateX(6px);
+}
+
+
+/* =========================================
+   08｜政治獻金增加亮色標籤
+========================================= */
+
+.donation-kicker::after {
+  content: "SUPPORT";
+
+  margin-left: 10px;
+
+  padding: 6px 11px;
+
+  border-radius: 999px;
+
+  background: var(--yoyo-pop);
+
+  color: white;
+
+  font-size: 9px;
+  letter-spacing: .12em;
+}
+
+
+/* =========================================
+   09｜服務據點加小色塊
+========================================= */
+
+.location-card-top span {
+  min-width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--yoyo-pop);
+  color: white;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   10｜六大政見滑過動畫
+========================================= */
+
+.policy-card .policy-icon {
+  transition:
+    transform .3s cubic-bezier(.2,.8,.2,1);
+}
+
+.policy-card:hover .policy-icon {
+  transform:
+    rotate(-5deg)
+    scale(1.08);
+}
+
+
+/* =========================================
+   11｜標題艷色短線
+========================================= */
+
+.section-heading h2,
+.policies-heading h2,
+.location-heading h2 {
+  position: relative;
+}
+
+.section-heading h2::after,
+.policies-heading h2::after,
+.location-heading h2::after {
+  content: "";
+
+  width: 42px;
+  height: 5px;
+
+  display: block;
+
+  margin: 18px auto 0;
+
+  border-radius: 999px;
+
+  background:
+    var(--yoyo-pop);
+}
+
+.location-heading h2::after {
+  margin-left: 0;
+}
+
+
+/* =========================================
+   12｜微動畫
+========================================= */
+
+@keyframes yoyoPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: .75;
+  }
+
+  50% {
+    transform: scale(1.22);
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================
+   尊重使用者減少動畫設定
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+
 }
 </style>
 </head>
@@ -3065,7 +3600,19 @@ body {
           <div class="hero-subtitle">
             讓<strong>草屯・中寮</strong>更好
           </div>
+          <div class="hero-location-tag">
+           <span class="hero-location-dot"></span>
 
+          <div class="hero-location-text">
+    NANTOU
+    <b>·</b>
+    CAOTUN
+    <b>·</b>
+    ZHONGLIAO
+  </div>
+
+  <span class="hero-location-line"></span>
+</div>
         </div>
 
         <img
