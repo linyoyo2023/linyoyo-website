@@ -3544,6 +3544,429 @@ body {
   }
 
 }
+
+
+/* =========================================
+   HERO 地方識別標籤（補強）
+========================================= */
+.hero-location-tag {
+  width: max-content;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+  border: 1px solid rgba(112,52,66,.10);
+  border-radius: 999px;
+  background: rgba(255,255,255,.72);
+  box-shadow: 0 10px 30px rgba(112,52,66,.06);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+.hero-location-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--yoyo-pop, #ff6a3d);
+  box-shadow: 0 0 0 5px rgba(255,106,61,.12);
+  animation: heroDotPulse 2.2s ease-in-out infinite;
+}
+.hero-location-text {
+  color: var(--yoyo-wine);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .15em;
+  white-space: nowrap;
+}
+.hero-location-text b {
+  margin: 0 4px;
+  color: var(--yoyo-pop, #ff6a3d);
+}
+.hero-location-line {
+  position: relative;
+  width: 42px;
+  height: 2px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(112,52,66,.12);
+}
+.hero-location-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--yoyo-pop, #ff6a3d);
+  animation: heroLineMove 2.4s ease-in-out infinite;
+}
+@keyframes heroDotPulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+@keyframes heroLineMove {
+  0% { left: -100%; }
+  45%,55% { left: 0; }
+  100% { left: 100%; }
+}
+
+/* =========================================
+   影音紀錄｜議會質詢＋地方行腳
+========================================= */
+.video-records {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0 125px;
+  background:
+    radial-gradient(circle at 90% 15%, rgba(255,106,61,.10), transparent 28%),
+    radial-gradient(circle at 15% 90%, rgba(205,120,134,.13), transparent 32%),
+    #2d2321;
+  color: #fff;
+}
+.video-records::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  bottom: -95px;
+  width: 360px;
+  height: 360px;
+  background: url("images/logo-mark.svg") center / contain no-repeat;
+  opacity: .035;
+  pointer-events: none;
+}
+.video-records-inner {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, calc(100% - 60px));
+  margin: 0 auto;
+}
+.video-heading {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: end;
+}
+.video-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ff8a66;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .18em;
+}
+.video-kicker::before {
+  content: "";
+  width: 38px;
+  height: 2px;
+  background: var(--yoyo-gold);
+}
+.video-heading h2 {
+  margin-top: 22px;
+  font-size: clamp(46px, 5vw, 68px);
+  line-height: 1.08;
+  font-weight: 900;
+}
+.video-heading h2 strong {
+  display: block;
+  margin-top: 12px;
+  color: #f3a1ae;
+  font-size: 18px;
+  font-weight: 800;
+}
+.video-heading p {
+  max-width: 520px;
+  margin-top: 25px;
+  color: #d4c6c2;
+  font-size: 15px;
+  line-height: 1.9;
+}
+.video-controls {
+  display: none;
+}
+.video-carousel {
+  position: relative;
+  margin-top: 55px;
+}
+.video-viewport {
+  width: min(100%, 1120px);
+  overflow: hidden;
+  position: relative;
+}
+.video-carousel::before,
+.video-carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 20px;
+  width: 74px;
+  z-index: 4;
+  pointer-events: none;
+}
+.video-carousel::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(43,31,30,.85), rgba(43,31,30,0));
+}
+.video-carousel::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(43,31,30,.85), rgba(43,31,30,0));
+}
+.video-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 4px 140px 20px 2px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-padding-left: 2px;
+  scroll-padding-right: 140px;
+}
+.video-track::-webkit-scrollbar { display: none; }
+.video-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 8;
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+  background: rgba(31,23,23,.88);
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 14px 34px rgba(0,0,0,.34);
+  backdrop-filter: blur(10px);
+  transition: transform .22s ease, background .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+.video-arrow[data-video-prev] {
+  left: 18px;
+  transform: translateY(-50%);
+}
+.video-arrow[data-video-next] {
+  right: 18px;
+  transform: translateY(-50%);
+}
+.video-arrow:hover {
+  background: var(--yoyo-pop);
+  border-color: var(--yoyo-pop);
+  box-shadow: 0 20px 48px rgba(0,0,0,.38);
+}
+.video-arrow:active {
+  transform: translateY(-50%) scale(.96);
+}
+.video-card {
+  flex: 0 0 270px;
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 24px;
+  background: #3a2b2c;
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: 0 18px 45px rgba(0,0,0,.18);
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+.video-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255,106,61,.55);
+  box-shadow: 0 26px 60px rgba(0,0,0,.28);
+}
+.video-thumb {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  background: #201817;
+}
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .45s cubic-bezier(.2,.8,.2,1);
+}
+.video-card:hover .video-thumb img { transform: scale(1.035); }
+.video-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 35% 0 0;
+  background: linear-gradient(to bottom, transparent, rgba(29,19,20,.88));
+  pointer-events: none;
+}
+.video-tag {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  left: 14px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: var(--yoyo-pop);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+.video-play {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 48%;
+  width: 58px;
+  height: 58px;
+  transform: translate(-50%,-50%);
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: 50%;
+  background: rgba(112,52,66,.76);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 32px rgba(0,0,0,.25);
+  font-size: 18px;
+  transition: transform .25s ease, background .25s ease;
+}
+.video-card:hover .video-play {
+  transform: translate(-50%,-50%) scale(1.08);
+  background: var(--yoyo-pop);
+}
+.video-card-copy {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 28px 20px 20px;
+}
+.video-card-copy small {
+  display: block;
+  margin-bottom: 8px;
+  color: #f1b8c0;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+.video-card-copy h3 {
+  font-size: 19px;
+  line-height: 1.45;
+  font-weight: 900;
+}
+.video-card-copy span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  color: #e8d9d6;
+  font-size: 11px;
+  font-weight: 700;
+}
+.video-card-copy span::after {
+  content: "→";
+  color: #ff8a66;
+  font-size: 16px;
+}
+
+/* 影片 Modal */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(20,14,14,.88);
+  backdrop-filter: blur(10px);
+}
+.video-modal.is-open { display: flex; }
+.video-modal-dialog {
+  width: min(980px, 100%);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 24px;
+  background: #1d1716;
+  box-shadow: 0 35px 90px rgba(0,0,0,.45);
+}
+.video-modal-top {
+  min-height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 18px 15px 24px;
+  color: #fff;
+}
+.video-modal-title {
+  font-size: 15px;
+  font-weight: 900;
+}
+.video-modal-close {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,.10);
+  color: #fff;
+  cursor: pointer;
+  font-size: 22px;
+}
+.video-frame-wrap {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  aspect-ratio: 9 / 16;
+  max-height: calc(100vh - 145px);
+  background: #000;
+}
+.video-frame-wrap iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+body.video-modal-open { overflow: hidden; }
+
+@media (min-width: 1200px) {
+  .nav { gap: 30px; font-size: 16px; }
+}
+@media (max-width: 900px) {
+  .video-records { padding: 90px 0 95px; }
+  .video-records-inner { width: min(100% - 36px, 760px); }
+  .video-heading { grid-template-columns: 1fr; gap: 25px; }
+  .video-carousel { margin-top: 38px; }
+  .video-viewport { width: 100%; }
+  .video-track { gap: 16px; padding-right: 110px; scroll-padding-right: 110px; }
+  .video-card { flex-basis: 245px; }
+  .video-arrow { width: 48px; height: 48px; font-size: 21px; }
+  .video-arrow[data-video-prev] { left: 10px; }
+  .video-arrow[data-video-next] { right: 10px; }
+}
+@media (max-width: 640px) {
+  .hero-location-tag { margin-top: 22px; padding: 9px 12px; gap: 9px; }
+  .hero-location-text { font-size: 8px; letter-spacing: .10em; }
+  .hero-location-line { width: 24px; }
+  .video-records { padding: 78px 0 82px; }
+  .video-records-inner { width: calc(100% - 32px); }
+  .video-heading h2 { font-size: 42px; }
+  .video-heading h2 strong { font-size: 16px; }
+  .video-carousel { margin-top: 34px; }
+  .video-track { padding-right: 18vw; }
+  .video-card { flex-basis: 78vw; max-width: 285px; }
+  .video-arrow { display: none; }
+  .video-modal { padding: 12px; }
+  .video-modal-dialog { border-radius: 18px; }
+  .video-modal-top { min-height: 56px; padding: 12px 12px 12px 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-location-dot,
+  .hero-location-line::after { animation: none !important; }
+}
+
 </style>
 </head>
 
@@ -3562,6 +3985,7 @@ body {
 
 <a href="#policies">六大政見</a>
 <a href="#achievements">服務實績</a>
+<a href="#videos">影音紀錄</a>
 <a href="#about">認識友友</a>
 <a href="#location">服務據點</a>
 
@@ -4118,6 +4542,120 @@ body {
     </section>
 
 <!-- =========================
+     影音紀錄
+========================= -->
+<section class="video-records" id="videos">
+  <div class="video-records-inner">
+
+    <div class="video-heading reveal">
+      <div>
+        <div class="video-kicker">VIDEO RECORDS</div>
+        <h2>
+          影音紀錄
+          <strong>從議場到地方，持續替草屯・中寮發聲</strong>
+        </h2>
+        <p>
+          從校園安全、通學環境到運動建設與地方行腳，
+          用影像留下每一次關心、質詢與行動。
+        </p>
+      </div>
+
+    </div>
+
+    <div class="video-carousel reveal">
+      <button class="video-arrow" type="button" data-video-prev aria-label="上一支影片">‹</button>
+
+      <div class="video-viewport">
+        <div class="video-track" id="videoTrack">
+
+          <button class="video-card" type="button"
+            data-video="https://drive.google.com/file/d/1CNKNHUxGCF0vTO-3YryZtxHGFS7s9jgK/preview"
+            data-title="議會質詢｜校園安全">
+            <div class="video-thumb">
+              <img src="images/video-39.jpg" alt="林友友議員質詢校園安全影片封面" loading="lazy">
+              <span class="video-tag">議會質詢</span>
+              <span class="video-play">▶</span>
+              <div class="video-card-copy">
+                <small>39 · CAMPUS SAFETY</small>
+                <h3>校園安全</h3>
+                <span>點擊播放</span>
+              </div>
+            </div>
+          </button>
+
+          <button class="video-card" type="button"
+            data-video="https://drive.google.com/file/d/1mDULkTkNbsU0eZoWsj6LWpNWyB8uyguL/preview"
+            data-title="議會質詢｜通學路線">
+            <div class="video-thumb">
+              <img src="images/video-40.jpg" alt="林友友議員質詢通學路線影片封面" loading="lazy">
+              <span class="video-tag">交通安全</span>
+              <span class="video-play">▶</span>
+              <div class="video-card-copy">
+                <small>40 · SCHOOL ROUTE</small>
+                <h3>通學路線</h3>
+                <span>點擊播放</span>
+              </div>
+            </div>
+          </button>
+
+          <button class="video-card" type="button"
+            data-video="https://drive.google.com/file/d/1HpRMz6MwEFVHa4OrlfFILC4Tzd42KDS2/preview"
+            data-title="議會質詢｜體適能中心">
+            <div class="video-thumb">
+              <img src="images/video-41.jpg" alt="林友友議員質詢體適能中心影片封面" loading="lazy">
+              <span class="video-tag">運動建設</span>
+              <span class="video-play">▶</span>
+              <div class="video-card-copy">
+                <small>41 · FITNESS CENTER</small>
+                <h3>體適能中心</h3>
+                <span>點擊播放</span>
+              </div>
+            </div>
+          </button>
+
+          <button class="video-card" type="button"
+            data-video="https://drive.google.com/file/d/1vhKe-NMaAea3BTe5Gv_5iRngcL3kw35X/preview"
+            data-title="地方行腳｜廟開光儀式">
+            <div class="video-thumb">
+              <img src="images/video-42.jpg" alt="林友友議員參與廟開光儀式影片封面" loading="lazy">
+              <span class="video-tag">地方行腳</span>
+              <span class="video-play">▶</span>
+              <div class="video-card-copy">
+                <small>42 · LOCAL STORIES</small>
+                <h3>廟開光儀式</h3>
+                <span>點擊播放</span>
+              </div>
+            </div>
+          </button>
+
+        </div>
+      </div>
+
+      <button class="video-arrow" type="button" data-video-next aria-label="下一支影片">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- 影片播放視窗 -->
+<div class="video-modal" id="videoModal" aria-hidden="true">
+  <div class="video-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+    <div class="video-modal-top">
+      <div class="video-modal-title" id="videoModalTitle">影音紀錄</div>
+      <button class="video-modal-close" type="button" aria-label="關閉影片">×</button>
+    </div>
+    <div class="video-frame-wrap">
+      <iframe
+        id="videoFrame"
+        src=""
+        title="林友友影音紀錄"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<!-- =========================
      選民服務
 ========================= -->
 
@@ -4230,7 +4768,7 @@ body {
 
     <h2>
       支持友友，
-      <strong>讓服務繼續走得更遠</strong>
+      <strong>讓服務走得更遠</strong>
     </h2>
 
     <p>
@@ -4254,9 +4792,12 @@ body {
 
     </div>
 
-<section class="location-section" id="location">
-
 </section>
+
+<!-- =========================
+     服務據點
+========================= -->
+<section class="location-section" id="location">
 
   <div class="location-inner">
 
@@ -4525,6 +5066,68 @@ body {
 
       counterObserver.observe(counter);
 
+    });
+
+  
+
+    /* =========================
+       影音紀錄：滑動與彈窗播放
+    ========================= */
+    const videoTrack = document.getElementById("videoTrack");
+    const videoModal = document.getElementById("videoModal");
+    const videoFrame = document.getElementById("videoFrame");
+    const videoModalTitle = document.getElementById("videoModalTitle");
+    const videoClose = document.querySelector(".video-modal-close");
+    const videoPrev = document.querySelector("[data-video-prev]");
+    const videoNext = document.querySelector("[data-video-next]");
+
+    function getVideoScrollAmount() {
+      const card = videoTrack?.querySelector(".video-card");
+      return card ? card.getBoundingClientRect().width + 20 : 300;
+    }
+
+    videoPrev?.addEventListener("click", () => {
+      videoTrack.scrollBy({ left: -getVideoScrollAmount(), behavior: "smooth" });
+    });
+
+    videoNext?.addEventListener("click", () => {
+      videoTrack.scrollBy({ left: getVideoScrollAmount(), behavior: "smooth" });
+    });
+
+    function openVideoModal(url, title) {
+      if (!videoModal || !videoFrame) return;
+      videoFrame.src = url;
+      videoModalTitle.textContent = title || "影音紀錄";
+      videoModal.classList.add("is-open");
+      videoModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("video-modal-open");
+      videoClose?.focus();
+    }
+
+    function closeVideoModal() {
+      if (!videoModal || !videoFrame) return;
+      videoModal.classList.remove("is-open");
+      videoModal.setAttribute("aria-hidden", "true");
+      videoFrame.src = "";
+      document.body.classList.remove("video-modal-open");
+    }
+
+    document.querySelectorAll(".video-card[data-video]").forEach(card => {
+      card.addEventListener("click", () => {
+        openVideoModal(card.dataset.video, card.dataset.title);
+      });
+    });
+
+    videoClose?.addEventListener("click", closeVideoModal);
+
+    videoModal?.addEventListener("click", event => {
+      if (event.target === videoModal) closeVideoModal();
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && videoModal?.classList.contains("is-open")) {
+        closeVideoModal();
+      }
     });
 
   </script>
