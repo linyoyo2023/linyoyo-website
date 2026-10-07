@@ -3967,6 +3967,133 @@ body.video-modal-open { overflow: hidden; }
   .hero-location-line::after { animation: none !important; }
 }
 
+
+/* =========================================
+   友友想對您說｜登記影片
+========================================= */
+.yoyo-message-section {
+  padding: 120px 30px;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(255,106,61,.09), transparent 30%),
+    linear-gradient(180deg, #fffaf8 0%, #f8e9e9 100%);
+}
+
+.yoyo-message-inner {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.yoyo-message-heading {
+  max-width: 720px;
+  margin-bottom: 46px;
+}
+
+.yoyo-message-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--yoyo-pop, #ff6a3d);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .18em;
+}
+
+.yoyo-message-kicker::before {
+  content: "";
+  width: 38px;
+  height: 2px;
+  background: var(--yoyo-gold, #e3bc91);
+}
+
+.yoyo-message-heading h2 {
+  margin-top: 20px;
+  color: var(--yoyo-wine, #703442);
+  font-size: clamp(44px, 5vw, 66px);
+  line-height: 1.15;
+}
+
+.yoyo-message-heading h2 small {
+  display: block;
+  margin-top: 14px;
+  color: var(--yoyo-pink, #cd7886);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.yoyo-message-heading p {
+  margin-top: 24px;
+  color: #78686d;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.yoyo-message-video {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(112,52,66,.12);
+  border-radius: 28px;
+  background: #1e1717;
+  box-shadow: 0 24px 65px rgba(112,52,66,.14);
+}
+
+.yoyo-message-video video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: cover;
+  background: #1e1717;
+}
+
+.yoyo-message-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 19px 22px;
+  background: #fff;
+  color: var(--yoyo-wine-dark, #4f2631);
+}
+
+.yoyo-message-caption strong {
+  font-size: 15px;
+}
+
+.yoyo-message-caption span {
+  color: #9a858a;
+  font-size: 12px;
+}
+
+/* 影音紀錄：取消左右箭頭 */
+.video-arrow,
+.video-controls {
+  display: none !important;
+}
+
+@media (max-width: 640px) {
+  .yoyo-message-section {
+    padding: 78px 18px 84px;
+  }
+
+  .yoyo-message-heading {
+    margin-bottom: 30px;
+  }
+
+  .yoyo-message-heading h2 {
+    font-size: 42px;
+  }
+
+  .yoyo-message-video {
+    border-radius: 20px;
+  }
+
+  .yoyo-message-caption {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    padding: 16px 18px;
+  }
+}
+
 </style>
 </head>
 
@@ -4563,9 +4690,7 @@ body.video-modal-open { overflow: hidden; }
     </div>
 
     <div class="video-carousel reveal">
-      <button class="video-arrow" type="button" data-video-prev aria-label="上一支影片">‹</button>
-
-      <div class="video-viewport">
+<div class="video-viewport">
         <div class="video-track" id="videoTrack">
 
           <button class="video-card" type="button"
@@ -4615,7 +4740,7 @@ body.video-modal-open { overflow: hidden; }
 
           <button class="video-card" type="button"
             data-video="https://drive.google.com/file/d/1vhKe-NMaAea3BTe5Gv_5iRngcL3kw35X/preview"
-            data-title="地方行腳｜廟開光儀式">
+            data-title="地方行腳｜開光儀式">
             <div class="video-thumb">
               <img src="images/video-42.jpg" alt="林友友議員參與廟開光儀式影片封面" loading="lazy">
               <span class="video-tag">地方行腳</span>
@@ -4630,9 +4755,7 @@ body.video-modal-open { overflow: hidden; }
 
         </div>
       </div>
-
-      <button class="video-arrow" type="button" data-video-next aria-label="下一支影片">›</button>
-    </div>
+</div>
   </div>
 </section>
 
@@ -4756,6 +4879,46 @@ body.video-modal-open { overflow: hidden; }
 <!-- =========================
      政治獻金
 ========================= -->
+
+
+<!-- =========================
+     友友想對您說
+========================= -->
+<section class="yoyo-message-section" id="message">
+  <div class="yoyo-message-inner">
+
+    <div class="yoyo-message-heading reveal">
+      <div class="yoyo-message-kicker">A MESSAGE FROM YOYO</div>
+
+      <h2>
+        友友想對您說
+        <small>關於這片土地，以及下一步想一起做的事</small>
+      </h2>
+
+      <p>
+        一段話，向一路關心草屯・中寮的朋友說明友友的想法與期待。
+      </p>
+    </div>
+
+    <div class="yoyo-message-video reveal">
+      <video
+        controls
+        playsinline
+        preload="metadata"
+        poster="images/yoyo-message.jpg"
+      >
+        <source src="videos/yoyo-message.mp4" type="video/mp4">
+        您的瀏覽器不支援影片播放。
+      </video>
+
+      <div class="yoyo-message-caption">
+        <strong>友友想對您說</strong>
+        <span>約 1 分鐘｜登記影片</span>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <section class="donation-section" id="donate">
 
