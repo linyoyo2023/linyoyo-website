@@ -1994,57 +1994,71 @@ body.video-modal-open { overflow: hidden; }
 }
 
 
-/* V5.2｜首頁服務實績：操場照片與法律服務人物照 */
-.media-education {
-  background-image: url("images/results/xuguang-sports-center.webp") !important;
-}
-.media-education > .education-running { object-position: center 44%; }
-.media-law {
-  background: #efe1e1 !important;
-  background-image: none !important;
-}
-.media-law > .legal-portrait {
-  object-position: 50% 19%;
-}
-.media-law::before {
-  background: linear-gradient(to top, rgba(75,38,48,.20), transparent 72%) !important;
-}
-.media-law::after {
-  background: linear-gradient(to top, rgba(63,35,42,.26), transparent 60%) !important;
-}
-
-/* V5.3｜服務實績：同一張圖片跨桌機與手機顯示，避免背景圖與封面重疊 */
+/* V5.3.2｜服務實績統一照片：桌機／手機共用相同本地圖片與構圖 */
 .service-media.media-traffic,
 .service-media.media-education,
 .service-media.media-law,
 .service-media.media-help,
 .service-media.media-community,
 .service-media.media-safety {
-  background-image:none!important;
-  background-color:#f5ebed!important;
-  isolation:isolate;
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 16 / 9;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: hidden;
+  background: #f5ebed !important;
+  background-image: none !important;
 }
 .service-media > img.service-cover {
-  position:absolute!important;inset:0!important;
-  display:block!important;width:100%!important;height:100%!important;
-  object-fit:cover!important;object-position:center!important;
-  z-index:0!important;
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  z-index: 0 !important;
 }
-.service-media > span {position:relative;z-index:3}
-.service-media::before{z-index:1;pointer-events:none}
-.service-media::after{z-index:2;pointer-events:none}
-.media-law > img.legal-portrait {object-position:center 22%!important}
-.media-education > img.education-running {object-position:center 44%!important}
-@media(max-width:640px){
-  .service-media {height:auto!important;aspect-ratio:16/10;min-height:0!important;padding:16px!important}
-  .service-media > img.service-cover {width:100%!important;height:100%!important;object-position:center!important}
-  /* 海報型照片手機顯示完整內容，避免文字、人像遭裁切 */
-  .media-traffic > img.service-cover,
-  .media-education > img.service-cover {object-fit:contain!important;background-color:#f5ebed}
-  .media-law > img.legal-portrait {object-fit:cover!important;object-position:center 24%!important}
-  .media-help > img.service-cover,
-  .media-community > img.service-cover,
-  .media-safety > img.service-cover {object-fit:cover!important;object-position:center!important}
+.service-media > span { position: relative; z-index: 3; }
+.service-media::before { z-index: 1; pointer-events: none; }
+.service-media::after { z-index: 2; pointer-events: none; }
+/* 人物頭部和操場起跑照片的焦點，兩種裝置採同一個定位 */
+.media-law > img.legal-portrait {
+  object-position: 50% 22% !important;
+}
+.media-education > img.education-running {
+  object-position: 50% 45% !important;
+}
+/* 缺圖時明確提示，不私自切換成另一張事件照片 */
+.media-education.photo-missing::after {
+  content: "請補上富功國小操場原照";
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  text-align: center;
+  color: #703442;
+  background: #f5ebed;
+  font-weight: 700;
+  font-size: 14px;
+}
+@media (max-width: 640px) {
+  .service-media.media-traffic,
+  .service-media.media-education,
+  .service-media.media-law,
+  .service-media.media-help,
+  .service-media.media-community,
+  .service-media.media-safety {
+    aspect-ratio: 16 / 9 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 16px !important;
+  }
+  .service-media > img.service-cover {
+    object-fit: cover !important;
+  }
 }
 
 </style>
@@ -2467,7 +2481,7 @@ body.video-modal-open { overflow: hidden; }
 
   <article class="service-card-pro reveal">
     <div class="service-media media-traffic">
-      <img class="service-cover" src="images/results/shiguan-road-safety.webp" alt="史館路道路安全改善紀錄照片" loading="lazy" decoding="async">
+      <img class="service-cover" src="images/results/shiguan-road-safety.webp?v=532" alt="史館路道路安全改善紀錄照片" loading="lazy" decoding="async">
       <span>草屯・中寮</span>
     </div>
 
@@ -2493,7 +2507,7 @@ body.video-modal-open { overflow: hidden; }
 
   <article class="service-card-pro reveal">
     <div class="service-media media-education">
-      <img class="service-cover education-running" src="https://www.dropbox.com/scl/fi/cy7nngs9ppsonlwojyk8f/_.jpg?rlkey=9jdi3dieh2p3ctm3xidem6b9v&amp;raw=1" alt="富功國小操場活動照片" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='images/results/xuguang-sports-center.webp';">
+      <img class="service-cover education-running" src="images/results/education-running.jpg?v=532" alt="林友友在富功國小操場準備起跑的照片" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('photo-missing');this.remove();">
       <span>教育</span>
     </div>
 
@@ -2519,7 +2533,7 @@ body.video-modal-open { overflow: hidden; }
 
   <article class="service-card-pro reveal">
     <div class="service-media media-law">
-      <img class="service-cover legal-portrait" src="images/results/legal-service-portrait.jpg" alt="林友友人物形象照" loading="lazy" decoding="async">
+      <img class="service-cover legal-portrait" src="images/results/legal-service-portrait.jpg?v=532" alt="林友友人物形象照" loading="lazy" decoding="async">
       <span>407 件</span>
     </div>
 
@@ -2545,7 +2559,7 @@ body.video-modal-open { overflow: hidden; }
 
   <article class="service-card-pro reveal">
     <div class="service-media media-help">
-      <img class="service-cover" src="images/results/emergency-aid.webp" alt="草屯新庄一路火警協助相關紀錄照片" loading="lazy" decoding="async">
+      <img class="service-cover" src="images/results/emergency-aid.webp?v=532" alt="草屯新庄一路火警協助相關紀錄照片" loading="lazy" decoding="async">
       <span>90 件</span>
     </div>
 
@@ -2571,7 +2585,7 @@ body.video-modal-open { overflow: hidden; }
 
   <article class="service-card-pro reveal">
     <div class="service-media media-community">
-      <img class="service-cover" src="images/results/bishan-baofu-camera.webp" alt="碧山路保福街監視器設置紀錄照片" loading="lazy" decoding="async">
+      <img class="service-cover" src="images/results/bishan-baofu-camera.webp?v=532" alt="碧山路保福街監視器設置紀錄照片" loading="lazy" decoding="async">
       <span>地方服務</span>
     </div>
 
@@ -2597,7 +2611,7 @@ body.video-modal-open { overflow: hidden; }
 
   <article class="service-card-pro reveal">
     <div class="service-media media-safety">
-      <img class="service-cover" src="images/results/firefighter-training.webp" alt="消防員訓練紀錄照片" loading="lazy" decoding="async">
+      <img class="service-cover" src="images/results/firefighter-training.webp?v=532" alt="消防員訓練紀錄照片" loading="lazy" decoding="async">
       <span>公共安全</span>
     </div>
 
