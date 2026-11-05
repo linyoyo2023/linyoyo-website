@@ -371,7 +371,7 @@ video {
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   overflow: hidden;
   border: var(--site-border);
   border-radius: var(--site-radius);
@@ -1689,6 +1689,7 @@ body.video-modal-open { overflow: hidden; }
 
   .stat:nth-child(2)::after { display: none; }
   .stat:nth-child(-n+2) { border-bottom: 1px solid rgba(112,52,66,.10); }
+  .stat:nth-child(3) { grid-column: 1 / -1; }
   .counter { font-size: 43px; }
   .stat-label { font-size: 15px; }
 
@@ -2011,6 +2012,41 @@ body.video-modal-open { overflow: hidden; }
 .media-law::after {
   background: linear-gradient(to top, rgba(63,35,42,.26), transparent 60%) !important;
 }
+
+/* V5.3｜服務實績：同一張圖片跨桌機與手機顯示，避免背景圖與封面重疊 */
+.service-media.media-traffic,
+.service-media.media-education,
+.service-media.media-law,
+.service-media.media-help,
+.service-media.media-community,
+.service-media.media-safety {
+  background-image:none!important;
+  background-color:#f5ebed!important;
+  isolation:isolate;
+}
+.service-media > img.service-cover {
+  position:absolute!important;inset:0!important;
+  display:block!important;width:100%!important;height:100%!important;
+  object-fit:cover!important;object-position:center!important;
+  z-index:0!important;
+}
+.service-media > span {position:relative;z-index:3}
+.service-media::before{z-index:1;pointer-events:none}
+.service-media::after{z-index:2;pointer-events:none}
+.media-law > img.legal-portrait {object-position:center 22%!important}
+.media-education > img.education-running {object-position:center 44%!important}
+@media(max-width:640px){
+  .service-media {height:auto!important;aspect-ratio:16/10;min-height:0!important;padding:16px!important}
+  .service-media > img.service-cover {width:100%!important;height:100%!important;object-position:center!important}
+  /* 海報型照片手機顯示完整內容，避免文字、人像遭裁切 */
+  .media-traffic > img.service-cover,
+  .media-education > img.service-cover {object-fit:contain!important;background-color:#f5ebed}
+  .media-law > img.legal-portrait {object-fit:cover!important;object-position:center 24%!important}
+  .media-help > img.service-cover,
+  .media-community > img.service-cover,
+  .media-safety > img.service-cover {object-fit:cover!important;object-position:center!important}
+}
+
 </style>
 </head>
 
@@ -2151,21 +2187,7 @@ body.video-modal-open { overflow: hidden; }
         </div>
 
 
-        <div class="stat">
 
-          <div class="counter" data-target="8">
-            0
-          </div>
-
-          <div class="stat-label">
-            公益捐贈
-          </div>
-
-          <div class="stat-note">
-            骨灰罈捐贈
-          </div>
-
-        </div>
 
       </div>
 

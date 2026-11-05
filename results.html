@@ -23,18 +23,46 @@
 @media(max-width:900px){.nav a:not(.back-button){display:none}.results-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head{align-items:start;flex-direction:column}.service-summary{align-items:flex-start;flex-direction:column}}
 @media(max-width:640px){.header-inner{width:calc(100% - 32px);min-height:74px}.logo{width:84px;height:58px}.hero{padding:72px 18px 64px}.summary{width:calc(100% - 32px);grid-template-columns:1fr;margin-top:-20px}.summary div{padding:20px}.summary div:not(:last-child):after{top:auto;bottom:0;left:10%;width:80%;height:1px}.summary strong{font-size:31px}.service-summary{width:calc(100% - 32px);margin-top:55px;padding:26px}.service-numbers{width:100%;gap:14px}.service-numbers div{flex:1;min-width:0}.results-section{padding:65px 16px 80px}.filters{overflow-x:auto;flex-wrap:nowrap;padding-bottom:5px}.filter{white-space:nowrap}.results-grid,.results-grid.few,.results-grid.single{max-width:none;grid-template-columns:1fr;gap:18px}.result-media{aspect-ratio:16/10}.result-body p{min-height:0}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.reveal{opacity:1;transform:none;transition:none}}
+
+/* V5.3｜站內成果詳細視窗（手機與桌機共用） */
+.case-dialog{width:min(960px,calc(100% - 32px));max-width:none;max-height:min(90dvh,940px);padding:0;margin:auto;border:0;border-radius:25px;background:#fff;box-shadow:0 26px 85px rgba(31,19,24,.25);overflow:auto;color:var(--wine-dark)}
+.case-dialog::backdrop{background:rgba(27,15,19,.68);backdrop-filter:blur(3px)}
+.case-dialog-layout{position:relative;display:grid;grid-template-columns:1fr 1fr;min-height:440px}
+.case-close{position:absolute;top:15px;right:15px;z-index:2;width:42px;height:42px;border:0;border-radius:50%;background:rgba(255,255,255,.95);color:var(--wine);font-size:28px;cursor:pointer;box-shadow:0 7px 20px rgba(0,0,0,.1)}
+.case-detail-media{min-height:420px;background:#f4e7e7}
+.case-detail-media img{width:100%;height:100%;object-fit:contain;object-position:center}
+.case-detail-body{padding:64px 40px 42px;display:flex;flex-direction:column;align-items:flex-start}
+.case-detail-kicker{color:var(--pink);font-weight:900;font-size:11px;letter-spacing:.12em}
+.case-detail-meta{display:flex;gap:10px;align-items:center;margin-top:23px;color:#9e737e;font-size:12px;font-weight:800}
+.case-detail-body h2{margin-top:12px;font-size:clamp(25px,3vw,35px);line-height:1.45;color:var(--wine)}
+.case-detail-body>p#caseDescription{margin-top:22px;font-size:15px;line-height:2;color:#6f6265}
+.case-detail-footnote{margin-top:26px;color:#a18d91;font-size:12px;line-height:1.85}
+.case-return{margin-top:auto;padding:12px 19px;border:0;border-radius:10px;background:var(--wine);color:#fff;font-weight:800;cursor:pointer}
+body:has(.case-dialog[open]){overflow:hidden}
+@media(max-width:700px){
+  .case-dialog{width:calc(100% - 20px);max-height:94dvh;border-radius:20px}
+  .case-dialog-layout{display:block;min-height:0}
+  .case-detail-media{min-height:0;aspect-ratio:4/3}
+  .case-detail-media img{object-fit:contain}
+  .case-detail-body{padding:27px 23px 30px}
+  .case-detail-meta{margin-top:15px}
+  .case-detail-body h2{font-size:25px}
+  .case-return{margin-top:25px;width:100%}
+  .case-close{top:9px;right:9px}
+}
+
 </style>
 </head>
 <body>
 <header class="header"><div class="header-inner"><a class="logo" href="index.html"><img src="images/logo-lockup.svg" alt="林友友"></a><nav class="nav"><a href="index.html#about">認識友友</a><a href="index.html#policies">六大政見</a><a href="index.html#videos">影音紀錄</a><a href="index.html#location">服務據點</a><a class="back-button" href="index.html">回首頁</a></nav></div></header>
 <main>
-<section class="hero"><div class="hero-inner"><div class="kicker">SERVICE RESULTS</div><h1>完整服務成果</h1><p class="hero-lead">從教育、道路交通、地方建設到社福關懷與公共安全，把地方一件件大小事整理成可以查找、可以追蹤的紀錄。</p><p class="hero-note">第一版先整理代表性案件；後續將持續加入簡報中的其他地方紀錄。</p></div></section>
-<section class="summary"><div><strong>77</strong><span>目前簡報可辨識的地方事件紀錄</span></div><div><strong>5</strong><span>資料分類</span></div><div><strong>2022–2026</strong><span>目前資料期間</span></div></section>
+<section class="hero"><div class="hero-inner"><div class="kicker">SERVICE RESULTS</div><h1>完整服務成果</h1><p class="hero-lead">從教育、道路交通、地方建設到社福關懷與公共安全，把地方一件件大小事整理成可以查找、可以追蹤的紀錄。</p><p class="hero-note">精選草屯・中寮地方服務與建設事件，持續整理更新。</p></div></section>
+<section class="summary"><div><strong>14</strong><span>已整理公開的代表事件</span></div><div><strong>5</strong><span>資料分類</span></div><div><strong>2023–2026</strong><span>本頁紀錄期間</span></div></section>
 <section class="service-summary" id="service-summary"><div><h2>服務量能</h2><p>首頁既有統計先保留為服務量能；個案資料會持續整理與匿名化。</p></div><div class="service-numbers"><div><strong>407</strong><span>法律服務｜截至115年8月</span></div><div><strong>90</strong><span>急難救助｜草屯72・中寮18</span></div></div></section>
-<section class="results-section"><div class="results-inner"><div class="section-head"><div><div class="kicker">SELECTED CASES</div><h2>代表成果紀錄</h2></div><p>第一版先選出 14 筆較具體、容易理解的案件。這裡呈現的是簡報中可以直接確認的日期、事件名稱與照片；沒有資料支持的因果關係不另外擴寫。</p></div>
+<section class="results-section" id="results"><div class="results-inner"><div class="section-head"><div><div class="kicker">SELECTED CASES</div><h2>代表成果紀錄</h2></div><p>目前展示 14 筆代表性地方事件。點選照片或「查看詳情」，即可在本站查看照片、日期與事件說明。</p></div>
 <div class="filters" aria-label="成果分類"><button class="filter active" data-filter="all">全部</button><button class="filter" data-filter="education">教育</button><button class="filter" data-filter="traffic">道路交通</button><button class="filter" data-filter="community">地方建設</button><button class="filter" data-filter="welfare">社福關懷</button><button class="filter" data-filter="safety">公共安全</button></div>
-<div class="results-grid" id="resultsGrid"><article class="result-card reveal" data-category="education" data-year="2024">
-      <a class="result-media" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_203" target="_blank" rel="noopener noreferrer" aria-label="查看 教師文康活動費每人 3 千元 原始紀錄">
+<div class="results-grid" id="resultsGrid"><article class="result-card reveal" data-case="case-01" data-category="education" data-year="2024">
+      <a class="result-media" href="results.html?case=case-01#results" data-open-case="case-01" aria-label="查看 教師文康活動費每人 3 千元 詳情">
         <img src="images/results/teacher-welfare.webp" alt="教師文康活動費每人 3 千元" loading="lazy" decoding="async">
         <span class="result-status">爭取</span>
       </a>
@@ -42,10 +70,10 @@
         <div class="result-meta"><span>教育</span><i></i><time>2024.12.27</time></div>
         <h3>教師文康活動費每人 3 千元</h3>
         <p>爭取教師文康活動費，持續關注第一線教育工作者的支持與福利。</p>
-        <a class="result-link" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_203" target="_blank" rel="noopener noreferrer">查看紀錄 <span>↗</span></a>
+        <a class="result-link" href="results.html?case=case-01#results" data-open-case="case-01">查看詳情 <span>→</span></a>
       </div>
-    </article><article class="result-card reveal" data-category="education" data-year="2023">
-      <a class="result-media" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.had74278fb843c71_1_219" target="_blank" rel="noopener noreferrer" aria-label="查看 旭光高中全民運動館 原始紀錄">
+    </article><article class="result-card reveal" data-case="case-02" data-category="education" data-year="2023">
+      <a class="result-media" href="results.html?case=case-02#results" data-open-case="case-02" aria-label="查看 旭光高中全民運動館 詳情">
         <img src="images/results/xuguang-sports-center.webp" alt="旭光高中全民運動館" loading="lazy" decoding="async">
         <span class="result-status">議會質詢</span>
       </a>
@@ -53,10 +81,10 @@
         <div class="result-meta"><span>教育</span><i></i><time>2023.05.31</time></div>
         <h3>旭光高中全民運動館</h3>
         <p>針對旭光高中設置全民運動館議題提出質詢，關注校園與全民運動空間。</p>
-        <a class="result-link" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.had74278fb843c71_1_219" target="_blank" rel="noopener noreferrer">查看紀錄 <span>↗</span></a>
+        <a class="result-link" href="results.html?case=case-02#results" data-open-case="case-02">查看詳情 <span>→</span></a>
       </div>
-    </article><article class="result-card reveal" data-category="traffic" data-year="2025">
-      <a class="result-media" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_195" target="_blank" rel="noopener noreferrer" aria-label="查看 投 9 線史館路安全改善 原始紀錄">
+    </article><article class="result-card reveal" data-case="case-03" data-category="traffic" data-year="2025">
+      <a class="result-media" href="results.html?case=case-03#results" data-open-case="case-03" aria-label="查看 投 9 線史館路安全改善 詳情">
         <img src="images/results/shiguan-road-safety.webp" alt="投 9 線史館路安全改善" loading="lazy" decoding="async">
         <span class="result-status">道路改善</span>
       </a>
@@ -64,10 +92,10 @@
         <div class="result-meta"><span>道路交通</span><i></i><time>2025.01.06</time></div>
         <h3>投 9 線史館路安全改善</h3>
         <p>史館路 156 號前路段改善反光防撞桿、白色安全線並增設路燈。</p>
-        <a class="result-link" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_195" target="_blank" rel="noopener noreferrer">查看紀錄 <span>↗</span></a>
+        <a class="result-link" href="results.html?case=case-03#results" data-open-case="case-03">查看詳情 <span>→</span></a>
       </div>
-    </article><article class="result-card reveal" data-category="traffic" data-year="2024">
-      <a class="result-media" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_210" target="_blank" rel="noopener noreferrer" aria-label="查看 台 14 線行人庇護島會勘 原始紀錄">
+    </article><article class="result-card reveal" data-case="case-04" data-category="traffic" data-year="2024">
+      <a class="result-media" href="results.html?case=case-04#results" data-open-case="case-04" aria-label="查看 台 14 線行人庇護島會勘 詳情">
         <img src="images/results/route14-pedestrian-island.webp" alt="台 14 線行人庇護島會勘" loading="lazy" decoding="async">
         <span class="result-status">現場會勘</span>
       </a>
@@ -75,10 +103,10 @@
         <div class="result-meta"><span>道路交通</span><i></i><time>2024.12.19</time></div>
         <h3>台 14 線行人庇護島會勘</h3>
         <p>博愛路、新豐路口行人庇護島現場會勘，關注行人通行與路口安全。</p>
-        <a class="result-link" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_210" target="_blank" rel="noopener noreferrer">查看紀錄 <span>↗</span></a>
+        <a class="result-link" href="results.html?case=case-04#results" data-open-case="case-04">查看詳情 <span>→</span></a>
       </div>
-    </article><article class="result-card reveal" data-category="traffic" data-year="2024">
-      <a class="result-media" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_282" target="_blank" rel="noopener noreferrer" aria-label="查看 中寮環鄉道路拓寬完工 原始紀錄">
+    </article><article class="result-card reveal" data-case="case-05" data-category="traffic" data-year="2024">
+      <a class="result-media" href="results.html?case=case-05#results" data-open-case="case-05" aria-label="查看 中寮環鄉道路拓寬完工 詳情">
         <img src="images/results/zhongliao-ring-road.webp" alt="中寮環鄉道路拓寬完工" loading="lazy" decoding="async">
         <span class="result-status">完工</span>
       </a>
@@ -86,10 +114,10 @@
         <div class="result-meta"><span>道路交通</span><i></i><time>2024.01.14</time></div>
         <h3>中寮環鄉道路拓寬完工</h3>
         <p>投 22 接投 26 線中寮環鄉道路拓寬改善工程完成。</p>
-        <a class="result-link" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_282" target="_blank" rel="noopener noreferrer">查看紀錄 <span>↗</span></a>
+        <a class="result-link" href="results.html?case=case-05#results" data-open-case="case-05">查看詳情 <span>→</span></a>
       </div>
-    </article><article class="result-card reveal" data-category="traffic" data-year="2023">
-      <a class="result-media" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.had74278fb843c71_1_228" target="_blank" rel="noopener noreferrer" aria-label="查看 草屯建興街開通 原始紀錄">
+    </article><article class="result-card reveal" data-case="case-06" data-category="traffic" data-year="2023">
+      <a class="result-media" href="results.html?case=case-06#results" data-open-case="case-06" aria-label="查看 草屯建興街開通 詳情">
         <img src="images/results/jianxing-street.webp" alt="草屯建興街開通" loading="lazy" decoding="async">
         <span class="result-status">開通</span>
       </a>
@@ -97,10 +125,10 @@
         <div class="result-meta"><span>道路交通</span><i></i><time>2023.05.27</time></div>
         <h3>草屯建興街開通</h3>
         <p>建興街開通紀錄，改善地方道路連結與居民通行。</p>
-        <a class="result-link" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.had74278fb843c71_1_228" target="_blank" rel="noopener noreferrer">查看紀錄 <span>↗</span></a>
+        <a class="result-link" href="results.html?case=case-06#results" data-open-case="case-06">查看詳情 <span>→</span></a>
       </div>
-    </article><article class="result-card reveal" data-category="community" data-year="2026">
-      <a class="result-media" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.p" target="_blank" rel="noopener noreferrer" aria-label="查看 碧山路保福街路口監視器安裝 原始紀錄">
+    </article><article class="result-card reveal" data-case="case-07" data-category="community" data-year="2026">
+      <a class="result-media" href="results.html?case=case-07#results" data-open-case="case-07" aria-label="查看 碧山路保福街路口監視器安裝 詳情">
         <img src="images/results/bishan-baofu-camera.webp" alt="碧山路保福街路口監視器安裝" loading="lazy" decoding="async">
         <span class="result-status">完成</span>
       </a>
@@ -108,10 +136,10 @@
         <div class="result-meta"><span>地方建設</span><i></i><time>2026.10.12</time></div>
         <h3>碧山路保福街路口監視器安裝</h3>
         <p>碧山路、保福街路口完成監視器安裝，補強社區公共安全。</p>
-        <a class="result-link" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.p" target="_blank" rel="noopener noreferrer">查看紀錄 <span>↗</span></a>
+        <a class="result-link" href="results.html?case=case-07#results" data-open-case="case-07">查看詳情 <span>→</span></a>
       </div>
-    </article><article class="result-card reveal" data-category="community" data-year="2026">
-      <a class="result-media" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_9" target="_blank" rel="noopener noreferrer" aria-label="查看 御史里增設護欄 原始紀錄">
+    </article><article class="result-card reveal" data-case="case-08" data-category="community" data-year="2026">
+      <a class="result-media" href="results.html?case=case-08#results" data-open-case="case-08" aria-label="查看 御史里增設護欄 詳情">
         <img src="images/results/yushi-guardrail.webp" alt="御史里增設護欄" loading="lazy" decoding="async">
         <span class="result-status">安全改善</span>
       </a>
@@ -119,10 +147,10 @@
         <div class="result-meta"><span>地方建設</span><i></i><time>2026.07.16</time></div>
         <h3>御史里增設護欄</h3>
         <p>玉屏路、長壽巷附近增設護欄，改善居民日常通行安全。</p>
-        <a class="result-link" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_9" target="_blank" rel="noopener noreferrer">查看紀錄 <span>↗</span></a>
+        <a class="result-link" href="results.html?case=case-08#results" data-open-case="case-08">查看詳情 <span>→</span></a>
       </div>
-    </article><article class="result-card reveal" data-category="community" data-year="2025">
-      <a class="result-media" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_80" target="_blank" rel="noopener noreferrer" aria-label="查看 復興里碧山路巷道路面鋪平 原始紀錄">
+    </article><article class="result-card reveal" data-case="case-09" data-category="community" data-year="2025">
+      <a class="result-media" href="results.html?case=case-09#results" data-open-case="case-09" aria-label="查看 復興里碧山路巷道路面鋪平 詳情">
         <img src="images/results/fuxing-road-surface.webp" alt="復興里碧山路巷道路面鋪平" loading="lazy" decoding="async">
         <span class="result-status">路面改善</span>
       </a>
@@ -130,10 +158,10 @@
         <div class="result-meta"><span>地方建設</span><i></i><time>2025.04.22</time></div>
         <h3>復興里碧山路巷道路面鋪平</h3>
         <p>碧山路 747-1 號至 40 號巷道路面鋪平，改善巷道通行品質。</p>
-        <a class="result-link" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_80" target="_blank" rel="noopener noreferrer">查看紀錄 <span>↗</span></a>
+        <a class="result-link" href="results.html?case=case-09#results" data-open-case="case-09">查看詳情 <span>→</span></a>
       </div>
-    </article><article class="result-card reveal" data-category="welfare" data-year="2024">
-      <a class="result-media" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_242" target="_blank" rel="noopener noreferrer" aria-label="查看 中寮三處關懷據點、草屯失智據點 原始紀錄">
+    </article><article class="result-card reveal" data-case="case-10" data-category="welfare" data-year="2024">
+      <a class="result-media" href="results.html?case=case-10#results" data-open-case="case-10" aria-label="查看 中寮三處關懷據點、草屯失智據點 詳情">
         <img src="images/results/care-dementia-sites.webp" alt="中寮三處關懷據點、草屯失智據點" loading="lazy" decoding="async">
         <span class="result-status">照顧據點</span>
       </a>
@@ -141,10 +169,10 @@
         <div class="result-meta"><span>社福關懷</span><i></i><time>2024.05.11</time></div>
         <h3>中寮三處關懷據點、草屯失智據點</h3>
         <p>中寮三個社區關懷據點及草屯一個失智據點相關地方紀錄。</p>
-        <a class="result-link" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_242" target="_blank" rel="noopener noreferrer">查看紀錄 <span>↗</span></a>
+        <a class="result-link" href="results.html?case=case-10#results" data-open-case="case-10">查看詳情 <span>→</span></a>
       </div>
-    </article><article class="result-card reveal" data-category="community" data-year="2023">
-      <a class="result-media" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.had74278fb843c71_1_237" target="_blank" rel="noopener noreferrer" aria-label="查看 草屯青年住宅預定地勘查 原始紀錄">
+    </article><article class="result-card reveal" data-case="case-11" data-category="community" data-year="2023">
+      <a class="result-media" href="results.html?case=case-11#results" data-open-case="case-11" aria-label="查看 草屯青年住宅預定地勘查 詳情">
         <img src="images/results/youth-housing-site.webp" alt="草屯青年住宅預定地勘查" loading="lazy" decoding="async">
         <span class="result-status">現場勘查</span>
       </a>
@@ -152,10 +180,10 @@
         <div class="result-meta"><span>地方建設</span><i></i><time>2023.05.26</time></div>
         <h3>草屯青年住宅預定地勘查</h3>
         <p>前往草屯鎮青年住宅預定地勘查，關注青年居住與地方發展。</p>
-        <a class="result-link" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.had74278fb843c71_1_237" target="_blank" rel="noopener noreferrer">查看紀錄 <span>↗</span></a>
+        <a class="result-link" href="results.html?case=case-11#results" data-open-case="case-11">查看詳情 <span>→</span></a>
       </div>
-    </article><article class="result-card reveal" data-category="community" data-year="2023">
-      <a class="result-media" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.had74278fb843c71_1_329" target="_blank" rel="noopener noreferrer" aria-label="查看 草屯親子公園動土 原始紀錄">
+    </article><article class="result-card reveal" data-case="case-12" data-category="community" data-year="2023">
+      <a class="result-media" href="results.html?case=case-12#results" data-open-case="case-12" aria-label="查看 草屯親子公園動土 詳情">
         <img src="images/results/family-park.webp" alt="草屯親子公園動土" loading="lazy" decoding="async">
         <span class="result-status">建設進度</span>
       </a>
@@ -163,10 +191,10 @@
         <div class="result-meta"><span>地方建設</span><i></i><time>2023.03.17</time></div>
         <h3>草屯親子公園動土</h3>
         <p>草屯親子公園動土紀錄，持續關注親子與公共休憩空間。</p>
-        <a class="result-link" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.had74278fb843c71_1_329" target="_blank" rel="noopener noreferrer">查看紀錄 <span>↗</span></a>
+        <a class="result-link" href="results.html?case=case-12#results" data-open-case="case-12">查看詳情 <span>→</span></a>
       </div>
-    </article><article class="result-card reveal" data-category="safety" data-year="2025">
-      <a class="result-media" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_142" target="_blank" rel="noopener noreferrer" aria-label="查看 消防隊防火巷宣導 原始紀錄">
+    </article><article class="result-card reveal" data-case="case-13" data-category="safety" data-year="2025">
+      <a class="result-media" href="results.html?case=case-13#results" data-open-case="case-13" aria-label="查看 消防隊防火巷宣導 詳情">
         <img src="images/results/fire-lane-awareness.webp" alt="消防隊防火巷宣導" loading="lazy" decoding="async">
         <span class="result-status">防火宣導</span>
       </a>
@@ -174,10 +202,10 @@
         <div class="result-meta"><span>公共安全</span><i></i><time>2025.11.03</time></div>
         <h3>消防隊防火巷宣導</h3>
         <p>與消防單位進行防火巷宣導，提升社區防災與公共安全意識。</p>
-        <a class="result-link" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_142" target="_blank" rel="noopener noreferrer">查看紀錄 <span>↗</span></a>
+        <a class="result-link" href="results.html?case=case-13#results" data-open-case="case-13">查看詳情 <span>→</span></a>
       </div>
-    </article><article class="result-card reveal" data-category="safety" data-year="2024">
-      <a class="result-media" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_275" target="_blank" rel="noopener noreferrer" aria-label="查看 消防節與消防員訓練 原始紀錄">
+    </article><article class="result-card reveal" data-case="case-14" data-category="safety" data-year="2024">
+      <a class="result-media" href="results.html?case=case-14#results" data-open-case="case-14" aria-label="查看 消防節與消防員訓練 詳情">
         <img src="images/results/firefighter-training.webp" alt="消防節與消防員訓練" loading="lazy" decoding="async">
         <span class="result-status">警消支持</span>
       </a>
@@ -185,11 +213,64 @@
         <div class="result-meta"><span>公共安全</span><i></i><time>2024.01.19</time></div>
         <h3>消防節與消防員訓練</h3>
         <p>消防節期間參與消防員訓練紀錄，關注第一線消防工作與安全需求。</p>
-        <a class="result-link" href="https://docs.google.com/presentation/d/1g-yJop0MJ-016TMVCMtaMwFVRsRyuz0Nyq6P430bD00/edit#slide=id.h297d8f27c6d26a8a_0_275" target="_blank" rel="noopener noreferrer">查看紀錄 <span>↗</span></a>
+        <a class="result-link" href="results.html?case=case-14#results" data-open-case="case-14">查看詳情 <span>→</span></a>
       </div>
-    </article></div><div class="empty" id="emptyState">這個分類目前尚未整理代表案例。</div><div class="source-note">資料來源：你整理的 Google Slides「事件照片整理」。卡片圖片已改為網站本地素材，避免 Google 臨時圖片網址失效；事件名稱與日期依簡報整理，「問題／行動／結果」會等有更完整紀錄後再補。</div></div></section>
+    </article></div><div class="empty" id="emptyState">這個分類目前尚未整理代表案例。</div><div class="source-note">本頁整理公開服務與地方事件紀錄，依實際事件日期、主題及照片呈現；相關進度如有更新，將逐步補充。</div></div></section>
 </main>
+
+<!-- 代表成果詳細內容：完全在本站顯示，不開啟內部文件 -->
+<dialog id="caseDialog" class="case-dialog" aria-labelledby="caseTitle">
+  <div class="case-dialog-layout">
+    <button class="case-close" type="button" data-close-case aria-label="關閉詳細內容">×</button>
+    <div class="case-detail-media"><img id="casePhoto" src="" alt="" loading="eager"></div>
+    <div class="case-detail-body">
+      <div class="case-detail-kicker">SERVICE RECORD · 服務紀錄</div>
+      <div class="case-detail-meta"><span id="caseCategory"></span><span aria-hidden="true">·</span><time id="caseDate"></time></div>
+      <h2 id="caseTitle"></h2>
+      <p id="caseDescription"></p>
+      <p class="case-detail-footnote">此頁展示目前可供公開閱讀的事件摘要及照片。詳細辦理進度如有更新，將持續補充。</p>
+      <button type="button" class="case-return" data-close-case>返回服務成果列表</button>
+    </div>
+  </div>
+</dialog>
+
 <script>
 const buttons=[...document.querySelectorAll('.filter')];const cards=[...document.querySelectorAll('.result-card')];const empty=document.getElementById('emptyState');function applyFilter(filter){let count=0;cards.forEach(card=>{const show=filter==='all'||card.dataset.category===filter;card.classList.toggle('is-hidden',!show);if(show)count++;});const grid=document.getElementById('resultsGrid');grid.classList.toggle('few',count===2);grid.classList.toggle('single',count===1);empty.style.display=count?'none':'block';buttons.forEach(b=>b.classList.toggle('active',b.dataset.filter===filter));}buttons.forEach(btn=>btn.addEventListener('click',()=>{const f=btn.dataset.filter;applyFilter(f);const u=new URL(location.href);if(f==='all')u.searchParams.delete('category');else u.searchParams.set('category',f);history.replaceState(null,'',u);}));const initial=new URLSearchParams(location.search).get('category')||'all';if(buttons.some(b=>b.dataset.filter===initial))applyFilter(initial);else applyFilter('all');const ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');ob.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>ob.observe(el));
+
+// V5.3: 公開成果改在本站內顯示，不導向內部資料來源。
+const caseDialog=document.getElementById('caseDialog');
+let caseTrigger=null;
+function openCase(caseId,{updateUrl=true}={}){
+  const card=cards.find(c=>c.dataset.case===caseId);
+  if(!card)return;
+  const photo=card.querySelector('.result-media img');
+  const title=card.querySelector('.result-body h3');
+  const intro=card.querySelector('.result-body p');
+  const cat=card.querySelector('.result-meta span');
+  const date=card.querySelector('.result-meta time');
+  document.getElementById('casePhoto').src=photo.getAttribute('src');
+  document.getElementById('casePhoto').alt=photo.alt;
+  document.getElementById('caseTitle').textContent=title.textContent.trim();
+  document.getElementById('caseDescription').textContent=intro.textContent.trim();
+  document.getElementById('caseCategory').textContent=cat.textContent.trim();
+  document.getElementById('caseDate').textContent=date.textContent.trim();
+  if(!caseDialog.open)caseDialog.showModal();
+  if(updateUrl){const u=new URL(location.href);u.searchParams.set('case',caseId);history.pushState({case:caseId},'',u);}
+}
+function closeCase({updateUrl=true}={}){
+  if(caseDialog.open)caseDialog.close();
+  if(updateUrl){const u=new URL(location.href);u.searchParams.delete('case');history.replaceState(null,'',u);}
+  if(caseTrigger){caseTrigger.focus({preventScroll:true});caseTrigger=null;}
+}
+document.querySelectorAll('[data-open-case]').forEach(link=>link.addEventListener('click',ev=>{
+  ev.preventDefault();caseTrigger=link;openCase(link.dataset.openCase);
+}));
+document.querySelectorAll('[data-close-case]').forEach(btn=>btn.addEventListener('click',()=>closeCase()));
+caseDialog.addEventListener('click',ev=>{if(ev.target===caseDialog)closeCase();});
+caseDialog.addEventListener('close',()=>{const u=new URL(location.href);if(u.searchParams.has('case')){u.searchParams.delete('case');history.replaceState(null,'',u);}});
+window.addEventListener('popstate',()=>{const id=new URLSearchParams(location.search).get('case');if(id)openCase(id,{updateUrl:false});else closeCase({updateUrl:false});});
+const initialCase=new URLSearchParams(location.search).get('case');
+if(initialCase)openCase(initialCase,{updateUrl:false});
+
 </script>
 </body></html>
