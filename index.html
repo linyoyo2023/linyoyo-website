@@ -1845,40 +1845,30 @@ body.video-modal-open { overflow: hidden; }
 }
 
 
-/* =========================================
-   Dropbox 原圖優化 V4
-   Dropbox 公開原圖優先 + 網站本地圖片備援
-========================================= */
-.media-traffic {
-  background-image:
-    url("https://www.dropbox.com/scl/fi/xilt84zut30w7z1sytmdl/.jpg?rlkey=5v01vn9aynvu0juuyjdix8654&raw=1"),
-    url("images/results/shiguan-road-safety.webp");
+/* V5.1｜成果照片以網站本地素材為準，不依賴外部 Dropbox 圖片網址 */
+.media-traffic { background-image: url("images/results/shiguan-road-safety.webp"); }
+.media-education { background-image: url("images/results/xuguang-sports-center.webp"); }
+.media-help { background-image: url("images/results/emergency-aid.webp"); }
+.media-community { background-image: url("images/results/bishan-baofu-camera.webp"); }
+.media-safety { background-image: url("images/results/firefighter-training.webp"); }
+.media-law { background-image: none; }
+.media-law .service-ghost-number { color: rgba(112,52,66,.20); }
+
+.service-media { position: relative; isolation: isolate; background-color: #f0d9de; }
+.service-media > .service-cover {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
 }
-.media-education {
-  background-image:
-    url("https://www.dropbox.com/scl/fi/cy7nngs9ppsonlwojyk8f/_.jpg?rlkey=9jdi3dieh2p3ctm3xidem6b9v&raw=1"),
-    url("images/results/xuguang-sports-center.webp");
-}
-.media-community {
-  background-image:
-    url("https://www.dropbox.com/scl/fi/sccylho7rqh4rdwk5ch4q/.jpg?rlkey=7s4in18os7n2bblwhs9l57w1d&raw=1"),
-    url("images/results/bishan-baofu-camera.webp");
-}
-.media-law {
-  background-image:
-    linear-gradient(to top, rgba(74,34,44,.46), rgba(74,34,44,.04) 66%),
-    url("https://www.dropbox.com/scl/fi/mezxb33km5oe45n0nr982/.jpg?rlkey=rziu76bgarznzpdtnp0rg8jbf&raw=1"),
-    linear-gradient(135deg, #f5e7e6, #ce7d8a);
-  background-size: cover;
-  background-position: center;
-}
-.media-law .service-ghost-number {
-  color: rgba(255,255,255,.30) !important;
-  text-shadow: 0 1px 14px rgba(0,0,0,.08);
-}
-.media-law span {
-  background: rgba(255,255,255,.92) !important;
-}
+.service-media::before { z-index: 1; pointer-events: none; }
+.service-media::after { z-index: 2; }
+.service-media > span { position: relative; z-index: 3; }
+.media-law .service-ghost-number { z-index: 1; }
 
 /* 認識友友：增加落款感，但不偽造親筆簽名 */
 .about-signoff {
@@ -1907,15 +1897,8 @@ body.video-modal-open { overflow: hidden; }
   letter-spacing: .04em;
 }
 
-/* 友友想對您說：尾端加入柔和人物感背景備援 */
-.yoyo-message-section {
-  background-image:
-    linear-gradient(rgba(255,250,248,.92), rgba(255,250,248,.96)),
-    url("https://www.dropbox.com/scl/fi/niqkctsuyq4lmlwld3tag/.jpg?rlkey=t7lod1ppn5i36jk76zrju4n3n&raw=1");
-  background-size: cover;
-  background-position: center;
-}
-
+/* 友友想對您說：使用本站配色，避免第三方背景資源載入問題 */
+.yoyo-message-section { background: linear-gradient(180deg, #fffaf8 0%, #f8e9e9 100%); }
 
 /* =========================================
    V5｜地方生活報摘錄與林友友親筆簽名
@@ -2009,6 +1992,25 @@ body.video-modal-open { overflow: hidden; }
   .yoyo-letter-excerpt p { font-size: 13px; }
 }
 
+
+/* V5.2｜首頁服務實績：操場照片與法律服務人物照 */
+.media-education {
+  background-image: url("images/results/xuguang-sports-center.webp") !important;
+}
+.media-education > .education-running { object-position: center 44%; }
+.media-law {
+  background: #efe1e1 !important;
+  background-image: none !important;
+}
+.media-law > .legal-portrait {
+  object-position: 50% 19%;
+}
+.media-law::before {
+  background: linear-gradient(to top, rgba(75,38,48,.20), transparent 72%) !important;
+}
+.media-law::after {
+  background: linear-gradient(to top, rgba(63,35,42,.26), transparent 60%) !important;
+}
 </style>
 </head>
 
@@ -2443,6 +2445,7 @@ body.video-modal-open { overflow: hidden; }
 
   <article class="service-card-pro reveal">
     <div class="service-media media-traffic">
+      <img class="service-cover" src="images/results/shiguan-road-safety.webp" alt="史館路道路安全改善紀錄照片" loading="lazy" decoding="async">
       <span>草屯・中寮</span>
     </div>
 
@@ -2468,6 +2471,7 @@ body.video-modal-open { overflow: hidden; }
 
   <article class="service-card-pro reveal">
     <div class="service-media media-education">
+      <img class="service-cover education-running" src="https://www.dropbox.com/scl/fi/cy7nngs9ppsonlwojyk8f/_.jpg?rlkey=9jdi3dieh2p3ctm3xidem6b9v&amp;raw=1" alt="富功國小操場活動照片" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='images/results/xuguang-sports-center.webp';">
       <span>教育</span>
     </div>
 
@@ -2493,7 +2497,7 @@ body.video-modal-open { overflow: hidden; }
 
   <article class="service-card-pro reveal">
     <div class="service-media media-law">
-      <strong class="service-ghost-number" aria-hidden="true">407</strong>
+      <img class="service-cover legal-portrait" src="images/results/legal-service-portrait.jpg" alt="林友友人物形象照" loading="lazy" decoding="async">
       <span>407 件</span>
     </div>
 
@@ -2519,6 +2523,7 @@ body.video-modal-open { overflow: hidden; }
 
   <article class="service-card-pro reveal">
     <div class="service-media media-help">
+      <img class="service-cover" src="images/results/emergency-aid.webp" alt="草屯新庄一路火警協助相關紀錄照片" loading="lazy" decoding="async">
       <span>90 件</span>
     </div>
 
@@ -2544,6 +2549,7 @@ body.video-modal-open { overflow: hidden; }
 
   <article class="service-card-pro reveal">
     <div class="service-media media-community">
+      <img class="service-cover" src="images/results/bishan-baofu-camera.webp" alt="碧山路保福街監視器設置紀錄照片" loading="lazy" decoding="async">
       <span>地方服務</span>
     </div>
 
@@ -2569,6 +2575,7 @@ body.video-modal-open { overflow: hidden; }
 
   <article class="service-card-pro reveal">
     <div class="service-media media-safety">
+      <img class="service-cover" src="images/results/firefighter-training.webp" alt="消防員訓練紀錄照片" loading="lazy" decoding="async">
       <span>公共安全</span>
     </div>
 
