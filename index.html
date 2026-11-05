@@ -876,12 +876,12 @@ video {
   backdrop-filter: blur(8px);
 }
 
-.media-traffic { background: linear-gradient(135deg, #f3dfe2, #e4b2ba); }
-.media-education { background-image: url("images/education.jpg"); }
+.media-traffic { background-image: url("images/results/shiguan-road-safety.webp"); }
+.media-education { background-image: url("images/results/xuguang-sports-center.webp"); }
 .media-law { background: linear-gradient(135deg, #f5e7e6, #ce7d8a); }
-.media-help { background: linear-gradient(135deg, #f6e9eb, #d69ba4); }
-.media-community { background-image: url("images/community.JPG"); }
-.media-safety { background: linear-gradient(135deg, #eedde0, #884b59); }
+.media-help { background-image: url("images/results/emergency-aid.webp"); }
+.media-community { background-image: url("images/results/bishan-baofu-camera.webp"); }
+.media-safety { background-image: url("images/results/firefighter-training.webp"); }
 
 .service-body {
   padding: 24px 26px 27px;
@@ -1798,6 +1798,217 @@ body.video-modal-open { overflow: hidden; }
   }
 }
 
+
+/* 服務實績照片優化 V3 */
+.media-traffic,
+.media-education,
+.media-help,
+.media-community,
+.media-safety {
+  background-position: center;
+  background-size: cover;
+}
+
+.media-traffic::before,
+.media-education::before,
+.media-help::before,
+.media-community::before,
+.media-safety::before {
+  background:
+    linear-gradient(to top, rgba(48,22,28,.34), rgba(48,22,28,.03) 62%),
+    radial-gradient(circle at 75% 25%, rgba(255,255,255,.18), transparent 28%);
+}
+
+.media-law {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 78% 25%, rgba(255,255,255,.32), transparent 26%),
+    linear-gradient(135deg, #f5e7e6, #ce7d8a);
+}
+
+.media-law .service-ghost-number {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  z-index: 0;
+  color: rgba(112,52,66,.13);
+  font-size: 92px;
+  font-weight: 950;
+  line-height: 1;
+  letter-spacing: -.08em;
+  pointer-events: none;
+}
+
+.media-law span {
+  z-index: 3;
+}
+
+
+/* =========================================
+   Dropbox 原圖優化 V4
+   Dropbox 公開原圖優先 + 網站本地圖片備援
+========================================= */
+.media-traffic {
+  background-image:
+    url("https://www.dropbox.com/scl/fi/xilt84zut30w7z1sytmdl/.jpg?rlkey=5v01vn9aynvu0juuyjdix8654&raw=1"),
+    url("images/results/shiguan-road-safety.webp");
+}
+.media-education {
+  background-image:
+    url("https://www.dropbox.com/scl/fi/cy7nngs9ppsonlwojyk8f/_.jpg?rlkey=9jdi3dieh2p3ctm3xidem6b9v&raw=1"),
+    url("images/results/xuguang-sports-center.webp");
+}
+.media-community {
+  background-image:
+    url("https://www.dropbox.com/scl/fi/sccylho7rqh4rdwk5ch4q/.jpg?rlkey=7s4in18os7n2bblwhs9l57w1d&raw=1"),
+    url("images/results/bishan-baofu-camera.webp");
+}
+.media-law {
+  background-image:
+    linear-gradient(to top, rgba(74,34,44,.46), rgba(74,34,44,.04) 66%),
+    url("https://www.dropbox.com/scl/fi/mezxb33km5oe45n0nr982/.jpg?rlkey=rziu76bgarznzpdtnp0rg8jbf&raw=1"),
+    linear-gradient(135deg, #f5e7e6, #ce7d8a);
+  background-size: cover;
+  background-position: center;
+}
+.media-law .service-ghost-number {
+  color: rgba(255,255,255,.30) !important;
+  text-shadow: 0 1px 14px rgba(0,0,0,.08);
+}
+.media-law span {
+  background: rgba(255,255,255,.92) !important;
+}
+
+/* 認識友友：增加落款感，但不偽造親筆簽名 */
+.about-signoff {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(112,52,66,.12);
+}
+.about-signoff img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+.about-signoff-text strong {
+  display: block;
+  color: var(--yoyo-wine);
+  font-size: 15px;
+}
+.about-signoff-text span {
+  display: block;
+  margin-top: 3px;
+  color: #9a858a;
+  font-size: 12px;
+  letter-spacing: .04em;
+}
+
+/* 友友想對您說：尾端加入柔和人物感背景備援 */
+.yoyo-message-section {
+  background-image:
+    linear-gradient(rgba(255,250,248,.92), rgba(255,250,248,.96)),
+    url("https://www.dropbox.com/scl/fi/niqkctsuyq4lmlwld3tag/.jpg?rlkey=t7lod1ppn5i36jk76zrju4n3n&raw=1");
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* =========================================
+   V5｜地方生活報摘錄與林友友親筆簽名
+   原始簽名擷取自使用者提供的 2026 VOL.02 雙頁照片
+========================================= */
+.about-signoff-real {
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 25px;
+  padding-top: 20px;
+}
+.about-signoff-real .about-signoff-text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.about-signoff-real .about-signoff-text strong {
+  font-size: 14px;
+  line-height: 1.7;
+}
+.about-signoff-real .about-signoff-text span {
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 1.8;
+}
+.about-signoff-real img.handwritten-signature {
+  flex: 0 0 auto;
+  width: clamp(145px, 12vw, 204px);
+  height: auto;
+  max-height: 90px;
+  object-fit: contain;
+  filter: none;
+}
+.yoyo-letter-excerpt {
+  margin-top: 29px;
+  padding: 30px 36px 31px;
+  border: 1px solid rgba(112,52,66,.13);
+  border-radius: 19px;
+  background: rgba(255,255,255,.94);
+  box-shadow: 0 13px 36px rgba(112,52,66,.05);
+}
+.yoyo-letter-eyebrow {
+  color: var(--yoyo-pink);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .16em;
+}
+.yoyo-letter-excerpt h3 {
+  margin: 12px 0 16px;
+  color: var(--yoyo-wine);
+  font-size: clamp(22px,2.6vw,29px);
+  line-height: 1.35;
+}
+.yoyo-letter-excerpt p {
+  max-width: 840px;
+  margin: 0 0 12px;
+  color: #68575b;
+  font-size: 14px;
+  line-height: 1.95;
+}
+.yoyo-letter-link {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(112,52,66,.35);
+  color: var(--yoyo-wine);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.yoyo-letter-link:hover { color: var(--yoyo-pink); }
+.yoyo-letter-link span { font-size: 17px; }
+@media (max-width:640px) {
+  .about-signoff-real {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .about-signoff-real img.handwritten-signature {
+    align-self: flex-end;
+    width: 180px;
+  }
+  .yoyo-letter-excerpt {
+    margin-top: 21px;
+    padding: 25px 21px 26px;
+    border-radius: 16px;
+  }
+  .yoyo-letter-excerpt p { font-size: 13px; }
+}
+
 </style>
 </head>
 
@@ -1994,14 +2205,13 @@ body.video-modal-open { overflow: hidden; }
       </h2>
 
       <p class="about-lead">
-        服務不是一句口號，而是願意走進地方，
-        聽見每一個人的需求，再一起找到解決問題的方法。
+        草屯與中寮，各有自己的生活樣貌。未來的規劃，
+        需要走進不同的村里，聽見需求，再把地方經驗帶進政策討論。
       </p>
 
       <p>
-        從法律服務、急難救助，到道路交通與地方建設，
-        每一件事情背後，都是一個家庭、一條道路，
-        或一個地方真正需要被看見的問題。
+        從一件陳情的處理，到一項公共政策的推動，
+        都要把問題問清楚、把方法想具體，也把後續進度交代明白。
       </p>
 
       <div class="about-values">
@@ -2023,10 +2233,25 @@ body.video-modal-open { overflow: hidden; }
 
       </div>
 
-      <a href="#" class="about-button">
-        更認識友友
+      <a href="results.html" class="about-button">
+        看見友友的服務足跡
         <span>→</span>
       </a>
+
+      <div class="about-signoff about-signoff-real">
+        <div class="about-signoff-text">
+          <strong>這是我對地方工作的期待，</strong>
+          <span>也是接下來希望和大家一起努力的方向。</span>
+        </div>
+        <img
+          class="handwritten-signature"
+          src="images/local-life/lin-yoyo-signature.png"
+          alt="林友友親筆簽名"
+          width="204"
+          height="82"
+          loading="lazy"
+        >
+      </div>
 
     </div>
 
@@ -2057,8 +2282,8 @@ body.video-modal-open { overflow: hidden; }
       </h2>
 
       <p>
-        從長照、婦幼、青年、教育文化、運動建設到區域發展，
-        以生活需求為出發點，一步一步打造更安心、更有活力的地方。
+        從健康與運動、教育與文化、工作與生活等每天感受得到的需求出發，
+        持續關注長照、婦幼、青年、地方產業與區域發展。
       </p>
 
     </div>
@@ -2268,6 +2493,7 @@ body.video-modal-open { overflow: hidden; }
 
   <article class="service-card-pro reveal">
     <div class="service-media media-law">
+      <strong class="service-ghost-number" aria-hidden="true">407</strong>
       <span>407 件</span>
     </div>
 
@@ -2620,6 +2846,22 @@ body.video-modal-open { overflow: hidden; }
         <span>約 1 分鐘｜登記影片</span>
       </div>
     </div>
+
+    <aside class="yoyo-letter-excerpt reveal" aria-labelledby="yoyo-letter-title">
+      <div class="yoyo-letter-eyebrow">FROM THE LOCAL LIFE JOURNAL</div>
+      <h3 id="yoyo-letter-title">給鄉親的一段話</h3>
+      <p>
+        一條每天經過的道路、一處照顧長輩的據點、一間孩子上課的教室，
+        都是我們生活的一部分，也是地方服務要認真對待的事。
+      </p>
+      <p>
+        已完成的改善，感謝鄉親、村里長、社區、學校與各單位一起促成；
+        還沒完成的事情，也要把原因釐清，尋找可以往前走的方法。
+      </p>
+      <a class="yoyo-letter-link" href="local-life.html" aria-label="閱讀草屯中寮地方生活報2026年第二期精選雙頁">
+        閱讀地方生活報 <span aria-hidden="true">→</span>
+      </a>
+    </aside>
 
   </div>
 </section>
