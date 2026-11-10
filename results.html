@@ -51,13 +51,33 @@ body:has(.case-dialog[open]){overflow:hidden}
   .case-close{top:9px;right:9px}
 }
 
+
+/* V6: 近期地方服務紀錄（不連內部來源） */
+.archive-section{padding:88px 24px 104px;background:linear-gradient(180deg,#fffaf8,#f7ecec);border-top:1px solid #f0e1e2}
+.archive-inner{width:min(1180px,100%);margin:0 auto}.archive-head{display:flex;justify-content:space-between;gap:20px;align-items:end;flex-wrap:wrap}
+.archive-head h2{margin-top:12px;font-size:clamp(34px,4.8vw,50px);line-height:1.25;color:#703442}.archive-pill{font-size:12px;color:#703442;border:1px solid #eadadd;border-radius:40px;padding:8px 14px;background:#fff}
+.archive-intro{margin-top:16px;max-width:770px;font-size:14px;line-height:1.9;color:#806d72}
+.archive-filters{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px;margin-top:28px}.archive-filters label{display:grid;gap:7px;font-size:12px;font-weight:800;color:#703442}
+.archive-filters input,.archive-filters select{border-radius:12px;border:1px solid #e9d4d7;background:#fff;padding:13px 14px;font:inherit;color:#4f2631;min-width:0}
+.archive-filters input:focus-visible,.archive-filters select:focus-visible{outline:2px solid #cd7886;outline-offset:2px}
+.archive-count{margin-top:21px;color:#8b757c;font-size:13px}.archive-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:15px}
+.archive-item{display:flex;gap:14px;padding:19px 20px;background:#fff;border:1px solid #f0e5e7;border-radius:17px;box-shadow:0 6px 22px rgba(112,52,66,.04)}
+.archive-date{flex:0 0 92px;font-size:12px;font-weight:800;color:#703442;font-variant-numeric:tabular-nums}.archive-body{min-width:0}
+.archive-category{display:inline-block;background:#f5e7e6;color:#965d6b;font-size:11px;font-weight:800;padding:4px 10px;border-radius:20px}
+.archive-title{display:block;margin-top:9px;color:#4f2631;font-size:14px;line-height:1.75;overflow-wrap:anywhere}.archive-footer{text-align:center;margin-top:23px}
+.archive-more{border-radius:99px;padding:12px 28px;border:1px solid #d9b8c0;background:#fff;color:#703442;font-weight:800;cursor:pointer}
+.archive-more[hidden],.archive-empty[hidden]{display:none!important}.archive-empty{text-align:center;padding:24px;margin-top:14px;color:#806d72}
+.archive-note{margin-top:24px;color:#927e84;font-size:12px;line-height:1.85}
+@media(max-width:800px){.archive-list{grid-template-columns:1fr}.archive-filters{grid-template-columns:1fr 1fr}.archive-filters label:first-child{grid-column:1/-1}}
+@media(max-width:640px){.archive-section{padding:65px 16px 75px}.archive-item{padding:16px;gap:9px}.archive-date{flex-basis:83px}.archive-title{font-size:13px}}
+
 </style>
 </head>
 <body>
 <header class="header"><div class="header-inner"><a class="logo" href="index.html"><img src="images/logo-lockup.svg" alt="林友友"></a><nav class="nav"><a href="index.html#about">認識友友</a><a href="index.html#policies">六大政見</a><a href="index.html#videos">影音紀錄</a><a href="index.html#location">服務據點</a><a class="back-button" href="index.html">回首頁</a></nav></div></header>
 <main>
 <section class="hero"><div class="hero-inner"><div class="kicker">SERVICE RESULTS</div><h1>完整服務成果</h1><p class="hero-lead">從教育、道路交通、地方建設到社福關懷與公共安全，把地方一件件大小事整理成可以查找、可以追蹤的紀錄。</p><p class="hero-note">精選草屯・中寮地方服務與建設事件，持續整理更新。</p></div></section>
-<section class="summary"><div><strong>14</strong><span>已整理公開的代表事件</span></div><div><strong>5</strong><span>資料分類</span></div><div><strong>2023–2026</strong><span>本頁紀錄期間</span></div></section>
+<section class="summary"><div><strong>14</strong><span>精選圖文案例</span></div><div><strong>84</strong><span>新增近期公開紀錄</span></div><div><strong>2022–2026</strong><span>紀錄涵蓋年度</span></div></section>
 <section class="service-summary" id="service-summary"><div><h2>服務量能</h2><p>首頁既有統計先保留為服務量能；個案資料會持續整理與匿名化。</p></div><div class="service-numbers"><div><strong>407</strong><span>法律服務｜截至115年8月</span></div><div><strong>90</strong><span>急難救助｜草屯72・中寮18</span></div></div></section>
 <section class="results-section" id="results"><div class="results-inner"><div class="section-head"><div><div class="kicker">SELECTED CASES</div><h2>代表成果紀錄</h2></div><p>目前展示 14 筆代表性地方事件。點選照片或「查看詳情」，即可在本站查看照片、日期與事件說明。</p></div>
 <div class="filters" aria-label="成果分類"><button class="filter active" data-filter="all">全部</button><button class="filter" data-filter="education">教育</button><button class="filter" data-filter="traffic">道路交通</button><button class="filter" data-filter="community">地方建設</button><button class="filter" data-filter="welfare">社福關懷</button><button class="filter" data-filter="safety">公共安全</button></div>
@@ -216,6 +236,13 @@ body:has(.case-dialog[open]){overflow:hidden}
         <a class="result-link" href="results.html?case=case-14#results" data-open-case="case-14">查看詳情 <span>→</span></a>
       </div>
     </article></div><div class="empty" id="emptyState">這個分類目前尚未整理代表案例。</div><div class="source-note">本頁整理公開服務與地方事件紀錄，依實際事件日期、主題及照片呈現；相關進度如有更新，將逐步補充。</div></div></section>
+<section class="archive-section" id="archive" aria-labelledby="archiveTitle"><div class="archive-inner">
+<div class="archive-head"><div><div class="kicker">LATEST LOCAL RECORDS</div><h2 id="archiveTitle">近期地方服務紀錄</h2></div><span class="archive-pill">2025–2026</span></div>
+<p class="archive-intro">從更新的地方事件資料整理出 84 筆近期公開紀錄。包含活動、會勘、政策倡議與地方服務，保留原始事件性質，不將所有紀錄統稱為「已完成成果」。下方可以直接搜尋、選擇類別或年份。</p>
+<div class="archive-filters" role="search" aria-label="搜尋地方紀錄"><label for="archiveSearch">關鍵字搜尋<input id="archiveSearch" type="search" placeholder="如：通學路線、匹克球、路燈"></label><label for="archiveCategory">類別<select id="archiveCategory"><option value="all">全部類別</option><option value="child">婦幼活動</option><option value="youth">青年發展</option><option value="education">教育藝文</option><option value="traffic">道路交通</option><option value="publicworks">地方建設</option><option value="safety">公共安全</option><option value="community">社區關懷</option></select></label><label for="archiveYear">年份<select id="archiveYear"><option value="all">全部年份</option><option value="2026">2026</option><option value="2025">2025</option></select></label></div>
+<p class="archive-count" id="archiveCount" aria-live="polite"></p><div class="archive-list" id="archiveList"></div><div id="archiveEmpty" class="archive-empty" hidden>沒有符合的紀錄，請更換搜尋條件。</div>
+<div class="archive-footer"><button id="archiveMore" class="archive-more" type="button" hidden>顯示更多紀錄</button></div>
+<p class="archive-note">公開摘要資料截至 2026 年 11 月 10 日，詳細成果、處理狀態與影像尚待逐案核對。為尊重當事人隱私，未納入喪葬與個人急難救助明細，亦不提供內部工作簡報連結。</p></div></section>
 </main>
 
 <!-- 代表成果詳細內容：完全在本站顯示，不開啟內部文件 -->
@@ -272,5 +299,31 @@ window.addEventListener('popstate',()=>{const id=new URLSearchParams(location.se
 const initialCase=new URLSearchParams(location.search).get('case');
 if(initialCase)openCase(initialCase,{updateUrl:false});
 
+</script>
+<script>
+(()=>{
+ "use strict";
+ const data=[{"date":"2026-10-30","cat":"safety","title":"捐贈交通警察設備"},{"date":"2026-10-25","cat":"community","title":"草屯紫微宮、中寮紫東宮同脈會香"},{"date":"2026-10-20","cat":"community","title":"樂活館動土儀式"},{"date":"2026-10-18","cat":"community","title":"東和宮、南瑤宮會香"},{"date":"2026-10-18","cat":"community","title":"虎山福德廟重陽節聚餐"},{"date":"2026-10-18","cat":"community","title":"中寮玄林宮發放重陽禮金"},{"date":"2026-10-17","cat":"community","title":"白沙屯媽祖到朝清宮"},{"date":"2026-10-17","cat":"community","title":"三子宮中壇元帥壽宴"},{"date":"2026-10-16","cat":"child","title":"馨光流轉－南投女孩女性跨時代生命紀實計畫展覽"},{"date":"2026-10-16","cat":"community","title":"碧峰社區重陽節活動"},{"date":"2026-10-07","cat":"education","title":"登瀛書院秋祭三獻禮"},{"date":"2026-10-02","cat":"education","title":"南投夢想實驗公園－青連節"},{"date":"2026-10-01","cat":"community","title":"社區長者施打疫苗關懷"},{"date":"2026-09-24","cat":"education","title":"旭光高中活動中心系統改善會勘"},{"date":"2026-09-24","cat":"education","title":"中原國小會勘"},{"date":"2026-09-23","cat":"education","title":"碧峰國小匹克球用具增設紀錄"},{"date":"2026-09-18","cat":"education","title":"廣達游於藝學生作品成果展"},{"date":"2026-09-15","cat":"education","title":"要求重新檢視全縣學校主要通學路線與工程車風險"},{"date":"2026-09-15","cat":"education","title":"提出設置南投固定體適能檢測中心的主張"},{"date":"2026-08-14","cat":"publicworks","title":"南投幸福GO服務座談會"},{"date":"2026-07-25","cat":"child","title":"聯合茉莉窯烤麵包舉辦四場親子窯烤 Pizza（7/25、8/1、8/15、8/22）"},{"date":"2026-07-23","cat":"child","title":"第三屆草屯新手盃戰鬥陀螺賽"},{"date":"2026-07-18","cat":"youth","title":"壹玖陸貳藝空間 1962 Art Gallery 王雄國老師"},{"date":"2026-07-10","cat":"traffic","title":"草屯投4、投8及縣道148線周邊人手孔地下化會勘"},{"date":"2026-07-09","cat":"traffic","title":"玉屏路與長壽巷路面改善會勘"},{"date":"2026-07-09","cat":"publicworks","title":"草屯殯儀館旁指示牌與國六橋下會勘"},{"date":"2026-06-20","cat":"publicworks","title":"虎山親水公園魚屍清理紀錄"},{"date":"2026-06-20","cat":"community","title":"中寮虎爺會成立"},{"date":"2026-06-15","cat":"publicworks","title":"垃圾車翻覆事件"},{"date":"2026-06-14","cat":"community","title":"石川社區發展協會端午暨健康衛教宣導"},{"date":"2026-06-14","cat":"community","title":"邯鄲會創會十週年繞境大典"},{"date":"2026-06-14","cat":"community","title":"中寮天德宮包粽活動"},{"date":"2026-06-13","cat":"traffic","title":"中寮鄉永福村大坪路段封閉"},{"date":"2026-06-10","cat":"community","title":"虎山國小畢業典禮"},{"date":"2026-06-05","cat":"community","title":"創世基金會與碧峰社區端午包粽活動"},{"date":"2026-06-02","cat":"community","title":"旭光國中畢業典禮"},{"date":"2026-05-18","cat":"education","title":"提出推動「台客語實驗國小」的構想"},{"date":"2026-05-17","cat":"child","title":"舉辦童心飛揚親子水樂園活動"},{"date":"2026-05-09","cat":"community","title":"北勢湳永安宮繞境盛會"},{"date":"2026-05-02","cat":"community","title":"南投青探號音樂節"},{"date":"2026-04-18","cat":"community","title":"帝爺公祝壽"},{"date":"2026-03-27","cat":"community","title":"南埔社區健康樂步行"},{"date":"2025-12-28","cat":"community","title":"永續發展基金會一日公益音樂會"},{"date":"2025-12-18","cat":"community","title":"御天宮、大庄浩天宮共同參與漂遊者森林音樂祭"},{"date":"2025-12-17","cat":"education","title":"敦和國小活動中心冷氣設備更新討論"},{"date":"2025-12-13","cat":"education","title":"旭光高中運動會並關心空手道隊"},{"date":"2025-12-10","cat":"community","title":"碧峰社區口紅製作"},{"date":"2025-11-29","cat":"education","title":"添購旭光高中射箭隊設備並回校關心"},{"date":"2025-11-17","cat":"education","title":"草屯富功國小建設操場、彰明盃籃球比賽紀錄"},{"date":"2025-11-15","cat":"education","title":"推廣匹克球運動"},{"date":"2025-10-22","cat":"community","title":"草屯御天宮徒步謁祖"},{"date":"2025-10-12","cat":"publicworks","title":"復興里美華巷電表故障"},{"date":"2025-09-18","cat":"safety","title":"草屯碧峰守望相助隊設備爭取紀錄"},{"date":"2025-09-03","cat":"publicworks","title":"中寮永福村永嘉新村竹坑橋下攔沙壩"},{"date":"2025-08-26","cat":"traffic","title":"草屯北投里慶安街80號增設反射鏡"},{"date":"2025-08-19","cat":"traffic","title":"中寮鄉內城村龍南路8-1號前號誌、標線"},{"date":"2025-08-13","cat":"traffic","title":"中寮投22線環鄉公路16.8K施建集水井"},{"date":"2025-08-13","cat":"publicworks","title":"南中寮勘災"},{"date":"2025-08-01","cat":"publicworks","title":"草屯碧峰里光華三橋旁護岸堤防改善"},{"date":"2025-07-31","cat":"publicworks","title":"富林路一段552號樹木倒塌"},{"date":"2025-07-29","cat":"traffic","title":"中寮139縣道沿線雜草清理"},{"date":"2025-07-16","cat":"publicworks","title":"草屯北投埔段131地號護岸堤防改善"},{"date":"2025-06-23","cat":"publicworks","title":"草屯土城里無元修道場旁電線雜亂"},{"date":"2025-06-18","cat":"traffic","title":"草溪路路樹倒塌"},{"date":"2025-05-28","cat":"traffic","title":"中寮鄉永福村永嘉新村路面改善"},{"date":"2025-05-12","cat":"traffic","title":"中寮鄉龍南路爽文國小前道路改善"},{"date":"2025-04-16","cat":"publicworks","title":"大觀市場中山街370號水溝清理"},{"date":"2025-04-14","cat":"publicworks","title":"北勢湳永安宮旁小路更換欄杆"},{"date":"2025-04-12","cat":"publicworks","title":"北中寮松鼠咬電線事件"},{"date":"2025-04-09","cat":"safety","title":"碧山路二手家電行火警事件"},{"date":"2025-04-08","cat":"traffic","title":"中寮921檳榔攤前方紅綠燈號誌"},{"date":"2025-03-25","cat":"traffic","title":"草屯坪頂里股坑巷增設路燈"},{"date":"2025-03-21","cat":"publicworks","title":"草屯南埔里中正路395號施作擋土牆"},{"date":"2025-03-07","cat":"publicworks","title":"新厝里集會所二樓啟用"},{"date":"2025-03-05","cat":"publicworks","title":"新興段灌溉溝清除淤積"},{"date":"2025-02-27","cat":"traffic","title":"草屯炎峰里中正路與大成街口標線改善"},{"date":"2025-02-25","cat":"traffic","title":"中寮鄉永福村永康國小附近反射鏡修繕"},{"date":"2025-02-24","cat":"publicworks","title":"北投朝陽宮古蹟會勘"},{"date":"2025-02-14","cat":"publicworks","title":"中寮鄉八杞仙段209地號擋土牆紀錄"},{"date":"2025-02-10","cat":"publicworks","title":"新庄里生態水利溝淤積會勘"},{"date":"2025-02-05","cat":"publicworks","title":"草屯新興段685地號新庄分線灌溉溝渠清淤"},{"date":"2025-02-03","cat":"traffic","title":"草屯敦和里碧山路348巷增設反射鏡"},{"date":"2025-01-19","cat":"community","title":"中庄福德祠親子拔蘿蔔活動"},{"date":"2025-01-14","cat":"community","title":"南投縣光暉慈善會公益活動"}];
+ const labels={"child":"婦幼活動","youth":"青年發展","education":"教育藝文","traffic":"道路交通","publicworks":"地方建設","safety":"公共安全","community":"社區關懷"};
+ const search=document.getElementById('archiveSearch'),category=document.getElementById('archiveCategory'),year=document.getElementById('archiveYear');
+ const list=document.getElementById('archiveList'),count=document.getElementById('archiveCount'),empty=document.getElementById('archiveEmpty'),more=document.getElementById('archiveMore');
+ let shown=16, filtered=data;
+ function render(){
+  const frag=document.createDocumentFragment();
+  filtered.slice(0,shown).forEach(item=>{
+   const article=document.createElement('article');article.className='archive-item';
+   const time=document.createElement('time');time.className='archive-date';time.dateTime=item.date;time.textContent=item.date.replaceAll('-','.');
+   const body=document.createElement('div');body.className='archive-body';
+   const cat=document.createElement('span');cat.className='archive-category';cat.textContent=labels[item.cat];
+   const title=document.createElement('strong');title.className='archive-title';title.textContent=item.title;
+   body.append(cat,title);article.append(time,body);frag.append(article);
+  });
+  list.replaceChildren(frag);count.textContent=`符合 ${filtered.length} 筆，顯示 ${Math.min(shown,filtered.length)} 筆`;
+  empty.hidden=filtered.length!==0;more.hidden=shown>=filtered.length;
+ }
+ function apply(){const q=search.value.trim().toLowerCase();filtered=data.filter(x=>(category.value==='all'||x.cat===category.value)&&(year.value==='all'||x.date.startsWith(year.value))&&(!q||(x.title+' '+labels[x.cat]+' '+x.date).toLowerCase().includes(q)));shown=16;render();}
+ search.addEventListener('input',apply);category.addEventListener('change',apply);year.addEventListener('change',apply);
+ more.addEventListener('click',()=>{shown+=16;render();});render();
+})();
 </script>
 </body></html>
