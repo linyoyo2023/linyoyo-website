@@ -2061,6 +2061,50 @@ body.video-modal-open { overflow: hidden; }
   }
 }
 
+/* === V9 POLICY ROADMAP — START / 只作用於六大政見 === */
+#policies.pol26 { scroll-margin-top: 72px; }
+.pol26 { position:relative;isolation:isolate;overflow:hidden;padding:112px 30px 120px;background:linear-gradient(155deg,#fffaf8 0%,#fdf6f4 55%,#f7ebed 100%); }
+.pol26::before {content:"";position:absolute;top:-260px;left:-200px;width:660px;height:660px;border-radius:50%;background:radial-gradient(circle,rgba(205,120,134,.095),transparent 68%);pointer-events:none;z-index:-1}
+.pol26-layout{position:relative;display:grid;grid-template-columns:minmax(0,345px) minmax(0,1fr);gap:clamp(48px,6vw,94px);max-width:1180px;margin:0 auto;align-items:start}
+.pol26-intro{position:sticky;top:120px;min-width:0;padding-top:17px}
+.pol26-kicker{display:flex;align-items:center;gap:11px;color:#bd7382;font-size:11px;font-weight:900;line-height:1.5;letter-spacing:.13em;white-space:nowrap}
+.pol26-kicker-line{display:inline-block;width:35px;height:2px;background:#d7af85}
+.pol26-kicker-dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:#ff7048}
+.pol26-intro h2{margin:35px 0 15px;color:#703442;font-size:clamp(63px,7.1vw,99px);line-height:1.03;letter-spacing:-.07em;font-weight:900}
+.pol26-intro h2 em{font-style:normal;color:#b9677a}
+.pol26-subtitle{margin:0;color:#a65d6f;font-size:17px;line-height:1.65;font-weight:850;letter-spacing:.04em}
+.pol26-intro-rule{width:42px;height:3px;margin:30px 0 23px;background:#ff7048;border-radius:5px}
+.pol26-intro-text{color:#74646b;max-width:320px;margin:0;line-height:2;font-size:14px}
+.pol26-marker{display:flex;align-items:flex-end;gap:13px;margin-top:26px;color:#cca5ad}
+.pol26-marker strong{font-size:104px;font-weight:900;line-height:.86;letter-spacing:-.12em;opacity:.38}
+.pol26-marker span{font-size:10px;font-weight:800;line-height:1.5;letter-spacing:.14em;margin-bottom:8px}
+.pol26-read-more{display:inline-flex;align-items:center;gap:12px;margin-top:35px;padding:12px 18px;border:1px solid rgba(112,52,66,.18);border-radius:999px;color:#703442;font-size:13px;font-weight:800;background:rgba(255,255,255,.7);transition:background .2s,transform .2s}
+.pol26-read-more:hover{background:#fff;transform:translateY(-2px)}
+.pol26-read-more span{font-size:16px;color:#ff7048}
+.pol26-track{position:relative;display:grid;gap:18px;padding:0}
+.pol26-track::before{content:"";position:absolute;z-index:0;left:21px;top:45px;bottom:50px;width:2px;background:linear-gradient(180deg,rgba(205,120,134,.7),rgba(216,186,146,.65),rgba(205,120,134,.3));pointer-events:none}
+.pol26-item{--pol26-accent:#b56c7c;--pol26-soft:#f7eaed;position:relative;min-width:0;margin-left:75px;padding:24px 28px 25px;border:1px solid rgba(112,52,66,.095);border-radius:19px;background:#fff;box-shadow:0 12px 35px rgba(112,52,66,.055);transition:transform .2s ease,box-shadow .2s ease}
+.pol26-item:hover{transform:translateX(4px);box-shadow:0 18px 43px rgba(112,52,66,.1)}
+.pol26-item::before{content:"";position:absolute;top:50px;left:-34px;width:33px;height:2px;background:#d6b5bc}
+.pol26-node{position:absolute;z-index:2;left:-81px;top:25px;display:flex;align-items:center;justify-content:center;width:55px;height:55px;border:4px solid #fff;border-radius:50%;background:var(--pol26-soft);color:var(--pol26-accent);box-shadow:0 5px 14px rgba(112,52,66,.09)}
+.pol26-item-header{display:flex;align-items:center;gap:12px;justify-content:space-between;min-width:0;flex-wrap:wrap}
+.pol26-serial{color:var(--pol26-accent);font-size:12px;font-weight:900;letter-spacing:.1em}
+.pol26-category{font-size:9px;letter-spacing:.1em;color:#947c82;font-weight:900}
+.pol26-item h3{margin:10px 0 0;color:#703442;font-size:clamp(27px,3vw,33px);line-height:1.3;letter-spacing:-.03em;font-weight:900}
+.pol26-item h3 small{display:inline-block;margin-left:15px;vertical-align:middle;color:var(--pol26-accent);font-size:13px;font-weight:850;letter-spacing:0}
+.pol26-item p{font-size:14px;line-height:1.95;color:#6f6368;margin:14px 0 0}
+.pol26-points{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:16px 0 0;padding:0}
+.pol26-points li{margin:0;padding:6px 11px;border-radius:40px;background:var(--pol26-soft);color:var(--pol26-accent);font-size:11px;font-weight:850;line-height:1.6}
+.pol26-family{--pol26-accent:#9c6d49;--pol26-soft:#f6ecdf}
+.pol26-youth{--pol26-accent:#5f879a;--pol26-soft:#e6eff3}
+.pol26-education{--pol26-accent:#8e759c;--pol26-soft:#f0e9f2}
+.pol26-sports{--pol26-accent:#617f6f;--pol26-soft:#e7eee8}
+.pol26-region{--pol26-accent:#b0776f;--pol26-soft:#f7e8e5}
+@media(max-width:960px){.pol26-layout{grid-template-columns:minmax(0,290px) minmax(0,1fr);gap:27px}.pol26-intro h2{font-size:72px}.pol26-item{padding:22px 22px 24px}.pol26-item h3 small{display:block;margin:7px 0 0}}
+@media(max-width:760px){.pol26{padding:77px 18px 84px}.pol26-layout{display:block}.pol26-intro{position:static;max-width:620px;padding:0}.pol26-intro h2{margin-top:19px;font-size:clamp(54px,10vw,73px)}.pol26-intro h2 br{display:none}.pol26-intro h2 em{margin-left:12px}.pol26-intro-text{max-width:620px}.pol26-intro-rule{margin:18px 0}.pol26-marker{display:none}.pol26-read-more{margin-top:19px}.pol26-track{margin-top:46px;gap:15px}.pol26-item{margin-left:55px;padding:20px 19px}.pol26-item::before{left:-24px;width:23px;top:43px}.pol26-node{left:-61px;top:21px;width:45px;height:45px;border-width:3px}.pol26-node svg{width:23px;height:23px}.pol26-track::before{left:15px;top:43px;bottom:46px}.pol26-item h3{font-size:27px}.pol26-item h3 small{font-size:13px}.pol26-item p{font-size:13px;line-height:1.85}.pol26-category{font-size:8px}}
+@media(max-width:390px){.pol26{padding-left:12px;padding-right:12px}.pol26-item{margin-left:48px;padding:18px 15px}.pol26-node{left:-54px}.pol26-track::before{left:14px}.pol26-item h3{font-size:25px}.pol26-points li{font-size:10px;padding:5px 8px}}
+@media(prefers-reduced-motion:reduce){.pol26-item,.pol26-read-more{transition:none}}
+/* === V9 POLICY ROADMAP — END === */
 </style>
 </head>
 
@@ -2303,163 +2347,66 @@ body.video-modal-open { overflow: hidden; }
      六大政見
 ========================= -->
 
-<section class="policies-section" id="policies">
-
-  <div class="policies-inner">
-
-    <div class="policies-heading reveal">
-
-      <div class="about-kicker">
-        <span></span>
-        OUR VISION
-      </div>
-
-      <h2>
-        六大政見
-        <small>讓草屯・中寮生活得更好</small>
-      </h2>
-
-      <p>
-        從健康與運動、教育與文化、工作與生活等每天感受得到的需求出發，
-        持續關注長照、婦幼、青年、地方產業與區域發展。
-      </p>
-
+<!-- V9 政策路線圖｜只更新六大政見，不改首頁其他區塊 -->
+<section class="pol26" id="policies" aria-labelledby="pol26-heading">
+  <div class="pol26-layout">
+    <header class="pol26-intro">
+      <div class="pol26-kicker"><span class="pol26-kicker-line"></span>OUR VISION <span class="pol26-kicker-dot"></span> 01—06</div>
+      <h2 id="pol26-heading">六大<br><em>政見</em></h2>
+      <p class="pol26-subtitle">草屯・中寮的六個政策方向</p>
+      <div class="pol26-intro-rule"></div>
+      <p class="pol26-intro-text">從日常照顧、孩子的成長，到青年發展、學校教育、運動空間及地方交通，把六個方向整理成清楚、可閱讀的政策主張。</p>
+      <div class="pol26-marker" aria-hidden="true"><strong>06</strong><span>POLICY<br>CHAPTERS</span></div>
+      <a class="pol26-read-more" href="#achievements">查看服務實績 <span aria-hidden="true">↗</span></a>
+    </header>
+    <div class="pol26-track" aria-label="六大政見詳細內容">
+      <article class="pol26-item pol26-care reveal" aria-labelledby="pol26-title-01">
+       <div class="pol26-node" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.8a5.2 5.2 0 0 0-7.4 0L12 6.2l-1.4-1.4a5.2 5.2 0 0 0-7.4 7.4L12 21l8.8-8.8a5.2 5.2 0 0 0 0-7.4Z"/><path d="M2.7 12h4.1l2.1-3.5 2.5 7.3 2.3-4.1h7"/></svg></div>
+       <div class="pol26-item-header"><span class="pol26-serial">01 / 06</span><span class="pol26-category">CARE &amp; WELLBEING</span></div>
+       <h3 id="pol26-title-01">完善長照<small>打造高齡友善環境</small></h3>
+       <p>整合長照、健康與社區照顧資源，簡化長照申請流程，讓草屯、中寮的長輩獲得更便利、更安心的照顧，也減輕家庭照顧負擔。</p>
+       <ul class="pol26-points" aria-label="完善長照的政策重點"><li>長照申請</li><li>社區照顧</li><li>家庭照顧支持</li></ul>
+     </article>
+      <article class="pol26-item pol26-family reveal" aria-labelledby="pol26-title-02">
+       <div class="pol26-node" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3.5 20v-1.8a5.5 5.5 0 0 1 11 0V20"/><path d="M17 11a3 3 0 0 0 0-6"/><path d="M17.5 14a4.3 4.3 0 0 1 3 4.1V20"/></svg></div>
+       <div class="pol26-item-header"><span class="pol26-serial">02 / 06</span><span class="pol26-category">FAMILY &amp; CHILDREN</span></div>
+       <h3 id="pol26-title-02">守護婦幼<small>健全家庭支持體系</small></h3>
+       <p>廣設托育資源，減輕育兒負擔，持續關注婦女權益、月經平權及弱勢與特殊境遇家庭，建立更完整的家庭支持與照顧網絡。</p>
+       <ul class="pol26-points" aria-label="守護婦幼的政策重點"><li>托育資源</li><li>月經平權</li><li>家庭支持</li></ul>
+     </article>
+      <article class="pol26-item pol26-youth reveal" aria-labelledby="pol26-title-03">
+       <div class="pol26-node" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="7" width="19" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M2.5 12.5c5.9 3.2 13.1 3.2 19 0"/><path d="M12 13v3"/></svg></div>
+       <div class="pol26-item-header"><span class="pol26-serial">03 / 06</span><span class="pol26-category">YOUTH &amp; OPPORTUNITY</span></div>
+       <h3 id="pol26-title-03">支持青年<small>創造在地發展機會</small></h3>
+       <p>串聯就業、創業、數位學習與創客資源，鼓勵青年留鄉、返鄉發展，推動青銀共生，讓年輕人在地方有更多參與及發揮的機會。</p>
+       <ul class="pol26-points" aria-label="支持青年的政策重點"><li>就業創業</li><li>數位學習</li><li>在地參與</li></ul>
+     </article>
+      <article class="pol26-item pol26-education reveal" aria-labelledby="pol26-title-04">
+       <div class="pol26-node" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7.5v13.2"/><path d="M12 7.5C9.1 5 5.6 4.9 2 6v13c4.1-1.2 7.4-.7 10 1.7"/><path d="M12 7.5c2.9-2.5 6.4-2.6 10-1.5v13c-4.1-1.2-7.4-.7-10 1.7"/></svg></div>
+       <div class="pol26-item-header"><span class="pol26-serial">04 / 06</span><span class="pol26-category">EDUCATION &amp; CULTURE</span></div>
+       <h3 id="pol26-title-04">深耕教育<small>傳承在地藝文文化</small></h3>
+       <p>支持學校教育、在地藝術家及藝文團隊，推廣藝文展演與文化活動，保存草屯、中寮的地方故事、技藝與特色，讓在地文化持續傳承。</p>
+       <ul class="pol26-points" aria-label="深耕教育的政策重點"><li>學校教育</li><li>藝文活動</li><li>地方文化</li></ul>
+     </article>
+      <article class="pol26-item pol26-sports reveal" aria-labelledby="pol26-title-05">
+       <div class="pol26-node" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6.5 6.5 11 11"/><path d="M4.5 3.8 2.8 5.5l4.4 4.4 1.7-1.7"/><path d="M19.5 20.2l1.7-1.7-4.4-4.4-1.7 1.7"/><path d="m8.5 8.5 7-7"/><path d="m15.5 15.5 7-7"/></svg></div>
+       <div class="pol26-item-header"><span class="pol26-serial">05 / 06</span><span class="pol26-category">SPORTS &amp; ACTIVE LIFE</span></div>
+       <h3 id="pol26-title-05">推廣運動<small>建置草屯匹克球場</small></h3>
+       <p>爭取草屯建置完善的匹克球場及運動空間，提供安全、友善的運動環境，推廣全民運動，鼓勵青銀世代共同參與，打造草屯新的休閒運動據點。</p>
+       <ul class="pol26-points" aria-label="推廣運動的政策重點"><li>匹克球場</li><li>友善運動環境</li><li>全民運動</li></ul>
+     </article>
+      <article class="pol26-item pol26-region reveal" aria-labelledby="pol26-title-06">
+       <div class="pol26-node" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="5.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/><path d="M7.5 5.5h4.3a4.2 4.2 0 0 1 0 8.4H11a4.6 4.6 0 0 0 0 9.2"/><path d="M14 19h2.5"/></svg></div>
+       <div class="pol26-item-header"><span class="pol26-serial">06 / 06</span><span class="pol26-category">REGIONAL PLANNING</span></div>
+       <h3 id="pol26-title-06">整體規劃<small>促進區域共榮</small></h3>
+       <p>推動東草屯交流道周邊整體規劃，完善人行道、自行車道及交通環境，並結合地方產業、觀光與生活機能，在兼顧居民需求及環境品質下，帶動地方穩健發展。</p>
+       <ul class="pol26-points" aria-label="整體規劃的政策重點"><li>東草屯交流道</li><li>步行與自行車環境</li><li>地方產業</li></ul>
+     </article>
     </div>
-
-
-    <div class="policies-grid">
-
-      <!-- 01 -->
-      <article class="policy-card reveal">
-
-        <div class="policy-number">01</div>
-
-        <div class="policy-icon">照</div>
-
-        <h3>
-          完善長照
-          <span>打造高齡友善環境</span>
-        </h3>
-
-        <p>
-          整合長照、健康與社區照顧資源，簡化長照申請流程，
-          讓草屯、中寮的長輩獲得更便利、更安心的照顧，
-          也減輕家庭照顧負擔。
-        </p>
-
-      </article>
-
-
-      <!-- 02 -->
-      <article class="policy-card reveal">
-
-        <div class="policy-number">02</div>
-
-        <div class="policy-icon">家</div>
-
-        <h3>
-          守護婦幼
-          <span>健全家庭支持體系</span>
-        </h3>
-
-        <p>
-          廣設托育資源，減輕育兒負擔，持續關注婦女權益、
-          月經平權及弱勢與特殊境遇家庭，
-          建立更完整的家庭支持與照顧網絡。
-        </p>
-
-      </article>
-
-
-      <!-- 03 -->
-      <article class="policy-card reveal">
-
-        <div class="policy-number">03</div>
-
-        <div class="policy-icon">青</div>
-
-        <h3>
-          支持青年
-          <span>創造在地發展機會</span>
-        </h3>
-
-        <p>
-          串聯就業、創業、數位學習與創客資源，
-          鼓勵青年留鄉、返鄉發展，推動青銀共生，
-          讓年輕人在地方有更多參與及發揮的機會。
-        </p>
-
-      </article>
-
-
-      <!-- 04 -->
-      <article class="policy-card reveal">
-
-        <div class="policy-number">04</div>
-
-        <div class="policy-icon">文</div>
-
-        <h3>
-          深耕教育
-          <span>傳承在地藝文文化</span>
-        </h3>
-
-        <p>
-          支持學校教育、在地藝術家及藝文團隊，
-          推廣藝文展演與文化活動，保存草屯、中寮的地方故事、
-          技藝與特色，讓在地文化持續傳承。
-        </p>
-
-      </article>
-
-
-      <!-- 05 -->
-      <article class="policy-card reveal">
-
-        <div class="policy-number">05</div>
-
-        <div class="policy-icon">動</div>
-
-        <h3>
-          推廣運動
-          <span>建置草屯匹克球場</span>
-        </h3>
-
-        <p>
-          爭取草屯建置完善的匹克球場及運動空間，
-          提供安全、友善的運動環境，推廣全民運動，
-          鼓勵青銀世代共同參與，打造草屯新的休閒運動據點。
-        </p>
-
-      </article>
-
-
-      <!-- 06 -->
-      <article class="policy-card reveal">
-
-        <div class="policy-number">06</div>
-
-        <div class="policy-icon">共</div>
-
-        <h3>
-          整體規劃
-          <span>促進區域共榮</span>
-        </h3>
-
-        <p>
-          推動東草屯交流道周邊整體規劃，
-          完善人行道、自行車道及交通環境，
-          並結合地方產業、觀光與生活機能，
-          在兼顧居民需求及環境品質下，帶動地方穩健發展。
-        </p>
-
-      </article>
-
-    </div>
-
   </div>
-
 </section>
+<!-- END V9 政策路線圖 -->
+
     <section class="achievements" id="achievements">
 
       <div class="section-inner">
